@@ -1,5 +1,13 @@
 name: flow1
 on: 
+  workflow_dispatch:
+    #branches:
+    #  - main
+    inputs:
+      tags:
+        description: 'Test scenario tags'
+        required: false 
+        type: boolean 
   schedule:
     - cron: "10 0 * * *"
 
