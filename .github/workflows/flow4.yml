@@ -1,4 +1,4 @@
-name: flow1
+name: flow4
 on: 
   workflow_dispatch:
     #branches:
@@ -9,7 +9,7 @@ on:
         required: false 
         type: boolean 
   schedule:
-    - cron: "01 0 * * *"
+    - cron: "10 2 * * *"
 
 jobs:
   start:

@@ -142,7 +142,7 @@ const getFinaceInfo = () => {
 const createFinaceHtml = async () => {
   try {
     const finaceList = await getFinaceInfo();
-    console.log(finaceList);
+    console.log(finaceList[0]);
 
     let trendStr = "";
     if (finaceList.length > 0) {
@@ -151,7 +151,7 @@ const createFinaceHtml = async () => {
                 <p style="width:330px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><span style="margin:0 15px;font-size:16px;font-weight:700;color:#f26d5f">${
                   ele[0].symbol
                 }</span><a style="color:#00c3ff;text-decoration: none;">${
-          ele[0].localizedAttributes["zh-cn"].shortName
+          ele[0].localizedAttributes["zh-cn"].shortName || ele[0].localizedAttributes['zh-cn'].displayName || '-'
         } ${ele[0].price}</a></p>
                 <p style="color:${
                   ele[0].priceChange > 0 ? "#ff2525" : "#37e91a"
@@ -173,7 +173,7 @@ const createFinaceHtml = async () => {
                     color: #fff;
                     text-align: center;
                     padding: 20px;
-                    font-size: 20px;">Fund Tips</div>
+                    font-size: 20px;">Finace Notice</div>
                     ${trendStr}
                     ${copyRight}
                   </div>`;
