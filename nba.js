@@ -139,9 +139,9 @@ const createNBAHtml = async () => {
 
     const html = `<div style="background: linear-gradient(90deg, #124998, transparent);box-shadow: ${randomRgbaColor()} 0px 0px 10px;border-radius: 40px;">
                     <div style="font-weight: bold;color: #fff;text-align: center;padding: 20px;font-size: 20px;">NBA排名</div>
-                    <div style="font-weight: bold;color: #fff;padding: 0 15px 10px;font-size: 16px;">东部分区</div>
+                    <div style="font-weight: bold;color: #fff;padding: 10px 15px;font-size: 16px;">东部分区</div>
                     ${createAreaString(EASTERNS)}
-                    <div style="font-weight: bold;color: #fff;padding: 0 15px 10px;font-size: 16px;">西部分区</div>
+                    <div style="font-weight: bold;color: #fff;padding: 10px 15px;font-size: 16px;">西部分区</div>
                     ${createAreaString(WESTERNS)}
                     ${copyRight}
                   </div>`;
