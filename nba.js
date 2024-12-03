@@ -102,14 +102,14 @@ const createAreaString = (areaData) => {
   areaData.forEach((item, index) => {
     areaString += `<div style="display: flex;align-items: center;margin-bottom: 5px;">
            <div style="color: #ABB3BC;font-size: 24px;width: 30px;text-align: center;">${index + 1}</div>
-           <div style="width: 100px;height: 66px;margin: 0 10px;">
+           <div style="margin: 0 10px;">
              <img style="width: inherit;height: inherit;object-fit: cover;" src="${item.image}" alt="">
            </div>
            <div style="color: #333333; font-weight: 600; font-size: 16px; display: flex; flex-direction: column;">
               <span>${item.shortName}</span>
-              <span style="font-size: 14px; color: #ff365c;">${item.wins}-${item.losses}</span>
+              <span style="font-size: 14px; color: #ff365c;">${item.winningPercentage}</span>
             </div>
-            <div style="flex: 1; text-align: right; color: #124998;">${item.winningPercentage}</div>
+            <div style="flex: 1; text-align: right; color: #124998; font-size: 18px; font-weight: bold;">${item.wins}-${item.losses}</div>
          </div>`
   });
   return areaString;
@@ -139,9 +139,9 @@ const createNBAHtml = async () => {
 
     const html = `<div style="background: linear-gradient(90deg, #124998, transparent);box-shadow: ${randomRgbaColor()} 0px 0px 10px;border-radius: 40px;">
                     <div style="font-weight: bold;color: #fff;text-align: center;padding: 20px;font-size: 20px;">NBA排名</div>
-                    <div style="font-weight: bold;color: #fff;padding: 0 15px;font-size: 16px;">东部分区</div>
+                    <div style="font-weight: bold;color: #fff;padding: 0 15px 10px;font-size: 16px;">东部分区</div>
                     ${createAreaString(EASTERNS)}
-                    <div style="font-weight: bold;color: #fff;padding: 0 15px;font-size: 16px;">西部分区</div>
+                    <div style="font-weight: bold;color: #fff;padding: 0 15px 10px;font-size: 16px;">西部分区</div>
                     ${createAreaString(WESTERNS)}
                     ${copyRight}
                   </div>`;
