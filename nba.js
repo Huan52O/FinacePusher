@@ -1,38 +1,42 @@
 const axios = require("axios");
 const util = require('./util');
 
-const { Day, CopyRight, randomRgbaColor, sendEmail } = util;
-
-const baseUrl = 'https://api.msn.com/sports/standings';
-const apiKey = 'kO1dI4ptCTTylLkPL1ZTHYP8JhLKb8mRDoA5yotmNJ';
-const version = '1.0';
-const cm = 'zh-cn';
-const activityId = '3AB4409B-6BFA-43E5-BAFC-DEB35EDBF67C';
-const ocId = 'sports-league-standings';
-const it = 'edgeid';
-const user = 'm-35F7F230E9F8605C12D5E779E8CC6194';
-const scn = 'APP_ANON';
-const id = 'Basketball_NBA';
-const idType = 'league';
-const seasonPhase = 'regularSeason';
+const { 
+  Day, 
+  CopyRight, 
+  CM,
+  IT,
+  SCN,
+  NbaUrl,
+  NbaApiKey,
+  NbaActivityId,
+  NbaVersion,
+  NbaOcId,
+  NbaUser,
+  NbaId,
+  NbaIdType,
+  NbaSeasonPhase,
+  randomRgbaColor, 
+  sendEmail 
+} = util;
 
 const getNBAInfo = () => {
   const params = {
-    apikey: apiKey,
-    version: version,
-    cm: cm,
-    activityId: activityId,
-    ocid: ocId,
-    it: it,
-    user: user,
-    scn: scn,
-    id: id,
-    idType: idType,
-    seasonPhase: seasonPhase
+    apikey: NbaApiKey,
+    version: NbaVersion,
+    cm: CM,
+    activityId: NbaActivityId,
+    ocid: NbaOcId,
+    it: IT,
+    user: NbaUser,
+    scn: SCN,
+    id: NbaId,
+    idType: NbaIdType,
+    seasonPhase: NbaSeasonPhase
   };
   return new Promise((resolve, reject) => {
     axios
-      .get(baseUrl, {
+      .get(NbaUrl, {
         params: params,
       })
       .then((res) => {

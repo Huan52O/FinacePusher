@@ -1,83 +1,36 @@
 const axios = require("axios");
 const util = require('./util');
 
-const { Day, CopyRight, randomRgbaColor, sendEmail } = util;
-
-// const url = 'https://assets.msn.cn/service/Finance/Quotes?apikey=0QfOX3Vn51YCzitbLaRkTTBadtWpgTN8NZLW0C1SEM&activityId=3A9B5B12-B975-4D8D-88AA-AA76DC86601B&ocid=finance-utils-peregrine&cm=zh-cn&it=edgeid&scn=APP_ANON&ids=adfh77,adg1m7,a6qja2,ah7etc,a9j7bh,a33k6h,a3oxnm,afx2kr,aopnp2,aecfh7,ahkucw,ale3jc,apnmnm,ad88mw,ad87qh,auvwoc,ad9b1h,adci1h,ad99yc,adfha2,adfif2,adfnec&wrapodata=false'
-const baseUrl = "https://assets.msn.cn/service/Finance/Quotes";
-const apiKey = "0QfOX3Vn51YCzitbLaRkTTBadtWpgTN8NZLW0C1SEM";
-const activityId = "3A9B5B12-B975-4D8D-88AA-AA76DC86601B";
-const ocId = "finance-utils-peregrine";
-const cm = "zh-cn";
-const it = "edgeid";
-const scn = "APP_ANON";
-const ids = [
-  "adfh77",
-  "adg1m7",
-  "a6qja2",
-  "ah7etc",
-  "a9j7bh",
-  "a33k6h",
-  "a3oxnm",
-  "afx2kr",
-  "aopnp2",
-  "aecfh7",
-  "ahkucw",
-  "ale3jc",
-  "apnmnm",
-  "ad88mw",
-  "ad87qh",
-  "auvwoc",
-  "ad9b1h",
-  "adci1h",
-  "ad99yc",
-  "adfha2",
-  "adfif2",
-  "adfnec",
-  "ad82lh",
-  "ad7w27",
-  "ad9gkr",
-  "ad8ck2",
-  "ad7op2",
-  "ad8rnm",
-  "ad8ecw",
-  "ad92xm",
-  "ad7hr7",
-  "ada37w",
-  "cf52gh",
-  "ad7zpr",
-  "c1rkhw",
-  "awrtp2",
-  "buw33m",
-  "ad7tlh",
-  "ada7dm",
-  "ad8gbh",
-  "bwm1jc",
-  "cf52p2",
-  "ad91yc",
-  "ad9ixm",
-  "az6h52",
-  "ad8ff2",
-  "ad8sk2",
-  "ad7qf2",
-  "ad9bww",
-];
-const wrapodata = false;
+const { 
+  Day, 
+  CopyRight, 
+  CM,
+  IT,
+  SCN,
+  FinaceUrl,
+  FinaceApiKey,
+  FinaceActivityId,
+  FinaceOcId,
+  FinaceIds,
+  FinaceWrapodata,
+  randomRgbaColor, 
+  sendEmail 
+} = util;
 
 const getFinaceInfo = () => {
   const params = {
-    apikey: apiKey,
-    activityId: activityId,
-    ocid: ocId,
-    cm: cm,
-    it: it,
-    scn: scn,
-    ids: ids.join(","),
-    wrapodata: wrapodata,
+    apikey: FinaceApiKey,
+    activityId: FinaceActivityId,
+    ocid: FinaceOcId,
+    cm: CM,
+    it: IT,
+    scn: SCN,
+    ids: FinaceIds.join(","),
+    wrapodata: FinaceWrapodata,
   };
   return new Promise((resolve, reject) => {
     axios
-      .get(baseUrl, {
+      .get(FinaceUrl, {
         params: params,
       })
       .then((res) => {
