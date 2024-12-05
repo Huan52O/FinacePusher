@@ -1,18 +1,26 @@
 const axios = require("axios");
 const util = require('./util');
+const CONSTANT = require('./constant');
 
-const { 
+const {
   Day, 
   CopyRight, 
   CM,
   IT,
   SCN,
+  FinaceInfo
+} = CONSTANT;
+
+const {
   FinaceUrl,
   FinaceApiKey,
   FinaceActivityId,
   FinaceOcId,
   FinaceIds,
   FinaceWrapodata,
+} = FinaceInfo;
+
+const { 
   randomRgbaColor, 
   sendEmail 
 } = util;

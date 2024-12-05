@@ -1,12 +1,17 @@
 const axios = require("axios");
 const util = require('./util');
+const CONSTANT = require('./constant');
 
-const { 
+const {
   Day, 
   CopyRight, 
   CM,
   IT,
   SCN,
+  NbaInfo
+} = CONSTANT;
+
+const {
   NbaUrl,
   NbaApiKey,
   NbaActivityId,
@@ -16,6 +21,9 @@ const {
   NbaId,
   NbaIdType,
   NbaSeasonPhase,
+} = NbaInfo;
+
+const { 
   randomRgbaColor, 
   sendEmail 
 } = util;
