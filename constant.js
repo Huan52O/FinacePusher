@@ -84,6 +84,12 @@ const NbaInfo = {
   NbaSeasonPhase: 'regularSeason'
 };
 
+const OilInfo = {
+  OilUrl: 'http://apis.juhe.cn/gnyj/query',
+  OilKey: 'b8757c3851968e979f533f27fc7969c7',
+  OilCity: '广东'
+}
+
 module.exports = {
   Day,
   CM,
@@ -91,5 +97,6 @@ module.exports = {
   SCN,
   CopyRight,
   FinaceInfo,
-  NbaInfo
+  NbaInfo,
+  OilInfo
 }
