@@ -16,7 +16,7 @@ const CopyRight = `<p style="margin: 0;padding: 0; text-align:center; color: #ee
 const FinaceInfo = {
   FinaceUrl: 'https://assets.msn.cn/service/Finance/Quotes',
   FinaceApiKey: '0QfOX3Vn51YCzitbLaRkTTBadtWpgTN8NZLW0C1SEM',
-  FinaceActivityId: '3A9B5B12-B975-4D8D-88AA-AA76DC86601B',
+  FinaceActivityId: 'ADDBC96E-7D9D-4DFE-BAAE-7EE57AD8BAE2',
   FinaceOcId: 'finace-utils-peregrine',
   FinaceIds: [
   "adfh77",
