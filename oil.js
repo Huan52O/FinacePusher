@@ -65,8 +65,8 @@ const createOilHtml = async () => {
     let oilStr = '';
     list.forEach((item) => {
       oilStr += `<div style="display: flex;align-items: center;margin-bottom: 5px;">
-                <div style="color: #ABB3BC;font-size: 24px;width: 50px;text-align: center;">${item.name}</div>
-                <div style="flex: 1; text-align: right; color: #124998; font-size: 18px; font-weight: bold;">${item.price}</div>
+                <div style="color: #ABB3BC;font-size: 24px;padding: 0 10px;text-align: center;">${item.name}</div>
+                <div style="flex: 1; text-align: right; color: #124998;padding: 0 10px; font-size: 18px; font-weight: bold;">${item.price}</div>
               </div>`
     });
 
