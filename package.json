@@ -2,6 +2,7 @@
   "name": "finacepusher",
   "version": "1.0.0",
   "main": "index.js",
+  "repo": "https://github.com/Huan52O/FinacePusher.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
