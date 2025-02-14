@@ -1,6 +1,4 @@
 const axios = require("axios");
-const { createCanvas } = require('canvas');
-const Chart = require('chart.js/auto');
 const util = require('./util');
 const CONSTANT = require('./constant');
 
@@ -92,63 +90,4 @@ const createOilHtml = async () => {
   }
 };
 
-// ![0, 6].includes(Day) && createOilHtml();
-
-const oilPrices = [
-  { date: '2024-01-01', price: 70 },
-  { date: '2024-02-01', price: 72 },
-  { date: '2024-03-01', price: 75 },
-  { date: '2024-04-01', price: 73 },
-  { date: '2024-05-01', price: 76 }
-];
-
-// 提取日期和价格数据
-const dates = oilPrices.map((item) => item.date);
-const prices = oilPrices.map((item) => item.price);
-
-// 创建画布
-const canvas = createCanvas(800, 600);
-const ctx = canvas.getContext("2d");
-
-// 创建图表
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: dates,
-    datasets: [
-      {
-        label: "油价走势",
-        data: prices,
-        borderColor: "blue",
-        fill: false,
-      },
-    ],
-  },
-  options: {
-    responsive: false,
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: "日期",
-        },
-      },
-      y: {
-        title: {
-          display: true,
-          text: "油价（美元/桶）",
-        },
-      },
-    },
-  },
-});
-
-// 将图表转换为 Base64 编码
-const imageBase64 = canvas.toDataURL("image/png").split(";base64,").pop();
-const html = `<p>这是最近的油价走势图表：</p><img src="data:image/png;base64,${imageBase64}" alt="油价走势图表">`
-
-sendEmail(
-  "hellohehuan@126.com",
-  html,
-  "【Oil Notice】By Github Actions"
-);
+![0, 6].includes(Day) && createOilHtml();
