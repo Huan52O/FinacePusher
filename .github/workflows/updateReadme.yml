@@ -9,6 +9,8 @@ on:
         type: boolean 
   schedule:
     - cron: '30 1 */2 * *'  # 每隔一天运行
+permissions:
+  contents: write  # 允许对仓库内容进行写操作
 
 jobs:
   update-readme:
