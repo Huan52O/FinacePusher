@@ -6,8 +6,8 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault("Asia/Shanghai");
 
-const Day = dayjs().day();
-const Time = dayjs().format('YYYY-MM-DD HH:mm:ss');
+const Day = dayjs().tz('Asia/Shanghai').day();
+const Time = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
 
 const CM = 'zh-cn';
 const IT = 'edgeid';
