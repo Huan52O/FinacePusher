@@ -7,6 +7,7 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault("Asia/Shanghai");
 
 const Day = dayjs().day();
+const Time = dayjs().format('YYYY-MM-DD HH:mm:ss');
 
 const CM = 'zh-cn';
 const IT = 'edgeid';
@@ -92,6 +93,7 @@ const OilInfo = {
 
 module.exports = {
   Day,
+  Time,
   CM,
   IT,
   SCN,

@@ -4,7 +4,7 @@ const CONSTANT = require('./constant');
 
 const {
   Day, 
-  CopyRight,
+  Time,
   OilInfo
 } = CONSTANT;
 
@@ -46,40 +46,42 @@ const createOilHtml = async () => {
     const list = [
       {
         price: resultGd['92h'],
-        name: '92汽油'
+        name: '92#汽油'
       },
       {
         price: resultGd['95h'],
-        name: '95汽油'
+        name: '95#汽油'
       },
       {
         price: resultGd['98h'],
-        name: '98汽油'
+        name: '98#汽油'
       },
       {
         price: resultGd['0h'],
-        name: '0柴油'
+        name: '0#柴油'
       },
     ]
 
-    let oilStr = '';
-    list.forEach((item) => {
-      oilStr += `<div style="display: flex;align-items: center;margin-bottom: 5px;">
-                <div style="color: #ABB3BC;font-size: 24px;padding: 0 10px;text-align: center;">${item.name}</div>
-                <div style="flex: 1; text-align: right; color: #124998;padding: 0 10px; font-size: 18px; font-weight: bold;">${item.price}</div>
-              </div>`
-    });
+    const html = `
+      <div style="background: #0a0e1a; color: #ffffff; line-height: 1.2; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px;">
+        <header style="text-align: center; padding: 40px 0;">
+          <h1 style="font-size: 2.0em; font-weight: 700; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(79,172,254,0.3);">⛽智慧能源价格速报</h1>
+        </header>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+          ${list.map(item => {
+            return `<div style="padding: 35px; border-radius: 15px; text-align: center; position: relative; overflow: hidden; transition: transform 0.3s ease; background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 2px solid ${item.color};">
+                      <div style="position: relative; font-size: 1.6em; font-weight: 600; margin-bottom: 15px;">${item.name}</div>
+                      <div style="font-size: 2.2em; font-weight: 700; color: #ffffff; text-shadow: 0 2px 6px rgba(255,255,255,0.2);">${item.price}<span style="font-size: 0.6em; color: #aab2c0;">元/L</span></div>
+                      <div style="content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg, transparent 20%, rgba(79,172,254,0.3) 50%, transparent 80%); animation: rotate 6s linear infinite;"></div>
+                    </div>`
+          }).join('')}
+        </div>
+        <footer style="text-align: center; padding: 40px 0 20px; color: #6d7a8f; font-size: 0.9em;">
+          <p>© 2025 能源数据观察中心 | 数据更新于 ${Time}</p>
+          <p style="margin-top:8px">数据来源：国家发改委价格监测中心</p>
+        </footer>
+      </div>`;
 
-    const html = `<div style="background: linear-gradient(90deg, #124998, transparent);box-shadow: ${randomRgbaColor()} 0px 0px 10px;border-radius: 40px;">
-                    <div style="
-                    font-weight: bold;
-                    color: #fff;
-                    text-align: center;
-                    padding: 20px;
-                    font-size: 20px;">Oil Notice</div>
-                    ${oilStr}
-                    ${CopyRight}
-                  </div>`;
     sendEmail(
       "hellohehuan@126.com",
       html,
