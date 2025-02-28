@@ -46,19 +46,23 @@ const createOilHtml = async () => {
     const list = [
       {
         price: resultGd['92h'],
-        name: '92#汽油'
+        name: '92#汽油',
+        color: '#4facfe'
       },
       {
         price: resultGd['95h'],
-        name: '95#汽油'
+        name: '95#汽油',
+        color: '#00f2fe'
       },
       {
         price: resultGd['98h'],
-        name: '98#汽油'
+        name: '98#汽油',
+        color: '#7b61ff'
       },
       {
         price: resultGd['0h'],
-        name: '0#柴油'
+        name: '0#柴油',
+        color: '#00e676'
       },
     ]
 
