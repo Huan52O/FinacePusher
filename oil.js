@@ -69,7 +69,7 @@ const createOilHtml = async () => {
     const html = `
       <div style="background: #0a0e1a; color: #ffffff; line-height: 1.2; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px;">
         <header style="text-align: center; padding: 40px 0;">
-          <h1 style="font-size: 2.0em; font-weight: 700; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(79,172,254,0.3);">⛽智慧能源价格速报</h1>
+          <h1 style="font-size: 2.0em; font-weight: 700; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(79,172,254,0.3);">⛽智慧能源价格速报</h1>
         </header>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
           ${list.map(item => {
