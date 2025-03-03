@@ -63,20 +63,17 @@ const getNBAInfo = () => {
   });
 };
 
-const renderArea = (areaData) => {
+const renderArea = (areaData, area) => {
   const area = areaData.map((item, i) => {
+    const rankColor = i+1 > 8 ? '#2b2d42' : area.startsWith('W') ? '#f8c654' : '#32badd';
     return `<div style="display:flex; flex-wrap:wrap; gap:10px;">
-            <!-- 单个球队 -->
             <div style="flex:1 1 100%; margin-bottom:10px; padding:15px; background:#fff; border:2px solid #edf2f4; border-radius:8px;">
               <div style="display:flex; align-items:center; gap:12px;">
-                <!-- 排名 -->
-                <span style="width:28px; height:28px; background:#2b2d42; color:#fff; border-radius:50%; 
+                <span style="width:28px; height:28px; background:${rankColor}; color:#fff; border-radius:50%; 
                     display:flex; align-items:center; justify-content:center; font-weight:700;">${i + 1}</span>
-                <!-- Logo -->
                 <img src="${item.image}" 
                   alt="Lakers" 
                   style="width:40px; height:40px; object-fit:contain;">
-                <!-- 球队信息 -->
                 <div style="flex:1;">
                   <div style="font-weight:700; color:#2b2d42;">${item.rawName}</div>
                   <div style="font-weight:700; color:#2b2d42;">${item.localizedName}</div>
@@ -130,14 +127,14 @@ const createNBAHtml = async () => {
           <div style="margin-bottom:15px; padding:10px; background:#edf2f4; border-left:4px solid #ef233c;">
               <h2 style="margin:0; color:#2b2d42; font-size:20px; font-weight:700;">WESTERN CONFERENCE</h2>
           </div>
-          ${renderArea(WESTERNS)}
+          ${renderArea(WESTERNS, 'W')}
       </div>
       <!-- 东部联盟 -->
       <div style="padding:10px 15px 20px;">
           <div style="margin-bottom:15px; padding:10px; background:#edf2f4; border-left:4px solid #0066cc;">
               <h2 style="margin:0; color:#2b2d42; font-size:20px; font-weight:700;">EASTERN CONFERENCE</h2>
           </div>
-          ${renderArea(EASTERNS)}
+          ${renderArea(EASTERNS, 'E')}
       </div>
       <!-- 页脚 -->
       <div style="padding:20px; background:#2b2d42; text-align:center;">
