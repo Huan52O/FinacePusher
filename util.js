@@ -39,7 +39,31 @@ const sendEmail = (to, html, subject) => {
   });
 };
 
+const dateFormater = (formater, time) => {
+  let date = time ? new Date(time) : new Date(),
+    Y = date.getFullYear() + '',
+    M = date.getMonth() + 1,
+    D = date.getDate(),
+    H = date.getHours(),
+    m = date.getMinutes(),
+    s = date.getSeconds();
+  return formater.replace(/YYYY|yyyy/g, Y)
+    .replace(/YY|yy/g, Y.substr(2, 2))
+    .replace(/MM/g, (M < 10 ? '0' : '') + M)
+    .replace(/DD/g, (D < 10 ? '0' : '') + D)
+    .replace(/HH|hh/g, (H < 10 ? '0' : '') + H)
+    .replace(/mm/g, (m < 10 ? '0' : '') + m)
+    .replace(/ss/g, (s < 10 ? '0' : '') + s)
+};
+
+const getNowSeconds = () => {
+  //本地时间 + 本地时间与格林威治时间的时间差 + GMT+8与格林威治的时间差 
+  return new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000)
+};
+
 module.exports = {
   randomRgbaColor,
-  sendEmail
+  sendEmail,
+  dateFormater,
+  getNowSeconds
 }
