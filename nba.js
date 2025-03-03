@@ -64,7 +64,7 @@ const getNBAInfo = () => {
 };
 
 const renderArea = (areaData, area) => {
-  const area = areaData.map((item, i) => {
+  const areaHtml = areaData.map((item, i) => {
     const rankColor = i+1 > 8 ? '#2b2d42' : area.startsWith('W') ? '#f8c654' : '#32badd';
     return `<div style="display:flex; flex-wrap:wrap; gap:10px;">
             <div style="flex:1 1 100%; margin-bottom:10px; padding:15px; background:#fff; border:2px solid #edf2f4; border-radius:8px;">
@@ -85,8 +85,8 @@ const renderArea = (areaData, area) => {
               </div>
             </div>
           </div>`
-  })
-  return area
+  }).join('');
+  return areaHtml
 }
 
 const createNBAHtml = async () => {
