@@ -29,7 +29,7 @@ const sendEmail = (to, html, subject) => {
     };
     Transporter.sendMail(option, (error, info = {}) => {
       if (error) {
-        console.error("邮件发送异常：", err);
+        console.error("邮件发送异常：", error);
         reject(error);
       } else {
         console.log("邮件发送成功", info.messageId);

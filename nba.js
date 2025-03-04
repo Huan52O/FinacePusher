@@ -105,7 +105,8 @@ const createNBAHtml = async () => {
         image: `https://ts4.cn.mm.bing.net/th?id=${item.team.image.id}&pid=MSports&w=24&h=24&qlt=90&c=0&rs=1&dpr=2&p=1`
       }
     }).sort((a, b) => {
-      return b.wins - a.wins
+      // 按胜率排序
+      return b.winningPercentage - a.winningPercentage
     });
     const EASTERNS = result.filter(item => {
       return item.alias === 'EASTERN'
