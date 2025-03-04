@@ -73,7 +73,7 @@ const renderArea = (areaData, area) => {
                     display:flex; align-items:center; justify-content:center; font-weight:700;">${i + 1}</span>
                 <img src="${item.image}" 
                   alt="Lakers" 
-                  style="width:40px; height:40px; object-fit:contain;">
+                  style="width:48px; height:48px; object-fit:contain;">
                 <div style="flex:1;">
                   <div style="font-weight:700; color:#2b2d42;">${item.rawName}</div>
                   <div style="font-weight:700; color:#2b2d42;">${item.localizedName}</div>
