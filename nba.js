@@ -156,8 +156,6 @@ const createNBAHtml = async () => {
   }
 };
 
-![0, 6].includes(Day) && createNBAHtml();
-
 // 根据日期获取赛程
 const getLiveSchedules = (date) => {
   const params = {
@@ -195,6 +193,12 @@ const getLiveSchedules = (date) => {
       });
   });
 };
+
+const gameStatus = {
+  'PreGame': '未开赛',
+  'Final': '已完赛',
+  'InProgress': '进行中',
+}
 
 const createScheduleTask = async() => {
   try {
@@ -241,6 +245,8 @@ const createScheduleTask = async() => {
           })[0]
         }
       });
+      console.log(date);
+      console.log(schedules);
       const renderGame = (game) => {
         const status = game.gameState.status;
         return `<div style="display:flex; align-items:center; gap:15px;">
@@ -250,31 +256,31 @@ const createScheduleTask = async() => {
                          style="width:48px; height:48px; margin-bottom:8px;">
                     <div style="color:#fff; font-weight:700;">${game.homeTeam.name}</div>
                     <div style="color:#888; font-size:12px;">主场 ${game.homeTeam.wins}胜-${game.homeTeam.losses}负</div>
-                    ${status == 'Final' && `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>`}
-                    ${status == 'InProgress' && `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>`}
+                    ${status == 'Final' ? `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>` : ''}
+                    ${status == 'InProgress' ? `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>` : ''}
                   </div>
                   <!-- 比分/时间 -->
-                  ${['PreGame', 'Final'].includes(status) && 
+                  ${['PreGame', 'Final'].includes(status) ? 
                     `<div style="width:100px; text-align:center;">
                       <div style="color:#ff6b00; font-size:24px; font-weight:800;">VS</div>
-                      <div style="color:#aaa; font-size:14px;">${dateFormater('MM-DD', game.startDateTime)} ${dateFormater('HH:mm', game.startDateTime)}</div>
+                      <div style="color:#aaa; font-size:14px;">${dateFormater('MM-DD', Number(game.startDateTime))} ${dateFormater('HH:mm', Number(game.startDateTime))}</div>
                       <div style="color:#888; font-size:12px;">${game.venue.city} ${game.venue.name}</div>
-                    </div>`
+                    </div>` : ''
                   }
-                  ${['InProgress'].includes(status) && 
+                  ${['InProgress'].includes(status) ? 
                     `<div style="width:60px; text-align:center; color:#aaa;">
                       <div style="font-size:12px;">第${game.gameState.currentPlayingPeriod}节 ${game.gameState.gameClock.minutes}:${game.gameState.gameClock.seconds}</div>
                       <div style="font-size:10px;">${game.venue.city} ${game.venue.name}</div>
-                    </div>`
+                    </div>` : ''
                   }
                   <!-- 客队 -->
                   <div style="flex:1; text-align:left;">
-                    <img src="https://cdn.nba.com/logos/nba/1610612744/global/D/logo.svg" 
+                    <img src="${game.awayTeam.image}" 
                          style="width:48px; height:48px; margin-bottom:8px;">
                     <div style="color:#fff; font-weight:700;">${game.awayTeam.name}</div>
                     <div style="color:#888; font-size:12px;">客场 ${game.awayTeam.wins}胜-${game.awayTeam.losses}负</div>
-                    ${status == 'Final' && `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>`}
-                    ${status == 'InProgress' && `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>`}
+                    ${status == 'Final' ? `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>` : ''}
+                    ${status == 'InProgress' ? `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>` : ''}
                   </div>
                 </div>`
       };
@@ -291,10 +297,10 @@ const createScheduleTask = async() => {
             <h2 style="margin:0; color:#2b2d42; font-size:20px; font-weight:700;">${date}</h2>
           </div>
           ${schedules.map(item => {
-            return `<div style="margin-bottom:20px; padding:15px; background:#2a2a2a; border-radius:8px; ${['Final', 'PreGame'].includes(item.gameState.status) && 'position:relative;'}${['InProgress'].includes(item.gameState.status) && 'border-left:4px solid #00ff47;'}">
+            return `<div style="margin-bottom:20px; padding:15px; background:#2a2a2a; border-radius:8px; ${['Final', 'PreGame'].includes(item.gameState.status) ? 'position:relative;' : ''}${['InProgress'].includes(item.gameState.status) ? 'border-left:4px solid #00ff47;' : ''}">
             ${['PreGame', 'Final'].includes(item.gameState.status) ? 
             `<div style="position:absolute; top:-8px; right:15px; background:${item.gameState.status == 'Final' ? '#00c8ff' : '#ff6b00'}; color:#fff; padding:4px 12px; border-radius:4px; font-size:12px;">
-                ${item.gameState.status == 'Final' ? '已完赛' : '未开赛'}
+                ${gameStatus[item.gameState.status]}
             </div>` : ''}
             ${renderGame(item)}
           </div>`
@@ -320,4 +326,9 @@ const createScheduleTask = async() => {
   }
 };
 
-createScheduleTask();
+const main = async() => {
+  await createNBAHtml();
+  await createScheduleTask();
+}
+
+main()
