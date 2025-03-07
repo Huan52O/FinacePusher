@@ -171,7 +171,7 @@ const getLiveSchedules = (date) => {
     user: 'm-12394F2DF1F06DD93AF65A8AF02F6C5B',
     scn: SCN,
     date: date,
-    id: NbaId,
+    ids: NbaId,
     withcalendar: true,
     type: 'LeagueSchedule'
   };
