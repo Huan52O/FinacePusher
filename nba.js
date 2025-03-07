@@ -237,7 +237,7 @@ const createScheduleTask = async() => {
           }).map(team => {
             return {
               name: team.team.name.localizedName,
-              image: team.team.image.id,
+              image: `https://ts4.cn.mm.bing.net/th?id=${team.team.image.id}`,
               score: team.result.score,
               wins: team.team.winLossRecord.wins,
               losses: team.team.winLossRecord.losses
@@ -263,7 +263,7 @@ const createScheduleTask = async() => {
                   ${['PreGame', 'Final'].includes(status) ? 
                     `<div style="width:100px; text-align:center;">
                       <div style="color:#ff6b00; font-size:24px; font-weight:800;">VS</div>
-                      <div style="color:#aaa; font-size:14px;">${dateFormater('MM-DD', Number(game.startDateTime))} ${dateFormater('HH:mm', Number(game.startDateTime))}</div>
+                      <div style="color:#aaa; font-size:14px;">${dateFormater('MM-DD', Number(game.startDateTime))} ${dateFormater('HH:mm', Number(game.startDateTime))}${status == 'Final' ? ' ·完赛' : ''}</div>
                       <div style="color:#888; font-size:12px;">${game.venue.city} ${game.venue.name}</div>
                     </div>` : ''
                   }
