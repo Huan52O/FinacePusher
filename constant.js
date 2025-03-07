@@ -75,6 +75,7 @@ const FinaceInfo = {
 
 const NbaInfo = {
   NbaUrl: 'https://api.msn.com/sports/standings',
+  LiveSchedulesUrl: 'https://api.msn.com/sports/liveschedules',
   NbaApiKey: 'kO1dI4ptCTTylLkPL1ZTHYP8JhLKb8mRDoA5yotmNJ',
   NbaVersion: '1.0',
   NbaActivityId: '3AB4409B-6BFA-43E5-BAFC-DEB35EDBF67C',

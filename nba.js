@@ -12,6 +12,7 @@ const {
 
 const {
   NbaUrl,
+  LiveSchedulesUrl,
   NbaApiKey,
   NbaActivityId,
   NbaVersion,
@@ -156,3 +157,167 @@ const createNBAHtml = async () => {
 };
 
 ![0, 6].includes(Day) && createNBAHtml();
+
+// 根据日期获取赛程
+const getLiveSchedules = (date) => {
+  const params = {
+    apikey: NbaApiKey,
+    version: NbaVersion,
+    cm: CM,
+    tzoffset: 8,
+    activityId: NbaActivityId,
+    ocid: NbaOcId,
+    it: IT,
+    user: NbaUser,
+    scn: SCN,
+    date: date,
+    id: NbaId,
+    withcalendar: true,
+    type: 'LeagueSchedule'
+  };
+  return new Promise((resolve, reject) => {
+    axios
+      .get(LiveSchedulesUrl, {
+        params: params,
+      })
+      .then((res) => {
+        if (res.data) {
+          if (res.data.value.length > 0) {
+            const schedules = res.data.value[0].schedules
+            resolve(schedules);
+          }
+        } else {
+          resolve([]);
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
+
+const createScheduleTask = async() => {
+  try {
+    const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
+    const today = dateFormater('YYYY-MM-DD')
+    const tomorrow = dateFormater('YYYY-MM-DD', new Date(new Date().getTime() +  + 24 * 60 * 60 * 1000))
+    const theDayAfterTomorrow = dateFormater('YYYY-MM-DD', new Date(new Date().getTime() +  + 48 * 60 * 60 * 1000))
+    const dateList = [today, tomorrow, theDayAfterTomorrow];
+    for (const date of dateList) {
+      const res = await getLiveSchedules(date);
+      const schedules = res[0].games.map(item => {
+        return {
+          startDateTime: item.startDateTime, // 1741392000000
+          venue: {
+            name: item.venue.name?.localizedName || item.venue.name?.rawName, // 球馆
+            city: item.venue.location.city.name?.localizedName || item.venue.location.city.name?.rawName // 主场城市
+          },
+          gameState: {
+            status: item.gameState.gameStatus, // InProgress,PreGame,Final
+            gameClock: item.gameState.gameClock,
+            currentPlayingPeriod: item?.currentPlayingPeriod?.number
+          },
+          homeTeam: item.participants.filter(item => {
+            return item.homeAwayStatus == 'Home'
+          }).map(team => {
+            return {
+              name: team.team.name.localizedName, //球队名称
+              image: `https://ts4.cn.mm.bing.net/th?id=${team.team.image.id}`,
+              score: team.result.score,
+              wins: team.team.winLossRecord.wins,
+              losses: team.team.winLossRecord.losses
+            }
+          })[0],
+          awayTeam: item.participants.filter(item => {
+            return item.homeAwayStatus == 'Away'
+          }).map(team => {
+            return {
+              name: team.team.name.localizedName,
+              image: team.team.image.id,
+              score: team.result.score,
+              wins: team.team.winLossRecord.wins,
+              losses: team.team.winLossRecord.losses
+            }
+          })[0]
+        }
+      });
+      const renderGame = (game) => {
+        const status = game.gameState.status;
+        return `<div style="display:flex; align-items:center; gap:15px;">
+                  <!-- 主队 -->
+                  <div style="flex:1; text-align:right;">
+                    <img src="${game.homeTeam.image}" 
+                         style="width:48px; height:48px; margin-bottom:8px;">
+                    <div style="color:#fff; font-weight:700;">${game.homeTeam.name}</div>
+                    <div style="color:#888; font-size:12px;">主场 ${game.homeTeam.wins}胜-${game.homeTeam.losses}负</div>
+                    ${status == 'Final' && `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>`}
+                    ${status == 'InProgress' && `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.homeTeam.score}</div>`}
+                  </div>
+                  <!-- 比分/时间 -->
+                  ${['PreGame', 'Final'].includes(status) && 
+                    `<div style="width:100px; text-align:center;">
+                      <div style="color:#ff6b00; font-size:24px; font-weight:800;">VS</div>
+                      <div style="color:#aaa; font-size:14px;">${dateFormater('MM-DD', game.startDateTime)} ${dateFormater('HH:mm', game.startDateTime)}</div>
+                      <div style="color:#888; font-size:12px;">${game.venue.city} ${game.venue.name}</div>
+                    </div>`
+                  }
+                  ${['InProgress'].includes(status) && 
+                    `<div style="width:60px; text-align:center; color:#aaa;">
+                      <div style="font-size:12px;">第${game.gameState.currentPlayingPeriod}节 ${game.gameState.gameClock.minutes}:${game.gameState.gameClock.seconds}</div>
+                      <div style="font-size:10px;">${game.venue.city} ${game.venue.name}</div>
+                    </div>`
+                  }
+                  <!-- 客队 -->
+                  <div style="flex:1; text-align:left;">
+                    <img src="https://cdn.nba.com/logos/nba/1610612744/global/D/logo.svg" 
+                         style="width:48px; height:48px; margin-bottom:8px;">
+                    <div style="color:#fff; font-weight:700;">${game.awayTeam.name}</div>
+                    <div style="color:#888; font-size:12px;">客场 ${game.awayTeam.wins}胜-${game.awayTeam.losses}负</div>
+                    ${status == 'Final' && `<div style="color:#00c8ff; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>`}
+                    ${status == 'InProgress' && `<div style="color:#00ff47; font-size:24px; font-weight:800;">${game.awayTeam.score}</div>`}
+                  </div>
+                </div>`
+      };
+      const template = `<div style="max-width:600px; margin:0 auto; background:#1e1e1e; border-radius:12px; box-shadow:0 0 20px rgba(255,80,0,0.1);">
+        <!-- 标题 -->
+        <div style="padding:28px 20px; background:linear-gradient(90deg, #d62424, #ff6b00); border-radius:12px 12px 0 0;">
+            <h1 style="margin:0; color:#fff; font-size:34px; text-align:center; font-weight:800; letter-spacing:1px;">
+                🏀 NBA赛程速递
+            </h1>
+        </div>
+        <!-- 赛程主体 -->
+        <div style="padding:20px 15px;">
+          <div style="margin-bottom:15px; padding:10px; background:#edf2f4; border-left:4px solid #ef233c;">
+            <h2 style="margin:0; color:#2b2d42; font-size:20px; font-weight:700;">${date}</h2>
+          </div>
+          ${schedules.map(item => {
+            return `<div style="margin-bottom:20px; padding:15px; background:#2a2a2a; border-radius:8px; ${['Final', 'PreGame'].includes(item.gameState.status) && 'position:relative;'}${['InProgress'].includes(item.gameState.status) && 'border-left:4px solid #00ff47;'}">
+            ${['PreGame', 'Final'].includes(item.gameState.status) ? 
+            `<div style="position:absolute; top:-8px; right:15px; background:${item.gameState.status == 'Final' ? '#00c8ff' : '#ff6b00'}; color:#fff; padding:4px 12px; border-radius:4px; font-size:12px;">
+                ${item.gameState.status == 'Final' ? '已完赛' : '未开赛'}
+            </div>` : ''}
+            ${renderGame(item)}
+          </div>`
+          }).join('')}
+        </div>
+        <!-- 页脚 -->
+        <div style="padding:20px; background:#000; border-radius:0 0 12px 12px; text-align:center;">
+          <p style="margin:0; color:#666; font-size:12px; line-height:1.5;">
+              © 2025 Tencent NBA 数据更新于 ${Time}<br>
+              官方合作伙伴 | 赛事直播请访问腾讯体育
+          </p>
+        </div>
+      </div>`;
+  
+      sendEmail(
+        "hellohehuan@126.com",
+        template,
+        "【NBA Schedules】By Github Actions"
+      );
+    };
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+createScheduleTask();
