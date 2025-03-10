@@ -90,6 +90,40 @@ const OilInfo = {
   OilUrl: 'http://apis.juhe.cn/gnyj/query',
   OilKey: 'b8757c3851968e979f533f27fc7969c7',
   OilCity: '广东'
+};
+
+const KnowCarInfo = {
+  RankListUrl: 'https://www.dongchedi.com/motor/pc/car/rank_data',
+  OutterDetailTypeMap: {
+    '0': '微型轿车',
+    '1': '小型轿车',
+    '2': '紧凑型轿车',
+    '3': '中型轿车',
+    '4': '中大型轿车',
+    '5': '大型轿车',
+    '10': '小型SUV',
+    '11': '紧凑型SUV',
+    '12': '中型SUV',
+    '13': '中大型SUV',
+    '14': '大型SUV',
+  },
+  TagStyle: [
+    {
+      background: '#ff6b0020',
+      color: '#ff6b00',
+      border: '#ff6b0050'
+    },
+    {
+      background: '#00ff4720',
+      color: '#00ff47',
+      border: '#00ff4750'
+    },
+    {
+      background: '#0095ff20',
+      color: '#0095ff',
+      border: '#0095ff50'
+    },
+  ]
 }
 
 module.exports = {
@@ -101,5 +135,6 @@ module.exports = {
   CopyRight,
   FinaceInfo,
   NbaInfo,
-  OilInfo
+  OilInfo,
+  KnowCarInfo
 }
