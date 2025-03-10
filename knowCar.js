@@ -33,12 +33,14 @@ const getRankList = (count) => {
     }).then(res => {
       if (res.data) {
         const result = res.data.data.list;
+        console.log(result.length);
         if (result.length > 0) {
           const list = result.map(item => {
             return {
               brandName: item.brand_name,
               rank: item.rank,
               price: item.price,
+              image: item.image,
               seriesName: item.series_name,
               score: item.score,
               outterDetailType: item.outter_detail_type,
@@ -63,6 +65,7 @@ const sendRankInfoTask = async () => {
   try {
     const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
     const ranks = await getRankList(50);
+    console.log(ranks.length);
     const template = `<div style="max-width:600px; margin:0 auto; background:#141414; border-radius:16px; box-shadow:0 0 30px rgba(255,80,0,0.1);">
       <!-- 标题 -->
       <div style="padding:28px 20px; background:linear-gradient(90deg, #ff6b00, #ff3c00); border-radius:16px 16px 0 0;">
@@ -78,6 +81,7 @@ const sendRankInfoTask = async () => {
             <div style="width:30px; height:30px; background:#ff6b00; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#fff;">
               ${item.rank}
             </div>
+            <img src="${item.image}" style="width:60px; object-fit:contain; border-radius:8px; border:2px solid #ffffff20;">
             <!-- 车型信息 -->
             <div style="flex:1;">
               <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">

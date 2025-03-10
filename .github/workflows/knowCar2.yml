@@ -1,4 +1,4 @@
-name: knowCar1
+name: knowCar2
 on: 
   workflow_dispatch:
     #branches:
