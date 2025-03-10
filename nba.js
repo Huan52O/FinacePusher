@@ -170,7 +170,7 @@ const getLiveSchedules = (date) => {
     scn: SCN,
     date: date,
     ids: NbaId,
-    withcalendar: true,
+    withcalendar: false,
     type: 'LeagueSchedule'
   };
   return new Promise((resolve, reject) => {
