@@ -32,7 +32,7 @@ const getRankList = (count) => {
       params: params
     }).then(res => {
       if (res.data) {
-        const result = res.data.list;
+        const result = res.data.data.list;
         if (result.length > 0) {
           const list = result.map(item => {
             return {
