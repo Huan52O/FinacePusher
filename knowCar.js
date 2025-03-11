@@ -11,6 +11,36 @@ const {
   getNowSeconds
 } = utils;
 
+const processResponseData = (res, callback) => {
+  if (!res.data) {
+    return []
+  }
+  const result = res.data.data.list;
+  console.log(result.length);
+  if (result.length === 0) {
+    return []
+  }
+  return result.map(callback)
+}
+
+const processItem = (item) => {
+  return {
+    brandName: item.brand_name,
+    rank: item.rank,
+    price: item.price,
+    image: item.image,
+    seriesName: item.series_name,
+    score: item.score,
+    outterDetailType: item.outter_detail_type,
+    tagList: item.review_tag_list.map(tag => {
+      return {
+        tagName: tag.tag_name,
+        count: tag.count
+      }
+    })
+  }
+}
+
 const getRankList = (count) => {
   const params = {
     aid: '1839',
@@ -31,32 +61,10 @@ const getRankList = (count) => {
     axios.get(RankListUrl, {
       params: params
     }).then(res => {
-      if (res.data) {
-        const result = res.data.data.list;
-        console.log(result.length);
-        if (result.length > 0) {
-          const list = result.map(item => {
-            return {
-              brandName: item.brand_name,
-              rank: item.rank,
-              price: item.price,
-              image: item.image,
-              seriesName: item.series_name,
-              score: item.score,
-              outterDetailType: item.outter_detail_type,
-              tagList: item.review_tag_list.map(tag => {
-                return {
-                  tagName: tag.tag_name,
-                  count: tag.count
-                }
-              })
-            }
-          })
-          resolve(list)
-        }
-      } else {
-        resolve([])
-      }
+      const list = processResponseData(res, processItem)
+      resolve(list)
+    }).catch(err => {
+      reject(err);
     })
   })
 }
@@ -124,6 +132,18 @@ const sendRankInfoTask = async () => {
   }
 }
 
+const processAttentionItem = (item) => {
+  return {
+    brandName: item.brand_name,
+    seriesName: item.series_name,
+    subBrandName: item.sub_brand_name,
+    price: item.dealer_price,
+    image: item.image,
+    rank: item.rank,
+    count: item.count
+  }
+}
+
 const getAttentionList = (type, count) => {
   const params = {
     aid: '1839',
@@ -144,26 +164,10 @@ const getAttentionList = (type, count) => {
     axios.get(RankListUrl, {
       params
     }).then(res => {
-      if (res.data) {
-        const result = res.data.data.list;
-        console.log(result.length);
-        if (result.length > 0) {
-          const list = result.map(item => {
-            return {
-              brandName: item.brand_name,
-              seriesName: item.series_name,
-              subBrandName: item.sub_brand_name,
-              price: item.dealer_price,
-              image: item.image,
-              rank: item.rank,
-              count: item.count
-            }
-          })
-          resolve(list)
-        }
-      } else {
-        resolve([])
-      }
+      const list = processResponseData(res, processAttentionItem)
+      resolve(list)
+    }).catch(err => {
+      reject(err)
     })
   })
 }
