@@ -124,7 +124,7 @@ const sendRankInfoTask = async () => {
   }
 }
 
-const getSedanAttentionList = (count) => {
+const getAttentionList = (type, count) => {
   const params = {
     aid: '1839',
     app_name: 'auto_web_pc',
@@ -137,7 +137,7 @@ const getSedanAttentionList = (count) => {
     brand_id: '',
     price: '',
     manufacturer: '',
-    outter_detail_type: '0,1,2,3,4,5',
+    outter_detail_type: type,
     nation: '0'
   }
   return new Promise((resolve, reject) => {
@@ -168,16 +168,30 @@ const getSedanAttentionList = (count) => {
   })
 }
 
-const sendSedanAttentionInfoTask = async () => {
+const sendAttentionInfoTask = async (type) => {
   try {
     const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
-    const ranks = await getSedanAttentionList(50);
+    const AttentionMap = {
+      'sedan': {
+        'type': '0,1,2,3,4,5',
+        'flag': 'Sedan',
+        'title': '轿车'
+      },
+      'suv': {
+        'type': '10,11,12,13,14',
+        'flag': 'Suv',
+        'title': 'SUV'
+      }
+    }
+    const attention = AttentionMap[type]
+    const ranks = await getAttentionList(attention['type'], 50);
+
     console.log(ranks.length);
     const template = `<div style="max-width:600px; margin:0 auto; background:#141414; border-radius:16px; box-shadow:0 0 30px rgba(255,80,0,0.1);">
       <!-- 标题 -->
       <div style="padding:28px 20px; background:linear-gradient(90deg, #00e1ff, #0080ff); border-radius:16px 16px 0 0;">
         <h1 style="margin:0; color:#fff; font-size:36px; text-align:center; font-weight:800; letter-spacing:1px;">
-          Sedan Attention List
+          ${attention['flag']} Attention List
         </h1>
       </div>
       <!-- 榜单主体 -->
@@ -215,7 +229,7 @@ const sendSedanAttentionInfoTask = async () => {
     sendEmail(
       "hellohehuan@126.com",
       template,
-      "【轿车关注度榜】By Github Actions"
+      `【${attention['title']}关注度榜】By Github Actions`
     );
   } catch (error) {
     console.log(error)
@@ -224,7 +238,8 @@ const sendSedanAttentionInfoTask = async () => {
 
 const main = async () => {
   await sendRankInfoTask();
-  await sendSedanAttentionInfoTask();
+  await sendAttentionInfoTask('sedan');
+  await sendAttentionInfoTask('suv');
 }
 
 main()
