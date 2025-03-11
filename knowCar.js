@@ -70,30 +70,30 @@ const sendRankInfoTask = async () => {
       <!-- 标题 -->
       <div style="padding:28px 20px; background:linear-gradient(90deg, #ff6b00, #ff3c00); border-radius:16px 16px 0 0;">
         <h1 style="margin:0; color:#fff; font-size:36px; text-align:center; font-weight:800; letter-spacing:1px;">
-          🚗 懂车分榜
+          Car Knowledge Ranking List
         </h1>
       </div>
       <!-- 榜单主体 -->
       <div style="padding:15px;">
         ${ranks.map(item => {
-          return `<div style="margin-bottom:20px; padding:15px; background:#1e1e1e; border-radius:12px; display:flex; gap:15px; align-items:center; border-left:4px solid #ff6b00;">
+          return `<div style="margin-bottom:15px; background:#1e1e1e; border-radius:12px; display:flex; gap:15px; align-items:center;">
             <!-- 排名 -->
-            <div style="width:30px; height:30px; background:#ff6b00; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#fff;">
+            <div style="width:30px; height:30px; background:#ff6b00; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#fff;">
               ${item.rank}
             </div>
-            <img src="${item.image}" style="width:60px; object-fit:contain; border-radius:8px; border:2px solid #ffffff20;">
+            <img src="${item.image}" style="width:90px; object-fit:contain; border-radius:8px; border:2px solid #ffffff20;">
             <!-- 车型信息 -->
             <div style="flex:1;">
               <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">
-                <div style="color:#fff; font-size:20px; font-weight:700;">${item.brandName} ${item.seriesName}</div>
+                <div style="color:#fff; font-size:16px; font-weight:700;">${item.brandName} ${item.seriesName}</div>
                 <div style="color:#888; font-size:14px;">${OutterDetailTypeMap[item.outterDetailType]}</div>
               </div>
               <!-- 价格与标签 -->
               <div style="display:flex; gap:15px; margin-bottom:12px;">
-                <div style="color:#ff6b00; font-size:16px; font-weight:700;">${item.price}</div>
+                <div style="color:#ff6b00; font-size:14px; font-weight:700;">${item.price}</div>
                 <div style="display:flex; gap:6px;">
                   ${item.tagList.map((tag, i) => {
-                    return `<span style="padding:4px 4px; background:${TagStyle[i].background}; color:${TagStyle[i].color}; border-radius:4px; border:1px solid ${TagStyle[i].border}; font-size:12px;">${tag.tagName}(${tag.count})</span>`
+                    return `<span style="padding:4px; background:${TagStyle[i].background}; color:${TagStyle[i].color}; border-radius:4px; border:1px solid ${TagStyle[i].border}; font-size:12px;">${tag.tagName}(${tag.count})</span>`
                   }).join('')}
                 </div>
               </div>
