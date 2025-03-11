@@ -81,7 +81,7 @@ const sendRankInfoTask = async () => {
             <div style="width:30px; height:30px; background:#ff6b00; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#fff;">
               ${item.rank}
             </div>
-            <img src="${item.image}" style="width:90px; object-fit:contain; border-radius:8px; border:2px solid #ffffff20;">
+            <img src="${item.image}" style="width:90px; object-fit:contain; border-radius:8px;">
             <!-- 车型信息 -->
             <div style="flex:1;">
               <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">
@@ -188,7 +188,7 @@ const sendSedanAttentionInfoTask = async () => {
             <div style="width:30px; height:30px; background:#00fff2; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#fff;">
               ${item.rank}
             </div>
-            <img src="${item.image}" style="width:90px; object-fit:contain; border-radius:8px; border:2px solid #ffffff20;">
+            <img src="${item.image}" style="width:90px; object-fit:contain; border-radius:8px;">
             <!-- 车型信息 -->
             <div style="flex:1;">
               <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">
