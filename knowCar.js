@@ -1,4 +1,5 @@
 const axios = require('axios');
+const path = require('path');
 const utils = require('./util');
 const CONSTANT = require('./constant');
 
@@ -8,7 +9,8 @@ const { RankListUrl, OutterDetailTypeMap, TagStyle } = KnowCarInfo;
 const {
   sendEmail,
   dateFormater,
-  getNowSeconds
+  getNowSeconds,
+  writeDataToFile
 } = utils;
 
 const processResponseData = (res, callback) => {
@@ -74,6 +76,8 @@ const sendRankInfoTask = async () => {
     const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
     const ranks = await getRankList(50);
     console.log(ranks.length);
+    const filePath = path.join(__dirname, 'src', 'resource', 'rank.json')
+    writeDataToFile(ranks, filePath)
     const template = `<div style="max-width:600px; margin:0 auto; background:#141414; border-radius:16px; box-shadow:0 0 30px rgba(255,80,0,0.1);">
       <!-- 标题 -->
       <div style="padding:28px 20px; background:linear-gradient(90deg, #ff6b00, #ff3c00); border-radius:16px 16px 0 0;">
@@ -189,7 +193,8 @@ const sendAttentionInfoTask = async (type) => {
     }
     const attention = AttentionMap[type]
     const ranks = await getAttentionList(attention['type'], 50);
-
+    const filePath = path.join(__dirname, 'src', 'resource', `${type}.json`)
+    writeDataToFile(ranks, filePath)
     console.log(ranks.length);
     const template = `<div style="max-width:600px; margin:0 auto; background:#141414; border-radius:16px; box-shadow:0 0 30px rgba(255,80,0,0.1);">
       <!-- 标题 -->

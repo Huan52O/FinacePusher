@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const nodemailer = require('nodemailer');
 
 const randomRgbaColor = () => {
@@ -61,9 +63,32 @@ const getNowSeconds = () => {
   return new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000)
 };
 
+const ensureDirectoryExistence = (filePath) => {
+  const dirname = path.dirname(filePath)
+  if (fs.existsSync(dirname)) {
+    return true
+  }
+  ensureDirectoryExistence(dirname)
+  fs.mkdirSync(dirname)
+};
+
+const writeDataToFile = (data, filePath) => {
+  ensureDirectoryExistence(filePath)
+  const jsonData = JSON.stringify(data, null, 2)
+  fs.writeFile(filePath, jsonData, 'utf-8', (err) => {
+    if (err) {
+      console.log('写入文件时出错:', err)
+    } else {
+      console.log('数据已成功写入文件:', filePath)
+    }
+  })
+}
+
 module.exports = {
   randomRgbaColor,
   sendEmail,
   dateFormater,
-  getNowSeconds
+  getNowSeconds,
+  ensureDirectoryExistence,
+  writeDataToFile
 }
