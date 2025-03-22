@@ -6,16 +6,16 @@
     "price": "12.22-16.47万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/29f9c5cbc4954233a41d36cad31dc4a5~tplv-resize:640:0.png",
     "rank": 1,
-    "count": 1194737
+    "count": 1194080
   },
   {
     "brandName": "AITO",
     "seriesName": "问界M9",
     "subBrandName": "赛力斯汽车",
     "price": "46.98-56.98万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/0cc67d2d9cdb477a86b93427af6c6670~tplv-resize:640:0.png",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/0cc67d2d9cdb477a86b93427af6c6670~tplv-resize:640:0.png",
     "rank": 2,
-    "count": 1173872
+    "count": 1171031
   },
   {
     "brandName": "特斯拉",
@@ -24,43 +24,7 @@
     "price": "26.35-31.35万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/a3483cc2bbb74c24adf62dd6ed0760fa~tplv-resize:640:0.png",
     "rank": 3,
-    "count": 1123460
-  },
-  {
-    "brandName": "小米汽车",
-    "seriesName": "小米YU7",
-    "subBrandName": "小米汽车",
-    "price": "",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/038609599a3d42bf8844f985d6b40dec~tplv-resize:640:0.png",
-    "rank": 4,
-    "count": 1095512
-  },
-  {
-    "brandName": "比亚迪",
-    "seriesName": "唐DM",
-    "subBrandName": "比亚迪",
-    "price": "16.98-26.48万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/79a6602e0e9842f49241d6a0462a1c30~tplv-resize:640:0.png",
-    "rank": 5,
-    "count": 1091595
-  },
-  {
-    "brandName": "吉利银河",
-    "seriesName": "银河星舰7 EM-i",
-    "subBrandName": "吉利银河",
-    "price": "9.48-12.78万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/5b2555ddc28b4e81b37c0508d728d609~tplv-resize:640:0.png",
-    "rank": 6,
-    "count": 1087284
-  },
-  {
-    "brandName": "广汽传祺",
-    "seriesName": "传祺向往S7",
-    "subBrandName": "广汽传祺",
-    "price": "",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/ace21e6ef5be426292650cdb88c40a62~tplv-resize:640:0.png",
-    "rank": 7,
-    "count": 1086655
+    "count": 1118531
   },
   {
     "brandName": "坦克",
@@ -68,8 +32,44 @@
     "subBrandName": "长城汽车",
     "price": "19.98-33.00万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/c165012de7a54454aec3825533f6e1c3~tplv-resize:640:0.png",
+    "rank": 4,
+    "count": 1074710
+  },
+  {
+    "brandName": "广汽传祺",
+    "seriesName": "传祺向往S7",
+    "subBrandName": "广汽传祺",
+    "price": "",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/ace21e6ef5be426292650cdb88c40a62~tplv-resize:640:0.png",
+    "rank": 5,
+    "count": 1070337
+  },
+  {
+    "brandName": "小米汽车",
+    "seriesName": "小米YU7",
+    "subBrandName": "小米汽车",
+    "price": "",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/038609599a3d42bf8844f985d6b40dec~tplv-resize:640:0.png",
+    "rank": 6,
+    "count": 1067930
+  },
+  {
+    "brandName": "比亚迪",
+    "seriesName": "唐DM",
+    "subBrandName": "比亚迪",
+    "price": "16.98-26.48万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/79a6602e0e9842f49241d6a0462a1c30~tplv-resize:640:0.png",
+    "rank": 7,
+    "count": 1063643
+  },
+  {
+    "brandName": "本田",
+    "seriesName": "本田CR-V",
+    "subBrandName": "东风本田",
+    "price": "13.29-22.29万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/985f8681965047a9a3c978f31c781105~tplv-resize:640:0.png",
     "rank": 8,
-    "count": 1079032
+    "count": 1055207
   },
   {
     "brandName": "丰田",
@@ -78,43 +78,7 @@
     "price": "12.48-19.38万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/aaf3143e1177415eb37359b9df0ca35d~tplv-resize:640:0.png",
     "rank": 9,
-    "count": 1067778
-  },
-  {
-    "brandName": "本田",
-    "seriesName": "本田CR-V",
-    "subBrandName": "东风本田",
-    "price": "13.29-22.29万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/985f8681965047a9a3c978f31c781105~tplv-resize:640:0.png",
-    "rank": 10,
-    "count": 1062868
-  },
-  {
-    "brandName": "方程豹",
-    "seriesName": "豹5",
-    "subBrandName": "方程豹",
-    "price": "22.98-32.98万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/5c571ad2442d4a2dafbe901bc1d83984~tplv-resize:640:0.png",
-    "rank": 11,
-    "count": 1056565
-  },
-  {
-    "brandName": "长安",
-    "seriesName": "长安CS75 PLUS",
-    "subBrandName": "长安汽车",
-    "price": "8.99-13.49万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/ca979536da2c4cadb64281d0f33886d0~tplv-resize:640:0.png",
-    "rank": 12,
-    "count": 1051061
-  },
-  {
-    "brandName": "沃尔沃",
-    "seriesName": "沃尔沃XC60",
-    "subBrandName": "沃尔沃亚太",
-    "price": "24.90-31.99万",
-    "image": "https://p3-dcd.byteimg.com/img/motor-mis-img/058f6dd326221149f0f7d23aec62600c~tplv-resize:640:0.png",
-    "rank": 13,
-    "count": 1031704
+    "count": 1053697
   },
   {
     "brandName": "大众",
@@ -122,8 +86,53 @@
     "subBrandName": "上汽大众",
     "price": "22.99-35.99万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/3a9fd474f4514a36b166ef56106ed877~tplv-resize:640:0.png",
+    "rank": 10,
+    "count": 1046612
+  },
+  {
+    "brandName": "AITO",
+    "seriesName": "问界M7",
+    "subBrandName": "赛力斯汽车",
+    "price": "24.98-32.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/887713ee6ba84da6b8962888260c914f~tplv-resize:640:0.png",
+    "rank": 11,
+    "count": 1035957
+  },
+  {
+    "brandName": "吉利银河",
+    "seriesName": "银河星舰7 EM-i",
+    "subBrandName": "吉利银河",
+    "price": "9.48-12.78万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/5b2555ddc28b4e81b37c0508d728d609~tplv-resize:640:0.png",
+    "rank": 12,
+    "count": 1032801
+  },
+  {
+    "brandName": "长安",
+    "seriesName": "长安CS75 PLUS",
+    "subBrandName": "长安汽车",
+    "price": "8.99-13.49万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/ca979536da2c4cadb64281d0f33886d0~tplv-resize:640:0.png",
+    "rank": 13,
+    "count": 1030049
+  },
+  {
+    "brandName": "腾势",
+    "seriesName": "腾势N9 DM",
+    "subBrandName": "腾势汽车",
+    "price": "38.98-44.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/20db1adaf84e4507a1589d1ac0224426~tplv-resize:640:0.png",
     "rank": 14,
-    "count": 1026913
+    "count": 1027508
+  },
+  {
+    "brandName": "沃尔沃",
+    "seriesName": "沃尔沃XC60",
+    "subBrandName": "沃尔沃亚太",
+    "price": "24.90-31.99万",
+    "image": "https://p3-dcd.byteimg.com/img/motor-mis-img/058f6dd326221149f0f7d23aec62600c~tplv-resize:640:0.png",
+    "rank": 15,
+    "count": 1021160
   },
   {
     "brandName": "丰田",
@@ -131,44 +140,35 @@
     "subBrandName": "广汽丰田",
     "price": "21.48-31.38万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/cb4f406c854649ae8c43be834e102803~tplv-resize:640:0.png",
-    "rank": 15,
-    "count": 1020063
+    "rank": 16,
+    "count": 1019526
+  },
+  {
+    "brandName": "宝马",
+    "seriesName": "宝马X5",
+    "subBrandName": "华晨宝马",
+    "price": "55.90-83.00万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/bf84f7f297c74b4ab69467bef101e7e1~tplv-resize:640:0.png",
+    "rank": 17,
+    "count": 1007816
   },
   {
     "brandName": "领克",
     "seriesName": "领克08 EM-P",
     "subBrandName": "领克",
     "price": "17.18-23.18万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/dbc3deec00ed4cf2b29fefc9cc05617b~tplv-resize:640:0.png",
-    "rank": 16,
-    "count": 1019709
-  },
-  {
-    "brandName": "本田",
-    "seriesName": "东风本田S7",
-    "subBrandName": "东风本田",
-    "price": "25.99-30.99万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/76cd3f53227348deaf2d3efb618a17df~tplv-resize:640:0.png",
-    "rank": 17,
-    "count": 1011839
-  },
-  {
-    "brandName": "理想汽车",
-    "seriesName": "理想L6",
-    "subBrandName": "理想汽车",
-    "price": "24.98-27.98万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/70084ec6188c457d81e000f310d9af9b~tplv-resize:640:0.png",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/dbc3deec00ed4cf2b29fefc9cc05617b~tplv-resize:640:0.png",
     "rank": 18,
-    "count": 1008156
+    "count": 1003520
   },
   {
-    "brandName": "奔驰",
-    "seriesName": "奔驰GLC",
-    "subBrandName": "北京奔驰",
-    "price": "27.06-37.41万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/e8b4e398af9d4c8ea7656766509bc7d2~tplv-resize:640:0.png",
+    "brandName": "方程豹",
+    "seriesName": "豹5",
+    "subBrandName": "方程豹",
+    "price": "22.98-32.98万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/5c571ad2442d4a2dafbe901bc1d83984~tplv-resize:640:0.png",
     "rank": 19,
-    "count": 1005019
+    "count": 1003339
   },
   {
     "brandName": "零跑汽车",
@@ -177,78 +177,60 @@
     "price": "",
     "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/a8c81f0bcbf64856958f0860df0122c5~tplv-resize:640:0.png",
     "rank": 20,
-    "count": 1003669
+    "count": 1003194
   },
   {
-    "brandName": "宝马",
-    "seriesName": "宝马X5",
-    "subBrandName": "华晨宝马",
-    "price": "55.90-83.00万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/bf84f7f297c74b4ab69467bef101e7e1~tplv-resize:640:0.png",
+    "brandName": "理想汽车",
+    "seriesName": "理想L6",
+    "subBrandName": "理想汽车",
+    "price": "24.98-27.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/70084ec6188c457d81e000f310d9af9b~tplv-resize:640:0.png",
     "rank": 21,
-    "count": 1003229
-  },
-  {
-    "brandName": "阿维塔",
-    "seriesName": "阿维塔 07",
-    "subBrandName": "阿维塔科技",
-    "price": "21.99-28.99万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/8b7d620a07494ec4a54bbd467b1aa2da~tplv-resize:640:0.png",
-    "rank": 22,
-    "count": 999466
-  },
-  {
-    "brandName": "零跑汽车",
-    "seriesName": "零跑C16",
-    "subBrandName": "零跑汽车",
-    "price": "15.08-18.48万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/5030f68f58884da894907f5032746f56~tplv-resize:640:0.png",
-    "rank": 23,
-    "count": 998713
-  },
-  {
-    "brandName": "奥迪",
-    "seriesName": "奥迪Q5L",
-    "subBrandName": "一汽奥迪",
-    "price": "24.49-29.87万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/a56d9f6ed52742a1a285b07e14d7b0bd~tplv-resize:640:0.png",
-    "rank": 24,
-    "count": 997781
+    "count": 1000724
   },
   {
     "brandName": "宝马",
     "seriesName": "宝马X3",
     "subBrandName": "华晨宝马",
     "price": "27.18-41.20万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/d9f85d58bea84eeaa9b95d5bba9ea617~tplv-resize:640:0.png",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/d9f85d58bea84eeaa9b95d5bba9ea617~tplv-resize:640:0.png",
+    "rank": 22,
+    "count": 999467
+  },
+  {
+    "brandName": "阿维塔",
+    "seriesName": "阿维塔 07",
+    "subBrandName": "阿维塔科技",
+    "price": "21.99-28.99万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/8b7d620a07494ec4a54bbd467b1aa2da~tplv-resize:640:0.png",
+    "rank": 23,
+    "count": 998368
+  },
+  {
+    "brandName": "AITO",
+    "seriesName": "问界M5",
+    "subBrandName": "赛力斯汽车",
+    "price": "22.98-27.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/284dc9ac306147368522b76dda294d23~tplv-resize:640:0.png",
+    "rank": 24,
+    "count": 997071
+  },
+  {
+    "brandName": "本田",
+    "seriesName": "东风本田S7",
+    "subBrandName": "东风本田",
+    "price": "25.99-30.99万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/76cd3f53227348deaf2d3efb618a17df~tplv-resize:640:0.png",
     "rank": 25,
-    "count": 995182
+    "count": 992978
   },
   {
-    "brandName": "丰田",
-    "seriesName": "普拉多",
-    "subBrandName": "一汽丰田",
-    "price": "42.98-53.98万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/497f52d1db1740f1b91746f1b6b65de2~tplv-resize:640:0.png",
+    "brandName": "奥迪",
+    "seriesName": "奥迪Q5L",
+    "subBrandName": "一汽奥迪",
+    "price": "24.49-29.87万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/a56d9f6ed52742a1a285b07e14d7b0bd~tplv-resize:640:0.png",
     "rank": 26,
-    "count": 994601
-  },
-  {
-    "brandName": "丰田",
-    "seriesName": "卡罗拉锐放",
-    "subBrandName": "一汽丰田",
-    "price": "9.08-14.58万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/9806ab780da34d2897aeb01e830b1794~tplv-resize:640:0.png",
-    "rank": 27,
-    "count": 991903
-  },
-  {
-    "brandName": "大众",
-    "seriesName": "探岳",
-    "subBrandName": "一汽-大众",
-    "price": "14.71-22.89万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/59238f446c094ac786ce6900909f6fe5~tplv-resize:640:0.png",
-    "rank": 28,
     "count": 988968
   },
   {
@@ -257,26 +239,26 @@
     "subBrandName": "小鹏汽车",
     "price": "17.68-19.88万",
     "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/330915c193584c4d887e678c29d39002~tplv-resize:640:0.png",
+    "rank": 27,
+    "count": 987143
+  },
+  {
+    "brandName": "丰田",
+    "seriesName": "普拉多",
+    "subBrandName": "一汽丰田",
+    "price": "42.98-53.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/497f52d1db1740f1b91746f1b6b65de2~tplv-resize:640:0.png",
+    "rank": 28,
+    "count": 984076
+  },
+  {
+    "brandName": "奔驰",
+    "seriesName": "奔驰GLC",
+    "subBrandName": "北京奔驰",
+    "price": "27.05-37.40万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/e8b4e398af9d4c8ea7656766509bc7d2~tplv-resize:640:0.png",
     "rank": 29,
-    "count": 986946
-  },
-  {
-    "brandName": "星途",
-    "seriesName": "星纪元ET",
-    "subBrandName": "星途",
-    "price": "17.98-31.98万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/fd102a950eaa467dbec573d6a31672d1~tplv-resize:640:0.png",
-    "rank": 30,
-    "count": 984853
-  },
-  {
-    "brandName": "AITO",
-    "seriesName": "问界M7",
-    "subBrandName": "赛力斯汽车",
-    "price": "24.98-32.98万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/887713ee6ba84da6b8962888260c914f~tplv-resize:640:0.png",
-    "rank": 31,
-    "count": 983926
+    "count": 982719
   },
   {
     "brandName": "领克",
@@ -284,8 +266,35 @@
     "subBrandName": "领克",
     "price": "22.58-23.28万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/364454f27a1a440e88097db05eabadec~tplv-resize:640:0.png",
+    "rank": 30,
+    "count": 981052
+  },
+  {
+    "brandName": "丰田",
+    "seriesName": "卡罗拉锐放",
+    "subBrandName": "一汽丰田",
+    "price": "9.08-14.58万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/9806ab780da34d2897aeb01e830b1794~tplv-resize:640:0.png",
+    "rank": 31,
+    "count": 979621
+  },
+  {
+    "brandName": "比亚迪",
+    "seriesName": "宋PLUS DM",
+    "subBrandName": "比亚迪",
+    "price": "12.78-17.58万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/7090077c0c97451eb60cc58effa35c74~tplv-resize:640:0.png",
     "rank": 32,
-    "count": 982974
+    "count": 977116
+  },
+  {
+    "brandName": "大众",
+    "seriesName": "探岳",
+    "subBrandName": "一汽-大众",
+    "price": "14.71-22.89万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/59238f446c094ac786ce6900909f6fe5~tplv-resize:640:0.png",
+    "rank": 33,
+    "count": 975361
   },
   {
     "brandName": "哈弗",
@@ -293,17 +302,17 @@
     "subBrandName": "长城汽车",
     "price": "7.19-12.19万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/62328473441241d98a6a623ffe67178f~tplv-resize:640:0.png",
-    "rank": 33,
-    "count": 982528
+    "rank": 34,
+    "count": 973534
   },
   {
-    "brandName": "比亚迪",
-    "seriesName": "宋PLUS DM",
-    "subBrandName": "比亚迪",
-    "price": "12.78-17.58万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/7090077c0c97451eb60cc58effa35c74~tplv-resize:640:0.png",
-    "rank": 34,
-    "count": 982381
+    "brandName": "凯迪拉克",
+    "seriesName": "凯迪拉克XT5",
+    "subBrandName": "上汽通用凯迪拉克",
+    "price": "24.27-33.59万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/a7afef1b740b4f6d9baf0c3d88671967~tplv-resize:640:0.png",
+    "rank": 35,
+    "count": 970400
   },
   {
     "brandName": "本田",
@@ -311,71 +320,8 @@
     "subBrandName": "广汽本田",
     "price": "14.09-21.89万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/adf3499684444e6d98ae7a0dc8c0edaf~tplv-resize:640:0.png",
-    "rank": 35,
-    "count": 975588
-  },
-  {
-    "brandName": "比亚迪",
-    "seriesName": "宋Pro DM",
-    "subBrandName": "比亚迪",
-    "price": "8.98-13.28万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/37e8e497ea194f32804dd131b571249d~tplv-resize:640:0.png",
     "rank": 36,
-    "count": 973890
-  },
-  {
-    "brandName": "魏牌",
-    "seriesName": "蓝山",
-    "subBrandName": "长城汽车",
-    "price": "27.38-32.68万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/b2fc30a2a36d424ebde60c4da44d95b6~tplv-resize:640:0.png",
-    "rank": 37,
-    "count": 971984
-  },
-  {
-    "brandName": "理想汽车",
-    "seriesName": "理想L9",
-    "subBrandName": "理想汽车",
-    "price": "40.98-43.98万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/4d19bbd0c6d947b9996ed6a690eaf852~tplv-resize:640:0.png",
-    "rank": 38,
-    "count": 964174
-  },
-  {
-    "brandName": "东风奕派",
-    "seriesName": "eπ008",
-    "subBrandName": "东风乘用车",
-    "price": "16.36-19.86万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/574dba8c153148afbe009549ea6c94fb~tplv-resize:640:0.png",
-    "rank": 39,
-    "count": 961903
-  },
-  {
-    "brandName": "沃尔沃",
-    "seriesName": "沃尔沃XC90",
-    "subBrandName": "沃尔沃(进口)",
-    "price": "44.90-56.90万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/66f59dfed0a7488fb1bf1f2d6fa82819~tplv-resize:640:0.png",
-    "rank": 40,
-    "count": 961116
-  },
-  {
-    "brandName": "凯迪拉克",
-    "seriesName": "凯迪拉克XT5",
-    "subBrandName": "上汽通用凯迪拉克",
-    "price": "24.27-33.59万",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/a7afef1b740b4f6d9baf0c3d88671967~tplv-resize:640:0.png",
-    "rank": 41,
-    "count": 960423
-  },
-  {
-    "brandName": "丰田",
-    "seriesName": "锋兰达",
-    "subBrandName": "广汽丰田",
-    "price": "8.78-14.68万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/2e716928f981407b80c5e8772b8141a2~tplv-resize:640:0.png",
-    "rank": 42,
-    "count": 960188
+    "count": 961936
   },
   {
     "brandName": "深蓝汽车",
@@ -383,35 +329,35 @@
     "subBrandName": "深蓝汽车",
     "price": "11.99-18.29万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/e3a99ed421fb474eb8e921c3253ab494~tplv-resize:640:0.png",
-    "rank": 43,
-    "count": 959316
+    "rank": 37,
+    "count": 958497
   },
   {
-    "brandName": "极氪",
-    "seriesName": "ZEEKR 7X",
-    "subBrandName": "极氪",
-    "price": "22.99-26.99万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/43587659f5b647bab7efa6acc32aea01~tplv-resize:640:0.png",
-    "rank": 44,
-    "count": 954407
+    "brandName": "比亚迪",
+    "seriesName": "宋Pro DM",
+    "subBrandName": "比亚迪",
+    "price": "8.98-13.28万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/37e8e497ea194f32804dd131b571249d~tplv-resize:640:0.png",
+    "rank": 38,
+    "count": 957028
   },
   {
-    "brandName": "领克",
-    "seriesName": "领克900",
-    "subBrandName": "领克",
-    "price": "",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/60b6fcbd064a46d7b065a1c9d7c835e6~tplv-resize:640:0.png",
-    "rank": 45,
-    "count": 954154
+    "brandName": "理想汽车",
+    "seriesName": "理想L9",
+    "subBrandName": "理想汽车",
+    "price": "40.98-43.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/4d19bbd0c6d947b9996ed6a690eaf852~tplv-resize:640:0.png",
+    "rank": 39,
+    "count": 955208
   },
   {
-    "brandName": "零跑汽车",
-    "seriesName": "零跑C10",
-    "subBrandName": "零跑汽车",
-    "price": "11.38-15.38万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/1de4f3c3ae7e4018955757a19a07378a~tplv-resize:640:0.png",
-    "rank": 46,
-    "count": 953907
+    "brandName": "星途",
+    "seriesName": "星纪元ET",
+    "subBrandName": "星途",
+    "price": "17.98-31.98万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/fd102a950eaa467dbec573d6a31672d1~tplv-resize:640:0.png",
+    "rank": 40,
+    "count": 952395
   },
   {
     "brandName": "丰田",
@@ -419,8 +365,44 @@
     "subBrandName": "一汽丰田",
     "price": "24.48-29.28万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/6a54e46c78d64ba591d90dcaeeef96d7~tplv-resize:640:0.png",
-    "rank": 47,
-    "count": 953804
+    "rank": 41,
+    "count": 952003
+  },
+  {
+    "brandName": "吉利银河",
+    "seriesName": "银河L7",
+    "subBrandName": "吉利银河",
+    "price": "10.47-15.47万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/00de72e8346a464fa99ff1cf935bce9e~tplv-resize:640:0.png",
+    "rank": 42,
+    "count": 948104
+  },
+  {
+    "brandName": "魏牌",
+    "seriesName": "蓝山",
+    "subBrandName": "长城汽车",
+    "price": "27.38-32.68万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/b2fc30a2a36d424ebde60c4da44d95b6~tplv-resize:640:0.png",
+    "rank": 43,
+    "count": 946852
+  },
+  {
+    "brandName": "丰田",
+    "seriesName": "锋兰达",
+    "subBrandName": "广汽丰田",
+    "price": "8.78-14.68万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/2e716928f981407b80c5e8772b8141a2~tplv-resize:640:0.png",
+    "rank": 44,
+    "count": 945746
+  },
+  {
+    "brandName": "沃尔沃",
+    "seriesName": "沃尔沃XC90",
+    "subBrandName": "沃尔沃(进口)",
+    "price": "44.90-56.90万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/66f59dfed0a7488fb1bf1f2d6fa82819~tplv-resize:640:0.png",
+    "rank": 45,
+    "count": 942970
   },
   {
     "brandName": "别克",
@@ -428,25 +410,43 @@
     "subBrandName": "上汽通用别克",
     "price": "16.99-19.99万",
     "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/778a75c4871b4a9daf9cc564e40259ff~tplv-resize:640:0.png",
+    "rank": 46,
+    "count": 941870
+  },
+  {
+    "brandName": "大众",
+    "seriesName": "途岳",
+    "subBrandName": "上汽大众",
+    "price": "7.99-17.16万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/c33c6674860948149e5d808e05ae222d~tplv-resize:640:0.png",
+    "rank": 47,
+    "count": 939242
+  },
+  {
+    "brandName": "路虎",
+    "seriesName": "揽胜",
+    "subBrandName": "路虎(进口)",
+    "price": "141.19-335.80万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/08ce9dde46f64638aa4df622ce69b497~tplv-resize:640:0.png",
     "rank": 48,
-    "count": 953385
+    "count": 936324
   },
   {
-    "brandName": "昊铂",
-    "seriesName": "昊铂HL",
-    "subBrandName": "广汽埃安新能源",
-    "price": "",
-    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/11ffcf44b8fd497a9a1c591434b29c7a~tplv-resize:640:0.png",
+    "brandName": "东风奕派",
+    "seriesName": "eπ008",
+    "subBrandName": "东风乘用车",
+    "price": "16.36-19.86万",
+    "image": "https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/574dba8c153148afbe009549ea6c94fb~tplv-resize:640:0.png",
     "rank": 49,
-    "count": 952799
+    "count": 936252
   },
   {
-    "brandName": "奥迪",
-    "seriesName": "奥迪Q7",
-    "subBrandName": "奥迪(进口)",
-    "price": "46.34-61.16万",
-    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/50ba485a370e49319782bcd5684c5c3d~tplv-resize:640:0.png",
+    "brandName": "丰田",
+    "seriesName": "威兰达",
+    "subBrandName": "广汽丰田",
+    "price": "12.98-22.08万",
+    "image": "https://p3-dcd.byteimg.com/img/tos-cn-i-dcdx/f81c60b3512f4732baf8f9b8d3fc4fc1~tplv-resize:640:0.png",
     "rank": 50,
-    "count": 951834
+    "count": 935338
   }
 ]
