@@ -14,8 +14,7 @@ const {
   OilCity
 } = OilInfo;
 
-const { 
-  randomRgbaColor, 
+const {  
   sendEmail 
 } = util;
 
