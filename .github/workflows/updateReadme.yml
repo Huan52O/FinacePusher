@@ -17,24 +17,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v2  
 
-      - name: Update README
-        run: |
-          # 获取当前日期和时间
-          current_date=$(date +"%Y-%m-%d %H:%M:%S")
-          # 在 README.md 文件末尾添加当前日期和时间
-          echo "Last updated: $current_date" >> README.md
+      - name: Setup Node.js
+        uses: actions/setup-node@v2  
+        with:
+          node-version: '14'
 
-      - name: Commit and push changes
+      - name: npm install
+        run: npm install
+      
+      - name: Start task
+        run: node updateReadme.js
+        # 提交并推送修改
+      - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Update README with current date"
-            git push
-          fi
+          git add .
+          git commit -m "update READMME"
+          git push

@@ -11,6 +11,15 @@ const randomRgbaColor = () => {
   return `rgb(${r},${g},${b},${alpha})`; //返回rgba(r,g,b,a)格式颜色
 };
 
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 const Transporter = nodemailer.createTransport({
   host: "smtp.qq.com",
   port: 587,
@@ -86,6 +95,7 @@ const writeDataToFile = (data, filePath) => {
 
 module.exports = {
   randomRgbaColor,
+  getRandomColor,
   sendEmail,
   dateFormater,
   getNowSeconds,
