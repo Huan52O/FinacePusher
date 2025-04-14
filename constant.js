@@ -89,7 +89,13 @@ const NbaInfo = {
 const OilInfo = {
   OilUrl: 'http://apis.juhe.cn/gnyj/query',
   OilKey: 'b8757c3851968e979f533f27fc7969c7',
-  OilCity: '广东'
+  OilCity: '广东',
+  OilMapping: {
+    '92h': { name: '92#汽油', color: '#4facfe' },
+    '95h': { name: '95#汽油', color: '#00f2fe' },
+    '98h': { name: '98#汽油', color: '#7b61ff' },
+    '0h': { name: '0#柴油', color: '#00e676' }
+  }
 };
 
 const KnowCarInfo = {

@@ -11,7 +11,8 @@ const {
 const {
   OilUrl,
   OilKey,
-  OilCity
+  OilCity,
+  OilMapping
 } = OilInfo;
 
 const {  
@@ -42,28 +43,17 @@ const createOilHtml = async () => {
     const resultGd = result.filter(item => {
       return item.city === OilCity
     })[0];
-    const list = [
-      {
-        price: resultGd['92h'],
-        name: '92#汽油',
-        color: '#4facfe'
-      },
-      {
-        price: resultGd['95h'],
-        name: '95#汽油',
-        color: '#00f2fe'
-      },
-      {
-        price: resultGd['98h'],
-        name: '98#汽油',
-        color: '#7b61ff'
-      },
-      {
-        price: resultGd['0h'],
-        name: '0#柴油',
-        color: '#00e676'
-      },
-    ]
+    const list = [];
+    for (const key in OilMapping) {
+      if (OilMapping.hasOwnProperty(key)) {
+        list.push({
+          price: resultGd[key],
+          name: OilMapping[key].name,
+          color: OilMapping[key].color
+        })
+      }
+    }
+    //优化代码结构，使用循环生成
 
     const html = `
       <div style="background: #0a0e1a; color: #ffffff; line-height: 1.2; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px;">
