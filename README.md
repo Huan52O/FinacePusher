@@ -26,7 +26,5 @@
 - [x] <span style="display:inline-block; padding:0.2em 0.5em; margin:0.2em; border-radius:0.3em; background:#70AD53; color:#000;">2025-04-05 02:42:18</span>
 - [x] <span style="display:inline-block; padding:0.2em 0.5em; margin:0.2em; border-radius:0.3em; background:#5BF0B7; color:#000;">2025-04-07 02:49:33</span>
 - [x] <span style="display:inline-block; padding:0.2em 0.5em; margin:0.2em; border-radius:0.3em; background:#6E3858; color:#000;">2025-04-09 02:47:26</span>
-
 - [x] <span style="display:inline-block; padding:0.2em 0.5em; margin:0.2em; border-radius:0.3em; background:#A261A9; color:#fff;">2025-04-11 10:47:20</span>
-
 - [x] <span style="display:inline-block; padding:0.2em 0.5em; margin:0.2em; border-radius:0.3em; background:#94B7E2; color:#fff;">2025-04-13 11:58:21</span>

@@ -17,7 +17,7 @@ const readReadme = () => {
 };
 
 const appendToReadme = (content, newContent) => {
-  const newText = `\n\n${newContent}`;
+  const newText = `\n${newContent}`;
   return content + newText;
 };
 
