@@ -1,0 +1,30 @@
+name: updateFund
+on: 
+  workflow_dispatch:
+    #branches:
+    #  - main
+    inputs:
+      tags:
+        description: 'Test scenario tags'
+        required: false 
+        type: boolean 
+  schedule:
+    - cron: "19 0 * * *"
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2  
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2  
+        with:
+          node-version: '14'
+
+      - name: npm install
+        run: npm install
+      
+      - name: Start task
+        run: node updateFundData.js

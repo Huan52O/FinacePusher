@@ -130,7 +130,9 @@ const KnowCarInfo = {
       border: '#0095ff50'
     },
   ]
-}
+};
+
+const FundURL = "http://fundgz.1234567.com.cn/js/";
 
 module.exports = {
   Day,
@@ -142,5 +144,6 @@ module.exports = {
   FinaceInfo,
   NbaInfo,
   OilInfo,
-  KnowCarInfo
+  KnowCarInfo,
+  FundURL
 }

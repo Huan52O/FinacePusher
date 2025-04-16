@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/lib/echarts.min.js"></script>
+    <script src="./src/resource/fund.js"></script>
+    <title>Echarts</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" style="width: 1200px; height: 800px"></div>
+
+    <script>
+      var chartDom = document.getElementById("main");
+      var myChart = echarts.init(chartDom);
+
+      function getLevelOption() {
+        return [
+          {
+            itemStyle: {
+              borderColor: "#777",
+              borderWidth: 0,
+              gapWidth: 1,
+            },
+            upperLabel: {
+              show: false,
+            },
+          },
+          {
+            itemStyle: {
+              borderColor: "#555",
+              borderWidth: 5,
+              gapWidth: 1,
+            },
+            emphasis: {
+              itemStyle: {
+                borderColor: "#ddd",
+              },
+            },
+          },
+          {
+            colorSaturation: [0.35, 0.5],
+            itemStyle: {
+              borderWidth: 5,
+              gapWidth: 1,
+              borderColorSaturation: 0.6,
+            },
+          },
+        ];
+      }
+
+      myChart.setOption(
+        (option = {
+          title: {
+            text: "测试标题",
+            left: "center",
+          },
+          tooltip: {
+            formatter: function (info) {
+              var value = info.value;
+              var treePathInfo = info.treePathInfo;
+              var treePath = [];
+              for (var i = 1; i < treePathInfo.length; i++) {
+                treePath.push(treePathInfo[i].name);
+              }
+              return [
+                '<div class="tooltip-title">' +
+                  echarts.format.encodeHTML(treePath.join("/")) +
+                  "</div>",
+                "Disk Usage: " + echarts.format.addCommas(value) + " KB",
+              ].join("");
+            },
+          },
+          series: [
+            {
+              name: "Disk Usage",
+              type: "treemap",
+              visibleMin: 300,
+              label: {
+                show: true,
+                formatter: "{b}",
+              },
+              upperLabel: {
+                show: true,
+                height: 30,
+              },
+              itemStyle: {
+                borderColor: "#fff",
+              },
+              levels: getLevelOption(),
+              data: res,
+            },
+          ],
+        })
+      );
+    </script>
+  </body>
+</html>
