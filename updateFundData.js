@@ -139,81 +139,6 @@ const list = [
   },
 ];
 
-// const res = [
-//   {
-//     fundcode: "005918",
-//     name: "天弘沪深300ETF联接C",
-//     jzrq: "2025-04-15",
-//     dwjz: "1.1512",
-//     gsz: "1.1426",
-//     gszzl: "-0.75",
-//     value: 75,
-//     originValue: -75,
-//     gztime: "2025-04-16 10:59",
-//     area: "沪深300",
-//   },
-//   {
-//     fundcode: "161725",
-//     name: "招商中证白酒指数(LOF)A",
-//     jzrq: "2025-04-15",
-//     dwjz: "0.8176",
-//     gsz: "0.8095",
-//     gszzl: "-0.99",
-//     value: 99,
-//     originValue: -99,
-//     gztime: "2025-04-16 10:58",
-//     area: "baijiu",
-//   },
-//   {
-//     fundcode: "005827",
-//     name: "易方达蓝筹精选混合",
-//     jzrq: "2025-04-15",
-//     dwjz: "1.8184",
-//     gsz: "1.7836",
-//     gszzl: "-1.91",
-//     value: 191,
-//     originValue: -191,
-//     gztime: "2025-04-16 11:00",
-//     area: "baijiu",
-//   },
-//   {
-//     fundcode: "003096",
-//     name: "中欧医疗健康混合C",
-//     jzrq: "2025-04-15",
-//     dwjz: "1.4811",
-//     gsz: "1.4608",
-//     gszzl: "-1.37",
-//     value: 137,
-//     originValue: -137,
-//     gztime: "2025-04-16 11:00",
-//     area: "yiliao",
-//   },
-//   {
-//     fundcode: "161726",
-//     name: "招商国证生物医药指数(LOF)A",
-//     jzrq: "2025-04-15",
-//     dwjz: "0.3594",
-//     gsz: "0.3521",
-//     gszzl: "-2.04",
-//     value: 204,
-//     originValue: -204,
-//     gztime: "2025-04-16 10:59",
-//     area: "yiliao",
-//   },
-//   {
-//     fundcode: "003984",
-//     name: "嘉实新能源新材料股票A",
-//     jzrq: "2025-04-15",
-//     dwjz: "1.6675",
-//     gsz: "1.6465",
-//     gszzl: "-1.26",
-//     value: 126,
-//     originValue: -126,
-//     gztime: "2025-04-16 10:59",
-//     area: "energe",
-//   },
-// ];
-
 const classifyByArea = (data) => {
   const areaMap = {};
   data.forEach((item) => {
@@ -227,7 +152,6 @@ const classifyByArea = (data) => {
       };
     }
     areaMap[area].value += value;
-    areaMap[area].originValue += originValue;
     areaMap[area].children.push({
       name,
       value,
@@ -246,6 +170,9 @@ const classifyByArea = (data) => {
   const result = [];
   for (const area in areaMap) {
     const areaData = areaMap[area];
+    const childrenCount = areaData.children.length;
+    const totalOriginValue = areaData.children.reduce((sum, child) => sum + child.originValue, 0);
+    areaData.originValue = totalOriginValue / childrenCount;
     result.push({
       ...areaData,
       path: area,

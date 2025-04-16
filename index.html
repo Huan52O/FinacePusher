@@ -58,12 +58,13 @@
       myChart.setOption(
         (option = {
           title: {
-            text: "测试标题",
+            text: "板块行情",
             left: "center",
           },
           tooltip: {
             formatter: function (info) {
-              var value = info.value;
+              var value = info.data.originValue / 100;
+              var val = value > 0 ? `+${value}` : value;
               var treePathInfo = info.treePathInfo;
               var treePath = [];
               for (var i = 1; i < treePathInfo.length; i++) {
@@ -73,13 +74,13 @@
                 '<div class="tooltip-title">' +
                   echarts.format.encodeHTML(treePath.join("/")) +
                   "</div>",
-                "Disk Usage: " + echarts.format.addCommas(value) + " KB",
+                echarts.format.addCommas(val) + " %",
               ].join("");
             },
           },
           series: [
             {
-              name: "Disk Usage",
+              name: "板块",
               type: "treemap",
               visibleMin: 300,
               label: {
