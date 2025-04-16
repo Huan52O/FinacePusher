@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const CONSTANT = require("./constant");
 
-const { FundURL } = CONSTANT;
+const { Day, FundURL } = CONSTANT;
 
 const filePath = path.join(__dirname, 'src', 'resource', 'fund.js');
 
@@ -172,7 +172,7 @@ const classifyByArea = (data) => {
     const areaData = areaMap[area];
     const childrenCount = areaData.children.length;
     const totalOriginValue = areaData.children.reduce((sum, child) => sum + child.originValue, 0);
-    areaData.originValue = totalOriginValue / childrenCount;
+    areaData.originValue = (totalOriginValue / childrenCount).toFixed();
     result.push({
       ...areaData,
       path: area,
@@ -225,4 +225,4 @@ const task = async () => {
   });
 };
 
-task();
+![0, 6].includes(Day) && task();

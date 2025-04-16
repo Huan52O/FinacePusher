@@ -69,7 +69,7 @@ var res = [
   {
     "name": "医药",
     "value": 341,
-    "originValue": -53.833333333333336,
+    "originValue": -53.8,
     "children": [
       {
         "name": "中欧医疗健康混合C",

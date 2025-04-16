@@ -63,7 +63,7 @@
           },
           tooltip: {
             formatter: function (info) {
-              var value = info.data.originValue / 100;
+              var value = (info.data.originValue / 100).toFixed(2);
               var val = value > 0 ? `+${value}` : value;
               var treePathInfo = info.treePathInfo;
               var treePath = [];
