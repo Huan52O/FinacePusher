@@ -1,4 +1,4 @@
-var res = [
+var funds = [
   {
     "name": "沪深300",
     "value": 93,

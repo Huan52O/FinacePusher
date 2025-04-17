@@ -1,5 +1,7 @@
 const axios = require("axios");
+const fs = require('fs');
 const util = require('./util');
+const path = require('path');
 const CONSTANT = require('./constant');
 
 const {
@@ -37,9 +39,71 @@ const getOilInfo = () => {
   });
 };
 
+const classifyByArea = (data) => {
+  const areaMap = {};
+  data.forEach(item => {
+    const { city } = item;
+    const h92 = Number(item['92h'])
+    const h95 = Number(item['95h'])
+    const h98 = Number(item['98h'])
+    const h0 = Number(item['0h'])
+    if (!areaMap[city]) {
+      areaMap[city] = {
+        name: city,
+        value: 0,
+        children: [
+          {
+            name: '92h',
+            value: h92,
+            path: `${city}/92h`
+          },
+          {
+            name: '95h',
+            value: h95,
+            path: `${city}/95h`
+          },
+          {
+            name: '98h',
+            value: h98,
+            path: `${city}/98h`
+          },
+          {
+            name: '0h',
+            value: h0,
+            path: `${city}/0h`
+          },
+        ]
+      }
+    }
+    areaMap[city].value += (h92 + h95 + h98 + h0);
+  });
+  const result = [];
+  for (const area in areaMap) {
+    const areaData = areaMap[area];
+    const childrenCount = areaData.children.length;
+    const totalValue = areaData.children.reduce((sum, child) => sum + child.value, 0)
+    areaData.value = (totalValue / childrenCount).toFixed(2) * 1
+    result.push({
+      ...areaData,
+      path: area
+    })
+  };
+  return result;
+};
+
 const createOilHtml = async () => {
   try {
     const result = await getOilInfo();
+    const oilRes = classifyByArea(result);
+    const filePath = path.join(__dirname, 'src', 'resource', 'oilRes.js')
+    const oilResStr = `var oils = ${JSON.stringify(oilRes, null, 2)}`
+    fs.writeFile(filePath, oilResStr, 'utf-8', (err) => {
+      if (err) {
+        console.log('写入文件时出错：', err)
+      } else {
+        console.log('数据写入成功')
+      }
+    })
     const resultGd = result.filter(item => {
       return item.city === OilCity
     })[0];
@@ -53,7 +117,6 @@ const createOilHtml = async () => {
         })
       }
     }
-    //优化代码结构，使用循环生成
 
     const html = `
       <div style="background: #0a0e1a; color: #ffffff; line-height: 1.2; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px;">

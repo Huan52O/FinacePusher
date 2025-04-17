@@ -5,38 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./src/lib/echarts.min.js"></script>
     <script src="./src/resource/fund.js"></script>
+    <script src="./src/resource/oilRes.js"></script>
     <title>Echarts</title>
     <style>
       body {
         display: flex;
         justify-content: center;
       }
+      /* 基础样式 */
+      .container {
+        max-width: 1200px;
+        /* margin: 0 auto; */
+        padding: 20px;
+      }
+
+      /* Tab栏样式 */
+      .tab-bar {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .tab-btn {
+        padding: 10px 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+      }
+
+      .tab-btn.active {
+        border-bottom-color: #007bff;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      /* 内容区域 */
+      .content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s, height 0.3s;
+      }
+
+      .content.active {
+        display: block;
+        opacity: 1;
+        height: auto;
+      }
+
+      .main {
+        width: 1200px;
+        height: 800px;
+      }
+      .mobile {
+        width: 800px;
+        height: 1200px;
+      }
     </style>
   </head>
   <body>
-    <div id="main" style="width: 1200px; height: 800px"></div>
-    <div id="mobile" style="width: 800px; height: 1200px;"></div>
+    <div class="container">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-target="fund">Fund</button>
+        <button class="tab-btn" data-target="oil">Oil</button>
+      </div>
+
+      <div id="fund" class="content active">
+        <div id="fund_main" class="main"></div>
+        <div id="fund_mobile" class="mobile"></div>
+      </div>
+
+      <div id="oil" class="content">
+        <div id="oil_main" class="main"></div>
+        <div id="oil_mobile" class="mobile"></div>
+      </div>
+    </div>
 
     <script>
-      function isMobile () {
+      function isMobile() {
         const UA = navigator.userAgent;
-        const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(UA);
-        const isTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const isMobileUA =
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            UA
+          );
+        const isTouchScreen =
+          "ontouchstart" in window || navigator.maxTouchPoints > 0;
         const isSmallScreen = window.innerWidth < 768;
         return isMobileUA || isTouchScreen || isSmallScreen;
       }
-
-      var chartDom = document.getElementById("main");
-      var mobileDom = document.getElementById('mobile');
-      var isMobileTerminal = isMobile();
-      var myChart;
-      if (isMobileTerminal) {
-        chartDom.style.display = 'none';
-        myChart = echarts.init(mobileDom);
-      } else {
-        mobileDom.style.display = 'none';
-        myChart = echarts.init(chartDom);
-      };
 
       function getLevelOption() {
         return [
@@ -73,51 +136,148 @@
         ];
       }
 
-      myChart.setOption(
-        (option = {
-          title: {
-            text: "板块行情",
-            left: "center",
-          },
-          tooltip: {
-            formatter: function (info) {
-              var value = (info.data.originValue / 100).toFixed(2);
-              var val = value > 0 ? `+${value}` : value;
-              var treePathInfo = info.treePathInfo;
-              var treePath = [];
-              for (var i = 1; i < treePathInfo.length; i++) {
-                treePath.push(treePathInfo[i].name);
-              }
-              return [
-                '<div class="tooltip-title">' +
-                  echarts.format.encodeHTML(treePath.join("/")) +
-                  "</div>",
-                echarts.format.addCommas(val) + " %",
-              ].join("");
-            },
-          },
-          series: [
-            {
-              name: "板块",
-              type: "treemap",
-              visibleMin: 300,
-              label: {
-                show: true,
-                formatter: "{b}",
+      document.addEventListener("DOMContentLoaded", function () {
+        // 初始化渲染Echarts图表
+        var fundMainDom = document.getElementById("fund_main");
+        var fundMbDom = document.getElementById("fund_mobile");
+        var fundChart;
+        var oilMainDom = document.getElementById("oil_main");
+        var oilMbDom = document.getElementById("oil_mobile");
+        var oilChart;
+
+        // 获取所有Tab按钮和内容区域
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".content");
+
+        // 初始显示fund内容
+        document.getElementById("fund").classList.add("active");
+
+        // 为每个Tab按钮添加点击事件
+        tabBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // 移除所有active类
+            tabBtns.forEach((b) => b.classList.remove("active"));
+            contents.forEach((c) => c.classList.remove("active"));
+
+            // 为当前点击的按钮和对应内容添加active类
+            this.classList.add("active");
+            const targetId = this.getAttribute("data-target");
+            document.getElementById(targetId).classList.add("active");
+          });
+        });
+
+        // 响应式显示控制函数
+        function handleResponsiveDisplay() {
+          const isMobileTerminal = isMobile();
+          fundChart = echarts.init(isMobileTerminal ? fundMbDom : fundMainDom);
+          oilChart = echarts.init(isMobileTerminal ? oilMbDom : oilMainDom);
+
+          fundChart.setOption(
+            (option = {
+              title: {
+                text: "板块行情",
+                left: "center",
               },
-              upperLabel: {
-                show: true,
-                height: 30,
+              tooltip: {
+                formatter: function (info) {
+                  var value = (info.data.originValue / 100).toFixed(2);
+                  var val = value > 0 ? `+${value}` : value;
+                  var treePathInfo = info.treePathInfo;
+                  var treePath = [];
+                  for (var i = 1; i < treePathInfo.length; i++) {
+                    treePath.push(treePathInfo[i].name);
+                  }
+                  return [
+                    '<div class="tooltip-title">' +
+                      echarts.format.encodeHTML(treePath.join("/")) +
+                      "</div>",
+                    echarts.format.addCommas(val) + " %",
+                  ].join("");
+                },
               },
-              itemStyle: {
-                borderColor: "#fff",
+              series: [
+                {
+                  name: "板块",
+                  type: "treemap",
+                  visibleMin: 300,
+                  label: {
+                    show: true,
+                    formatter: "{b}",
+                  },
+                  upperLabel: {
+                    show: true,
+                    height: 30,
+                  },
+                  itemStyle: {
+                    borderColor: "#fff",
+                  },
+                  levels: getLevelOption(),
+                  data: funds,
+                },
+              ],
+            })
+          );
+
+          oilChart.setOption(
+            (option = {
+              title: {
+                text: "油价行情",
+                left: "center",
               },
-              levels: getLevelOption(),
-              data: res,
-            },
-          ],
-        })
-      );
+              tooltip: {
+                formatter: function (info) {
+                  var value = info.value;
+                  var treePathInfo = info.treePathInfo;
+                  var treePath = [];
+                  for (var i = 1; i < treePathInfo.length; i++) {
+                    treePath.push(treePathInfo[i].name);
+                  }
+                  return [
+                    '<div class="tooltip-title">' +
+                      echarts.format.encodeHTML(treePath.join("/")) +
+                      "</div>",
+                    echarts.format.addCommas(value) + " 元/L",
+                  ].join("");
+                },
+              },
+              series: [
+                {
+                  name: "地区",
+                  type: "treemap",
+                  visibleMin: 300,
+                  label: {
+                    show: true,
+                    formatter: "{b}",
+                  },
+                  upperLabel: {
+                    show: true,
+                    height: 30,
+                  },
+                  itemStyle: {
+                    borderColor: "#fff",
+                  },
+                  levels: getLevelOption(),
+                  data: oils,
+                },
+              ],
+            })
+          );
+
+          document.querySelectorAll(".main").forEach((el) => {
+            el.style.display = isMobileTerminal ? "none" : "block";
+          });
+
+          document.querySelectorAll(".mobile").forEach((el) => {
+            el.style.display = isMobileTerminal ? "block" : "none";
+          });
+        }
+
+        // 初始调用
+        handleResponsiveDisplay();
+
+        // 窗口大小改变时重新计算
+        window.addEventListener("resize", handleResponsiveDisplay);
+      });
     </script>
   </body>
 </html>

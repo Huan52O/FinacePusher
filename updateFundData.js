@@ -247,7 +247,7 @@ const task = async () => {
   // 将arr处理成echarts矩形树图数据结构
   const result = classifyByArea(arr);
   // 写入目录
-  const str = `var res = ${JSON.stringify(result, null, 2)};`
+  const str = `var funds = ${JSON.stringify(result, null, 2)};`
   fs.writeFile(filePath, str, 'utf8', (err) => {
     if (err) {
         console.error('写入文件时出错:', err);
