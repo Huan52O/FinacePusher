@@ -1,5 +1,6 @@
 const axios = require('axios');
 const path = require('path');
+const fs = require('fs');
 const utils = require('./util');
 const CONSTANT = require('./constant');
 
@@ -71,13 +72,53 @@ const getRankList = (count) => {
   })
 }
 
+const classifyByArea = (data) => {
+  const dataMap = {}
+  data.forEach(item => {
+    const { brandName, seriesName, score, outterDetailType } = item;
+    if (!dataMap[outterDetailType]) {
+      dataMap[outterDetailType] = {
+        name: OutterDetailTypeMap[outterDetailType],
+        value: 0,
+        children: []
+      }
+    };
+    dataMap[outterDetailType].value += score;
+    dataMap[outterDetailType].children.push({
+      name: seriesName,
+      value: score,
+      path: `${OutterDetailTypeMap[outterDetailType]}/${seriesName}`,
+      brandName
+    })
+  });
+  const result = [];
+  for (const type in dataMap) {
+    const typeData = dataMap[type]
+    const childCount = typeData.children.length;
+    const totalScore = typeData.children.reduce((sum, child) => sum + child.value, 0);
+    typeData.value = (totalScore / childCount).toFixed(2) * 1;
+    result.push({
+      ...typeData,
+      path: OutterDetailTypeMap[type]
+    })
+  };
+  return result;
+}
+
 const sendRankInfoTask = async () => {
   try {
     const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
     const ranks = await getRankList(50);
-    console.log(ranks.length);
-    const filePath = path.join(__dirname, 'src', 'resource', 'rank.json')
-    writeDataToFile(ranks, filePath)
+    const rankRes = classifyByArea(ranks);
+    const rankStr = `var rankRes = ${JSON.stringify(rankRes, null, 2)}`;
+    const filePath = path.join(__dirname, 'src', 'resource', 'rank.js');
+    fs.writeFile(filePath, rankStr, 'utf-8', (err) => {
+      if (err) {
+        console.log('写入文件时出错：', err)
+      } else {
+        console.log('数据写入成功')
+      }
+    });
     const template = `<div style="max-width:600px; margin:0 auto; background:#141414; border-radius:16px; box-shadow:0 0 30px rgba(255,80,0,0.1);">
       <!-- 标题 -->
       <div style="padding:28px 20px; background:linear-gradient(90deg, #ff6b00, #ff3c00); border-radius:16px 16px 0 0;">

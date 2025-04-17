@@ -1,4 +1,6 @@
 const axios = require("axios");
+const fs = require('fs');
+const path = require('path');
 const util = require('./util');
 const CONSTANT = require('./constant');
 
@@ -90,6 +92,45 @@ const renderArea = (areaData, area) => {
   return areaHtml
 }
 
+const classifyByArea = (data) => {
+  const areaMap = {}
+  data.forEach(item => {
+    const { alias, winningPercentage, localizedName, image, rawName } = item;
+    if (!areaMap[alias]) {
+      areaMap[alias] = {
+        name: alias,
+        value: 0,
+        children: []
+      }
+    };
+    const rate = Number(winningPercentage);
+    const alpha = Math.min(1, rate);
+    areaMap[alias].value += rate;
+    areaMap[alias].children.push({
+      name: localizedName,
+      value: Number(winningPercentage),
+      path: `${alias}/${localizedName}`,
+      image,
+      rawName,
+      itemStyle: {
+        color: `rgba(${alias.startsWith('W') ? `255, 0, 0, ${alpha}` : `0, 123, 255, ${alpha}`})`
+      }
+    })
+  });
+  const result = [];
+  for (const area in areaMap) {
+    const areaData = areaMap[area];
+    const childrenCount = areaData.children.length;
+    const totalValue = areaData.children.reduce((sum, child) => sum + child.value, 0)
+    areaData.value = (totalValue / childrenCount).toFixed(2) * 1;
+    result.push({
+      ...areaData,
+      path: area
+    })
+  };
+  return result;
+}
+
 const createNBAHtml = async () => {
   try {
     const Time = dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds());
@@ -109,6 +150,17 @@ const createNBAHtml = async () => {
       // 按胜率排序
       return b.winningPercentage - a.winningPercentage
     });
+    const filterRes = classifyByArea(result);
+    const filePath = path.join(__dirname, 'src', 'resource', 'nbaRes.js')
+    const nbaResStr = `var nbaRes = ${JSON.stringify(filterRes, null, 2)}`
+    fs.writeFile(filePath, nbaResStr, 'utf-8', (err) => {
+      if (err) {
+        console.log('写入文件时出错：', err)
+      } else {
+        console.log('数据写入成功')
+      }
+    });
+
     const EASTERNS = result.filter(item => {
       return item.alias === 'EASTERN'
     });
