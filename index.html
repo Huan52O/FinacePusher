@@ -115,10 +115,6 @@
           id: "fund",
           chart: null,
           option: {
-            title: {
-              text: "Area Info",
-              left: "center",
-            },
             tooltip: {
               formatter: function (info) {
                 var value = (info.data.originValue / 100).toFixed(2);
@@ -166,10 +162,6 @@
           id: "oil",
           chart: null,
           option: {
-            title: {
-              text: "Oil Info",
-              left: "center",
-            },
             tooltip: {
               formatter: function (info) {
                 var value = info.value;
@@ -214,10 +206,6 @@
           id: "nba",
           chart: null,
           option: {
-            title: {
-              text: "Nba Info",
-              left: "center",
-            },
             tooltip: {
               formatter: function (info) {
                 var value = info.value;
@@ -277,10 +265,6 @@
           id: "car",
           chart: null,
           option: {
-            title: {
-              text: "Car Info",
-              left: "center",
-            },
             tooltip: {
               formatter: function (info) {
                 var value = info.value;
@@ -336,10 +320,6 @@
           id: "day",
           chart: null,
           option: {
-            title: {
-              text: "Day Info",
-              left: "center",
-            },
             tooltip: {
               formatter: function (info) {
                 var value = info.data.count;
@@ -496,9 +476,6 @@
         // 获取所有Tab按钮和内容区域
         const tabBtns = document.querySelectorAll(".tab-btn");
         const contents = document.querySelectorAll(".content");
-
-        // 初始显示内容
-        document.getElementById("oil").classList.add("active");
 
         // 为每个Tab按钮添加点击事件
         tabBtns.forEach((btn) => {
