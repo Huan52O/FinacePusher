@@ -95,7 +95,7 @@ const renderArea = (areaData, area) => {
 const classifyByArea = (data) => {
   const areaMap = {}
   data.forEach(item => {
-    const { alias, winningPercentage, localizedName, image, rawName } = item;
+    const { alias, winningPercentage, localizedName, image, rawName, wins, losses } = item;
     if (!areaMap[alias]) {
       areaMap[alias] = {
         name: alias,
@@ -112,6 +112,7 @@ const classifyByArea = (data) => {
       path: `${alias}/${localizedName}`,
       image,
       rawName,
+      record: `${wins}-${losses}`,
       itemStyle: {
         color: `rgba(${alias.startsWith('W') ? `255, 0, 0, ${alpha}` : `0, 123, 255, ${alpha}`})`
       }

@@ -218,6 +218,7 @@
                   '<div class="tooltip-title">' +
                     echarts.format.encodeHTML(treePath.join("/")) +
                     "</div>",
+                  "战绩：" + echarts.format.addCommas(info.data.record),
                   "胜率：" + echarts.format.addCommas(value),
                 ].join("");
               },
@@ -236,7 +237,7 @@
                         "\n" +
                         params.data.rawName +
                         "\n" +
-                        params.data.value
+                        '(' + params.data.record + ') ' + params.data.value
                       );
                     }
                   },
