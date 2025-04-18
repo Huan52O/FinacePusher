@@ -8,6 +8,7 @@
     <script src="./src/resource/oilRes.js"></script>
     <script src="./src/resource/nbaRes.js"></script>
     <script src="./src/resource/rank.js"></script>
+    <script src="./src/resource/dayRes.js"></script>
     <title>Echarts</title>
     <style>
       body {
@@ -48,7 +49,6 @@
       /* 内容区域 */
       .content {
         display: none;
-        padding: 20px;
         border: 1px solid #eee;
         border-radius: 4px;
         opacity: 0;
@@ -64,30 +64,31 @@
       }
 
       .main {
-        width: 1200px;
+        width: 1300px;
         height: 800px;
       }
       .mobile {
-        width: 800px;
-        height: 1200px;
+        width: 500px;
+        height: 1000px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="tab-bar">
-        <button class="tab-btn active" data-target="fund">Fund</button>
-        <button class="tab-btn" data-target="oil">Oil</button>
+        <button class="tab-btn" data-target="fund">Fund</button>
+        <button class="tab-btn active" data-target="oil">Oil</button>
         <button class="tab-btn" data-target="nba">Nba</button>
         <button class="tab-btn" data-target="car">Car</button>
+        <button class="tab-btn" data-target="day">Day</button>
       </div>
 
-      <div id="fund" class="content active">
+      <div id="fund" class="content">
         <div id="fund_main" class="main"></div>
         <div id="fund_mobile" class="mobile"></div>
       </div>
 
-      <div id="oil" class="content">
+      <div id="oil" class="content active">
         <div id="oil_main" class="main"></div>
         <div id="oil_mobile" class="mobile"></div>
       </div>
@@ -100,6 +101,11 @@
       <div id="car" class="content">
         <div id="car_main" class="main"></div>
         <div id="car_mobile" class="mobile"></div>
+      </div>
+
+      <div id="day" class="content">
+        <div id="day_main" class="main"></div>
+        <div id="day_mobile" class="mobile"></div>
       </div>
     </div>
 
@@ -165,13 +171,22 @@
         var carMainDom = document.getElementById("car_main");
         var carMbDom = document.getElementById("car_mobile");
         var carChart;
+        var dayMainDom = document.getElementById('day_main');
+        var dayMbDom = document.getElementById('day_mobile');
+        var dayChart;
+        const maxDayResValue = Math.max(...dayRes.map(item => item.value));
+        const processedDayRes = dayRes.map(item => ({
+          ...item,
+          value: maxDayResValue - item.value + 1,
+          count: item.value
+        }))
 
         // 获取所有Tab按钮和内容区域
         const tabBtns = document.querySelectorAll(".tab-btn");
         const contents = document.querySelectorAll(".content");
 
-        // 初始显示fund内容
-        document.getElementById("fund").classList.add("active");
+        // 初始显示内容
+        document.getElementById("oil").classList.add("active");
 
         // 为每个Tab按钮添加点击事件
         tabBtns.forEach((btn) => {
@@ -194,6 +209,7 @@
           oilChart = echarts.init(isMobileTerminal ? oilMbDom : oilMainDom);
           nbaChart = echarts.init(isMobileTerminal ? nbaMbDom : nbaMainDom);
           carChart = echarts.init(isMobileTerminal ? carMbDom : carMainDom);
+          dayChart = echarts.init(isMobileTerminal ? dayMbDom : dayMainDom);
 
           fundChart.setOption(
             (option = {
@@ -378,7 +394,11 @@
                   label: {
                     show: true,
                     formatter: function(params) {
-                      return params.data.brandName + '\n' +  params.data.name + '\n' + params.data.value + '分'
+                      if (params.data.brandName) {
+                        return params.data.brandName + '\n' +  params.data.name + '\n' + params.data.value + '分'
+                      } else {
+                        return params.data.name + '\n' + params.data.value + '分'
+                      }
                     },
                   },
                   upperLabel: {
@@ -390,6 +410,53 @@
                   },
                   levels: getLevelOption(),
                   data: rankRes,
+                },
+              ],
+            })
+          );
+
+          dayChart.setOption(
+            (option = {
+              title: {
+                text: "Day Info",
+                left: "center",
+              },
+              tooltip: {
+                formatter: function (info) {
+                  var value = info.data.count;
+                  var treePathInfo = info.treePathInfo;
+                  var treePath = [];
+                  for (var i = 1; i < treePathInfo.length; i++) {
+                    treePath.push(treePathInfo[i].name);
+                  }
+                  return [
+                    '<div class="tooltip-title">' +
+                      echarts.format.encodeHTML(treePath.join("/")) +
+                      "</div>",
+                    echarts.format.addCommas(value) + " 天",
+                  ].join("");
+                },
+              },
+              series: [
+                {
+                  name: "事件",
+                  type: "treemap",
+                  visibleMin: 300,
+                  label: {
+                    show: true,
+                    formatter: function(params) {
+                      return params.data.name + '\n' + params.data.date + '\n' + params.data.count + '天'
+                    },
+                  },
+                  upperLabel: {
+                    show: true,
+                    height: 30,
+                  },
+                  itemStyle: {
+                    borderColor: "#fff",
+                  },
+                  levels: getLevelOption(),
+                  data: processedDayRes,
                 },
               ],
             })

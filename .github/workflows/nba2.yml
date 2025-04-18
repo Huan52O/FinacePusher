@@ -34,5 +34,9 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "update nbaRes.js"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else   
+            git commit -m "update nbaRes.js"
+            git push
+          fi

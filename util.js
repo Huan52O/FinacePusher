@@ -50,6 +50,15 @@ const sendEmail = (to, html, subject) => {
   });
 };
 
+const diffDay = (year, month, day) => {
+  const now = new Date()
+  const endDate = new Date(year, month - 1, day)
+  const leftTime = endDate.getTime() - now.getTime()
+  const leftSecond = parseInt(leftTime / 1000)
+  const countDay = Math.floor(leftSecond / (60 * 60 * 24)) + 1
+  return countDay
+};
+
 const dateFormater = (formater, time) => {
   let date = time ? new Date(time) : new Date(),
     Y = date.getFullYear() + '',
@@ -97,6 +106,7 @@ module.exports = {
   randomRgbaColor,
   getRandomColor,
   sendEmail,
+  diffDay,
   dateFormater,
   getNowSeconds,
   ensureDirectoryExistence,
