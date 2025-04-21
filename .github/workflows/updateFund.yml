@@ -1,15 +1,13 @@
 name: updateFund
 on: 
   workflow_dispatch:
-    #branches:
-    #  - main
     inputs:
       tags:
         description: 'Test scenario tags'
         required: false 
         type: boolean 
   schedule:
-    - cron: "20 0-7 * * *"
+    - cron: "20 0-7 * * 1-5"
 
 jobs:
   start:
