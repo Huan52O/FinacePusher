@@ -211,7 +211,6 @@ const createNBAHtml = async () => {
 
 // 根据日期获取赛程
 const getLiveSchedules = (date) => {
-  const isToday = dateFormater('YYYY-MM-DD') == date;
   const params = {
     apikey: NbaApiKey,
     version: NbaVersion,
@@ -224,7 +223,7 @@ const getLiveSchedules = (date) => {
     scn: SCN,
     date: date,
     ids: NbaId,
-    withcalendar: isToday,
+    withcalendar: false,
     type: 'LeagueSchedule'
   };
   return new Promise((resolve, reject) => {
