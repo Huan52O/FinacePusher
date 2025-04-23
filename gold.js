@@ -5,7 +5,7 @@ const utils = require('./util');
 
 const filePath = path.join(__dirname, 'src', 'resource', 'actualGolds.js');
 
-const { getRandomColor, dateFormater } = utils;
+const { getRandomColor, dateFormater, sendEmail } = utils;
 const Time = dateFormater('YYYY-MM-DD hh:mm:ss')
 
 const keyMap = {
@@ -109,7 +109,7 @@ const sendMsg = (list) => {
           </p>
       </div>
   </div>`;
-  sendMail(
+  sendEmail(
     'clearhuan@qq.com',
     html,
     `【Gold Helper】By Github Actions`
