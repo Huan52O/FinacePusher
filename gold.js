@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const utils = require('./util');
 
-const filePath = path.join(__dirname, 'src', 'resource', 'actualGolds.js');
+const filePath = path.join(__dirname, 'src', 'resource', 'forwardGolds.js');
 
 const { getRandomColor, dateFormater, sendEmail } = utils;
 const Time = dateFormater('YYYY-MM-DD hh:mm:ss')
@@ -27,14 +27,28 @@ const icons = [
   'data:image/png;base64,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'
 ]
 
-const getData = () => {
+const typeMap = {
+  actual: {
+    cb: `jQuery37107208853041718065_${new Date().getTime()}`,
+    fs: 'm:118',
+    fields: 'f12,f13,f14,f1,f2,f4,f3,f152,f17,f28,f15,f16,f124',
+  },
+  forward: {
+    cb: `jQuery37105876305693407142_${new Date().getTime()}`,
+    fs: 'm:113+t:5',
+    fields: 'f12,f13,f14,f1,f2,f4,f3,f152,f17,f28,f15,f16,f5,f211,f212,f108',
+  }
+}
+
+const getData = (type) => {
+  const { cb, fs, fields } = typeMap[type]
   const params = {
     np: 1,
     fltt: 1,
     invt: 2,
-    cb: `jQuery37107208853041718065_${new Date().getTime()}`,
-    fs: "m:118",
-    fields: "f12,f13,f14,f1,f2,f4,f3,f152,f17,f28,f15,f16,f124",
+    cb: cb,
+    fs: fs,
+    fields: fields,
     fid: "f3",
     pn: 1,
     pz: 5,
@@ -117,19 +131,22 @@ const sendMsg = (list) => {
 }
 
 const main = async () => {
-  const res = await getData();
+  const res = await getData('actual');
   const result = JSON.parse(res.substring(res.indexOf("(") + 1, res.lastIndexOf(")")));
   const diff = result.data.diff;
   console.log(diff.length);
   sendMsg(diff);
-  // const actualGolds = `var actualGolds = ${JSON.stringify(diff, null, 2)}`
-  // fs.writeFile(filePath, actualGolds, 'utf-8', (err) => {
-  //   if (err) {
-  //     console.log('写入文件时出错：', err)
-  //   } else {
-  //     console.log('数据写入成功')
-  //   }
-  // })
+  const forwards = await getData('forward')
+  const resForward = JSON.parse(forwards.substring(forwards.indexOf("(") + 1, forwards.lastIndexOf(")")))
+  const diffForward = resForward.data.diff;
+  const str = `var forwards = ${JSON.stringify(diffForward, null, 2)}`
+  fs.writeFile(filePath, str, 'utf-8', (err) => {
+    if (err) {
+      console.log('写入文件时出错：', err)
+    } else {
+      console.log('数据写入成功')
+    }
+  })
 };
 
 main();
