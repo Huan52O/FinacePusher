@@ -104,7 +104,7 @@ const sendMsg = (list) => {
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">涨跌幅</span>
-                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f4 > 0 ? '+' : ''}${item.f3 / 100 / 100}%</div>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f4 > 0 ? '+' : ''}${(item.f3 / 100 / 100).toFixed(2)}%</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">今开</span>
@@ -116,15 +116,15 @@ const sendMsg = (list) => {
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">最高</span>
-                  <div style="color:#fff; font-size:18px;">${item.f15 / 100}</div>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f15 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">最低</span>
-                  <div style="color:#fff; font-size:18px;">${item.f16 / 100}</div>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f16 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:12px;">更新时间</span>
-                  <div style="color:#fff; font-size:16px;">${time}</div>
+                  <div style="color: #fff; font-size:22px; font-weight:700;">${time}</div>
               </div>
           </div>
         </div>`
@@ -156,14 +156,6 @@ const main = async () => {
   const diffForward = resForward.data.diff;
   console.log('diffForward:', diffForward.length)
   sendMsg(diffForward)
-  // const str = `var forwards = ${JSON.stringify(diffForward, null, 2)}`
-  // fs.writeFile(filePath, str, 'utf-8', (err) => {
-  //   if (err) {
-  //     console.log('写入文件时出错：', err)
-  //   } else {
-  //     console.log('数据写入成功')
-  //   }
-  // })
 };
 
 main();
