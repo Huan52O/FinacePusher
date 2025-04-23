@@ -9,11 +9,14 @@ const { getRandomColor, dateFormater, sendEmail } = utils;
 const Time = dateFormater('YYYY-MM-DD hh:mm:ss')
 
 const keyMap = {
+  f2: '最新价',
+  f3: '涨跌幅',
+  f4: '涨跌额',
   f12: '代码',
   f14: '名称',
-  f17: '今开',
   f15: '最高',
   f16: '最低',
+  f17: '今开',
   f28: '昨结',
   f124: '更新时间'
 }
@@ -92,20 +95,32 @@ const sendMsg = (list) => {
           </div>
           <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:10px;">
               <div>
+                  <span style="color:${titleColor}; font-size:16px; font-weight:600;">最新价</span>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f2 / 100}</div>
+              </div>
+              <div>
+                  <span style="color:${titleColor}; font-size:16px; font-weight:600;">涨跌额</span>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f4 > 0 ? '+' : ''}${item.f4 / 100}</div>
+              </div>
+              <div>
+                  <span style="color:${titleColor}; font-size:16px; font-weight:600;">涨跌幅</span>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f4 > 0 ? '+' : ''}${item.f3 / 100 / 100}%</div>
+              </div>
+              <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">今开</span>
-                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f17}</div>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f17 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">昨结</span>
-                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f28}</div>
+                  <div style="color:${textColor}; font-size:22px; font-weight:700;">${item.f28 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">最高</span>
-                  <div style="color:#fff; font-size:18px;">${item.f15}</div>
+                  <div style="color:#fff; font-size:18px;">${item.f15 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:16px; font-weight:600;">最低</span>
-                  <div style="color:#fff; font-size:18px;">${item.f16}</div>
+                  <div style="color:#fff; font-size:18px;">${item.f16 / 100}</div>
               </div>
               <div>
                   <span style="color:${titleColor}; font-size:12px;">更新时间</span>
@@ -133,20 +148,22 @@ const sendMsg = (list) => {
 const main = async () => {
   const res = await getData('actual');
   const result = JSON.parse(res.substring(res.indexOf("(") + 1, res.lastIndexOf(")")));
-  const diff = result.data.diff;
-  console.log(diff.length);
-  sendMsg(diff);
+  const actual = result.data.diff;
+  console.log('actual：', actual.length);
+  sendMsg(actual);
   const forwards = await getData('forward')
   const resForward = JSON.parse(forwards.substring(forwards.indexOf("(") + 1, forwards.lastIndexOf(")")))
   const diffForward = resForward.data.diff;
-  const str = `var forwards = ${JSON.stringify(diffForward, null, 2)}`
-  fs.writeFile(filePath, str, 'utf-8', (err) => {
-    if (err) {
-      console.log('写入文件时出错：', err)
-    } else {
-      console.log('数据写入成功')
-    }
-  })
+  console.log('diffForward:', diffForward.length)
+  sendMsg(diffForward)
+  // const str = `var forwards = ${JSON.stringify(diffForward, null, 2)}`
+  // fs.writeFile(filePath, str, 'utf-8', (err) => {
+  //   if (err) {
+  //     console.log('写入文件时出错：', err)
+  //   } else {
+  //     console.log('数据写入成功')
+  //   }
+  // })
 };
 
 main();
