@@ -1,18 +1,9 @@
 var funds = [
   {
     "name": "沪深300",
-    "value": 66,
+    "value": 44,
     "originValue": "22",
     "children": [
-      {
-        "name": "天弘沪深300ETF联接C",
-        "value": 22,
-        "originValue": 22,
-        "path": "沪深300/天弘沪深300ETF联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.022)"
-        }
-      },
       {
         "name": "华夏沪深300ETF联接A",
         "value": 22,
@@ -86,18 +77,9 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 175,
-    "originValue": "-29",
+    "value": 170,
+    "originValue": "-43",
     "children": [
-      {
-        "name": "中欧医疗健康混合C",
-        "value": 1,
-        "originValue": -1,
-        "path": "医药/中欧医疗健康混合C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.001)"
-        }
-      },
       {
         "name": "招商国证生物医药指数(LOF)A",
         "value": 28,
@@ -105,15 +87,6 @@ var funds = [
         "path": "医药/招商国证生物医药指数(LOF)A",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.028)"
-        }
-      },
-      {
-        "name": "易方达医药ETF联接A",
-        "value": 4,
-        "originValue": -4,
-        "path": "医药/易方达医药ETF联接A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.004)"
         }
       },
       {
@@ -146,7 +119,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.029)"
+      "color": "rgba(0, 255, 0, 0.043)"
     }
   },
   {
@@ -171,7 +144,7 @@ var funds = [
   },
   {
     "name": "银行",
-    "value": 27,
+    "value": 18,
     "originValue": "-9",
     "children": [
       {
@@ -191,15 +164,6 @@ var funds = [
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.009)"
         }
-      },
-      {
-        "name": "南方中证银行ETF发起联接A",
-        "value": 9,
-        "originValue": -9,
-        "path": "银行/南方中证银行ETF发起联接A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.009)"
-        }
       }
     ],
     "path": "银行",
@@ -209,18 +173,9 @@ var funds = [
   },
   {
     "name": "芯片半导体",
-    "value": 90,
+    "value": 60,
     "originValue": "-30",
     "children": [
-      {
-        "name": "富国中证芯片产业ETF发起式联接A",
-        "value": 30,
-        "originValue": -30,
-        "path": "芯片半导体/富国中证芯片产业ETF发起式联接A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.03)"
-        }
-      },
       {
         "name": "富国中证芯片产业ETF发起式联接C",
         "value": 30,
@@ -352,18 +307,9 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 1686,
-    "originValue": "-562",
+    "value": 1128,
+    "originValue": "-564",
     "children": [
-      {
-        "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 558,
-        "originValue": -558,
-        "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.558)"
-        }
-      },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
         "value": 558,
@@ -385,7 +331,7 @@ var funds = [
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.562)"
+      "color": "rgba(0, 255, 0, 0.564)"
     }
   },
   {
