@@ -1,7 +1,8 @@
 const axios = require("axios");
-const utils = require("./util");
+const fs = require('fs');
+const path = require('path');
 
-const { dateFormater } = utils;
+const filePath = path.join(__dirname, 'src', 'resource', 'actualGolds.js');
 
 const keyMap = {
   f12: '代码',
@@ -45,8 +46,16 @@ const getData = () => {
 const main = async () => {
   const res = await getData();
   console.log(res);
-  const data = JSON.parse(res.substring(res.indexOf("(") + 1, res.lastIndexOf(")")));
-  console.log(data);
+  const result = JSON.parse(res.substring(res.indexOf("(") + 1, res.lastIndexOf(")")));
+  const diff = result.data.diff;
+  const actualGolds = `var actualGolds = ${JSON.stringify(diff, null, 2)}`
+  fs.writeFile(filePath, actualGolds, 'utf-8', (err) => {
+    if (err) {
+      console.log('写入文件时出错：', err)
+    } else {
+      console.log('数据写入成功')
+    }
+  })
 };
 
 main();
