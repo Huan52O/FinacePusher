@@ -390,7 +390,7 @@ var funds = [
   },
   {
     "name": "碳中和",
-    "value": 84,
+    "value": 112,
     "originValue": "-28",
     "children": [
       {
@@ -416,6 +416,15 @@ var funds = [
         "value": 28,
         "originValue": -28,
         "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.028)"
+        }
+      },
+      {
+        "name": "汇添富中证上海环交所碳中和ETF发起式联接A",
+        "value": 28,
+        "originValue": -28,
+        "path": "碳中和/汇添富中证上海环交所碳中和ETF发起式联接A",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.028)"
         }
