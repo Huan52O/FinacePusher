@@ -91,32 +91,7 @@ const getMarketTrend = () => {
     })
       .then((res) => {
         res.data ? resolve(res.data) : resolve([]);
-        // var s = {
-        //   code: 1,
-        //   data: {
-        //     au: {
-        //       A: "783.17",
-        //       B: "781.67",
-        //       jt: "781.37",
-        //       zj: "780.09",
-        //       yj: "777.96",
-        //       k18: "577.02",
-        //       k22: "707.59",
-        //       k14: "445.67",
-        //     },
-        //     ag: { A: "7.820", B: "7.570", zy: "7.470", ag925: "6.903" },
-        //     pt: {
-        //       A: "231.4",
-        //       B: "227.9",
-        //       pt999: "225.5",
-        //       pt990: "224.3",
-        //       pt950: "216.3",
-        //       pt900: "203.7",
-        //     },
-        //     pd: { A: "222.2", B: "216.7", pd999: "212.1", pd990: "210.0" },
-        //     isOpen: "1",
-        //   },
-        // };
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -271,118 +246,118 @@ const main = async () => {
   const diffForward = resForward.data.diff;
   console.log("diffForward:", diffForward.length);
   sendMsg(diffForward);
-  // const resMarket = await getMarketTrend()
-  // const marketInfo = resMarket.data;
-  // const { au, ag, pt, pd } = marketInfo;
-  // console.log("marketInfo:", marketInfo);
-  // const marketList = [
-  //   {
-  //     name: '黄金',
-  //     children: [
-  //       {
-  //         name: '回购',
-  //         price: au.B
-  //       },
-  //       {
-  //         name: '销售',
-  //         price: au.A
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     name: '钯金',
-  //     children: [
-  //       {
-  //         name: '回购',
-  //         price: pd.B
-  //       },
-  //       {
-  //         name: '销售',
-  //         price: pd.A
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     name: '铂金',
-  //     children: [
-  //       {
-  //         name: '回购',
-  //         price: pt.B
-  //       },
-  //       {
-  //         name: '销售',
-  //         price: pt.A
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     name: '白银',
-  //     children: [
-  //       {
-  //         name: '回购',
-  //         price: ag.B
-  //       },
-  //       {
-  //         name: '销售',
-  //         price: ag.A
-  //       },
-  //     ]
-  //   },
-  //   {
-  //     name: '旧料回购',
-  //     children: [
-  //       {
-  //         name: '银行金条',
-  //         price: au.jt
-  //       },
-  //       {
-  //         name: '足金',
-  //         price: au.zj
-  //       },
-  //       {
-  //         name: '硬金',
-  //         price: au.yj
-  //       },
-  //       {
-  //         name: '22k',
-  //         price: au.k22
-  //       },
-  //       {
-  //         name: '18k',
-  //         price: au.k18
-  //       },
-  //       {
-  //         name: '14k',
-  //         price: au.k14
-  //       },
-  //       {
-  //         name: 'PD999',
-  //         price: pd.pd999
-  //       },
-  //       {
-  //         name: 'PD990',
-  //         price: pd.pd990
-  //       },
-  //       {
-  //         name: 'PT999',
-  //         price: pt.pt999
-  //       },
-  //       {
-  //         name: 'PT990',
-  //         price: pt.pt990
-  //       },
-  //       {
-  //         name: 'PT950',
-  //         price: pt.pt950
-  //       },
-  //       {
-  //         name: 'PT900',
-  //         price: pt.pt900
-  //       },
-  //     ]
-  //   },
-  // ];
-  // sendMarketMsg(marketList);
+  const resMarket = await getMarketTrend()
+  const marketInfo = resMarket.data;
+  const { au, ag, pt, pd } = marketInfo;
+  console.log("marketInfo:", marketInfo);
+  const marketList = [
+    {
+      name: '黄金',
+      children: [
+        {
+          name: '回购',
+          price: au.B
+        },
+        {
+          name: '销售',
+          price: au.A
+        },
+      ]
+    },
+    {
+      name: '钯金',
+      children: [
+        {
+          name: '回购',
+          price: pd.B
+        },
+        {
+          name: '销售',
+          price: pd.A
+        },
+      ]
+    },
+    {
+      name: '铂金',
+      children: [
+        {
+          name: '回购',
+          price: pt.B
+        },
+        {
+          name: '销售',
+          price: pt.A
+        },
+      ]
+    },
+    {
+      name: '白银',
+      children: [
+        {
+          name: '回购',
+          price: ag.B
+        },
+        {
+          name: '销售',
+          price: ag.A
+        },
+      ]
+    },
+    {
+      name: '旧料回购',
+      children: [
+        {
+          name: '银行金条',
+          price: au.jt
+        },
+        {
+          name: '足金',
+          price: au.zj
+        },
+        {
+          name: '硬金',
+          price: au.yj
+        },
+        {
+          name: '22k',
+          price: au.k22
+        },
+        {
+          name: '18k',
+          price: au.k18
+        },
+        {
+          name: '14k',
+          price: au.k14
+        },
+        {
+          name: 'PD999',
+          price: pd.pd999
+        },
+        {
+          name: 'PD990',
+          price: pd.pd990
+        },
+        {
+          name: 'PT999',
+          price: pt.pt999
+        },
+        {
+          name: 'PT990',
+          price: pt.pt990
+        },
+        {
+          name: 'PT950',
+          price: pt.pt950
+        },
+        {
+          name: 'PT900',
+          price: pt.pt900
+        },
+      ]
+    },
+  ];
+  sendMarketMsg(marketList);
 };
 
 main();
