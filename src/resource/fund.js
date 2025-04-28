@@ -1,7 +1,7 @@
 var funds = [
   {
     "name": "沪深300",
-    "value": 6,
+    "value": 4,
     "originValue": "2",
     "children": [
       {
@@ -9,15 +9,6 @@ var funds = [
         "value": 2,
         "originValue": 2,
         "path": "沪深300/天弘沪深300ETF联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.002)"
-        }
-      },
-      {
-        "name": "华夏沪深300ETF联接A",
-        "value": 2,
-        "originValue": 2,
-        "path": "沪深300/华夏沪深300ETF联接A",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.002)"
         }
