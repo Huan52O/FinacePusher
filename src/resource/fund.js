@@ -276,18 +276,9 @@ var funds = [
   },
   {
     "name": "ChatGPT",
-    "value": 684,
-    "originValue": "228",
+    "value": 458,
+    "originValue": "229",
     "children": [
-      {
-        "name": "西部利得人工智能主题指数增强A",
-        "value": 226,
-        "originValue": 226,
-        "path": "ChatGPT/西部利得人工智能主题指数增强A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.226)"
-        }
-      },
       {
         "name": "华夏中证人工智能主题ETF联接A",
         "value": 226,
@@ -309,7 +300,7 @@ var funds = [
     ],
     "path": "ChatGPT",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.228)"
+      "color": "rgba(255, 0, 0, 0.229)"
     }
   },
   {
@@ -390,7 +381,7 @@ var funds = [
   },
   {
     "name": "碳中和",
-    "value": 100,
+    "value": 75,
     "originValue": "25",
     "children": [
       {
@@ -407,15 +398,6 @@ var funds = [
         "value": 25,
         "originValue": 25,
         "path": "碳中和/易方达中证上海环交所碳中和ETF联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.025)"
-        }
-      },
-      {
-        "name": "南方中证上海环交所碳中和ETF联接A",
-        "value": 25,
-        "originValue": 25,
-        "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.025)"
         }
