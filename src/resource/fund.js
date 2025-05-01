@@ -150,6 +150,26 @@ var funds = [
     }
   },
   {
+    "name": "新能源",
+    "value": 129,
+    "originValue": "129",
+    "children": [
+      {
+        "name": "嘉实新能源新材料股票A",
+        "value": 129,
+        "originValue": 129,
+        "path": "新能源/嘉实新能源新材料股票A",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.129)"
+        }
+      }
+    ],
+    "path": "新能源",
+    "itemStyle": {
+      "color": "rgba(255, 0, 0, 0.129)"
+    }
+  },
+  {
     "name": "银行",
     "value": 640,
     "originValue": "-213",
