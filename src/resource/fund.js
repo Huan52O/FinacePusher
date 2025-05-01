@@ -86,7 +86,7 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 482,
+    "value": 483,
     "originValue": "63",
     "children": [
       {
@@ -100,11 +100,11 @@ var funds = [
       },
       {
         "name": "招商国证生物医药指数(LOF)A",
-        "value": 52,
-        "originValue": -52,
+        "value": 53,
+        "originValue": -53,
         "path": "医药/招商国证生物医药指数(LOF)A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.052)"
+          "color": "rgba(0, 255, 0, 0.053)"
         }
       },
       {
@@ -150,26 +150,6 @@ var funds = [
     }
   },
   {
-    "name": "新能源",
-    "value": 129,
-    "originValue": "129",
-    "children": [
-      {
-        "name": "嘉实新能源新材料股票A",
-        "value": 129,
-        "originValue": 129,
-        "path": "新能源/嘉实新能源新材料股票A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.129)"
-        }
-      }
-    ],
-    "path": "新能源",
-    "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.129)"
-    }
-  },
-  {
     "name": "银行",
     "value": 640,
     "originValue": "-213",
@@ -185,20 +165,20 @@ var funds = [
       },
       {
         "name": "天弘中证银行ETF联接C",
-        "value": 213,
-        "originValue": -213,
+        "value": 214,
+        "originValue": -214,
         "path": "银行/天弘中证银行ETF联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.213)"
+          "color": "rgba(0, 255, 0, 0.214)"
         }
       },
       {
         "name": "南方中证银行ETF发起联接A",
-        "value": 214,
-        "originValue": -214,
+        "value": 213,
+        "originValue": -213,
         "path": "银行/南方中证银行ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.214)"
+          "color": "rgba(0, 255, 0, 0.213)"
         }
       }
     ],
@@ -352,25 +332,25 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 313,
-    "originValue": "-104",
+    "value": 305,
+    "originValue": "-102",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 95,
-        "originValue": -95,
+        "value": 91,
+        "originValue": -91,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.095)"
+          "color": "rgba(0, 255, 0, 0.091)"
         }
       },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
-        "value": 95,
-        "originValue": -95,
+        "value": 91,
+        "originValue": -91,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.095)"
+          "color": "rgba(0, 255, 0, 0.091)"
         }
       },
       {
@@ -385,7 +365,7 @@ var funds = [
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.104)"
+      "color": "rgba(0, 255, 0, 0.102)"
     }
   },
   {
