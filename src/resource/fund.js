@@ -86,8 +86,8 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 483,
-    "originValue": "63",
+    "value": 400,
+    "originValue": "59",
     "children": [
       {
         "name": "中欧医疗健康混合C",
@@ -126,15 +126,6 @@ var funds = [
         }
       },
       {
-        "name": "银华中证全指医药卫生",
-        "value": 83,
-        "originValue": 83,
-        "path": "医药/银华中证全指医药卫生",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.083)"
-        }
-      },
-      {
         "name": "广发医药卫生联接C",
         "value": 83,
         "originValue": 83,
@@ -146,7 +137,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.063)"
+      "color": "rgba(255, 0, 0, 0.059)"
     }
   },
   {
@@ -352,18 +343,9 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 305,
-    "originValue": "-102",
+    "value": 214,
+    "originValue": "-107",
     "children": [
-      {
-        "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 91,
-        "originValue": -91,
-        "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.091)"
-        }
-      },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
         "value": 91,
@@ -385,7 +367,7 @@ var funds = [
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.102)"
+      "color": "rgba(0, 255, 0, 0.107)"
     }
   },
   {
@@ -437,7 +419,7 @@ var funds = [
   },
   {
     "name": "信息技术",
-    "value": 274,
+    "value": 137,
     "originValue": "137",
     "children": [
       {
@@ -445,15 +427,6 @@ var funds = [
         "value": 137,
         "originValue": 137,
         "path": "信息技术/广发信息技术联接A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.137)"
-        }
-      },
-      {
-        "name": "广发信息技术联接C",
-        "value": 137,
-        "originValue": 137,
-        "path": "信息技术/广发信息技术联接C",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.137)"
         }
