@@ -437,18 +437,9 @@ var funds = [
   },
   {
     "name": "信息技术",
-    "value": 274,
+    "value": 137,
     "originValue": "137",
     "children": [
-      {
-        "name": "广发信息技术联接A",
-        "value": 137,
-        "originValue": 137,
-        "path": "信息技术/广发信息技术联接A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.137)"
-        }
-      },
       {
         "name": "广发信息技术联接C",
         "value": 137,
