@@ -1,7 +1,7 @@
 var funds = [
   {
     "name": "沪深300",
-    "value": 24,
+    "value": 36,
     "originValue": "-12",
     "children": [
       {
@@ -9,6 +9,15 @@ var funds = [
         "value": 12,
         "originValue": -12,
         "path": "沪深300/天弘沪深300ETF联接C",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.012)"
+        }
+      },
+      {
+        "name": "华夏沪深300ETF联接A",
+        "value": 12,
+        "originValue": -12,
+        "path": "沪深300/华夏沪深300ETF联接A",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.012)"
         }
@@ -77,8 +86,8 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 483,
-    "originValue": "63",
+    "value": 400,
+    "originValue": "59",
     "children": [
       {
         "name": "中欧医疗健康混合C",
@@ -124,40 +133,11 @@ var funds = [
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.083)"
         }
-      },
-      {
-        "name": "广发医药卫生联接C",
-        "value": 83,
-        "originValue": 83,
-        "path": "医药/广发医药卫生联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.083)"
-        }
       }
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.063)"
-    }
-  },
-  {
-    "name": "新能源",
-    "value": 129,
-    "originValue": "129",
-    "children": [
-      {
-        "name": "嘉实新能源新材料股票A",
-        "value": 129,
-        "originValue": 129,
-        "path": "新能源/嘉实新能源新材料股票A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.129)"
-        }
-      }
-    ],
-    "path": "新能源",
-    "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.129)"
+      "color": "rgba(255, 0, 0, 0.059)"
     }
   },
   {
@@ -200,9 +180,18 @@ var funds = [
   },
   {
     "name": "芯片半导体",
-    "value": 220,
+    "value": 330,
     "originValue": "110",
     "children": [
+      {
+        "name": "富国中证芯片产业ETF发起式联接A",
+        "value": 110,
+        "originValue": 110,
+        "path": "芯片半导体/富国中证芯片产业ETF发起式联接A",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.11)"
+        }
+      },
       {
         "name": "富国中证芯片产业ETF发起式联接C",
         "value": 110,
@@ -372,7 +361,7 @@ var funds = [
   },
   {
     "name": "碳中和",
-    "value": 12,
+    "value": 9,
     "originValue": "-3",
     "children": [
       {
@@ -398,15 +387,6 @@ var funds = [
         "value": 3,
         "originValue": -3,
         "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.003)"
-        }
-      },
-      {
-        "name": "汇添富中证上海环交所碳中和ETF发起式联接A",
-        "value": 3,
-        "originValue": -3,
-        "path": "碳中和/汇添富中证上海环交所碳中和ETF发起式联接A",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.003)"
         }
