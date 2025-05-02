@@ -1,7 +1,7 @@
 var funds = [
   {
     "name": "沪深300",
-    "value": 36,
+    "value": 24,
     "originValue": "-12",
     "children": [
       {
@@ -9,15 +9,6 @@ var funds = [
         "value": 12,
         "originValue": -12,
         "path": "沪深300/天弘沪深300ETF联接C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.012)"
-        }
-      },
-      {
-        "name": "华夏沪深300ETF联接A",
-        "value": 12,
-        "originValue": -12,
-        "path": "沪深300/华夏沪深300ETF联接A",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.012)"
         }
@@ -209,18 +200,9 @@ var funds = [
   },
   {
     "name": "芯片半导体",
-    "value": 330,
+    "value": 220,
     "originValue": "110",
     "children": [
-      {
-        "name": "富国中证芯片产业ETF发起式联接A",
-        "value": 110,
-        "originValue": 110,
-        "path": "芯片半导体/富国中证芯片产业ETF发起式联接A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.11)"
-        }
-      },
       {
         "name": "富国中证芯片产业ETF发起式联接C",
         "value": 110,
