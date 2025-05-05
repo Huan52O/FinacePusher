@@ -86,8 +86,8 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 347,
-    "originValue": "87",
+    "value": 483,
+    "originValue": "63",
     "children": [
       {
         "name": "中欧医疗健康混合C",
@@ -96,6 +96,15 @@ var funds = [
         "path": "医药/中欧医疗健康混合C",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.082)"
+        }
+      },
+      {
+        "name": "招商国证生物医药指数(LOF)A",
+        "value": 53,
+        "originValue": -53,
+        "path": "医药/招商国证生物医药指数(LOF)A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.053)"
         }
       },
       {
@@ -117,6 +126,15 @@ var funds = [
         }
       },
       {
+        "name": "银华中证全指医药卫生",
+        "value": 83,
+        "originValue": 83,
+        "path": "医药/银华中证全指医药卫生",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.083)"
+        }
+      },
+      {
         "name": "广发医药卫生联接C",
         "value": 83,
         "originValue": 83,
@@ -128,7 +146,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.087)"
+      "color": "rgba(255, 0, 0, 0.063)"
     }
   },
   {
@@ -153,9 +171,18 @@ var funds = [
   },
   {
     "name": "银行",
-    "value": 427,
-    "originValue": "-214",
+    "value": 640,
+    "originValue": "-213",
     "children": [
+      {
+        "name": "南方中证银行ETF发起联接E",
+        "value": 213,
+        "originValue": -213,
+        "path": "银行/南方中证银行ETF发起联接E",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.213)"
+        }
+      },
       {
         "name": "天弘中证银行ETF联接C",
         "value": 214,
@@ -177,7 +204,7 @@ var funds = [
     ],
     "path": "银行",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.214)"
+      "color": "rgba(0, 255, 0, 0.213)"
     }
   },
   {
@@ -249,14 +276,23 @@ var funds = [
   },
   {
     "name": "ChatGPT",
-    "value": 462,
-    "originValue": "231",
+    "value": 686,
+    "originValue": "229",
     "children": [
       {
         "name": "西部利得人工智能主题指数增强A",
         "value": 224,
         "originValue": 224,
         "path": "ChatGPT/西部利得人工智能主题指数增强A",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.224)"
+        }
+      },
+      {
+        "name": "华夏中证人工智能主题ETF联接A",
+        "value": 224,
+        "originValue": 224,
+        "path": "ChatGPT/华夏中证人工智能主题ETF联接A",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.224)"
         }
@@ -273,7 +309,7 @@ var funds = [
     ],
     "path": "ChatGPT",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.231)"
+      "color": "rgba(255, 0, 0, 0.229)"
     }
   },
   {
@@ -354,7 +390,7 @@ var funds = [
   },
   {
     "name": "碳中和",
-    "value": 9,
+    "value": 12,
     "originValue": "-3",
     "children": [
       {
@@ -383,6 +419,15 @@ var funds = [
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.003)"
         }
+      },
+      {
+        "name": "汇添富中证上海环交所碳中和ETF发起式联接A",
+        "value": 3,
+        "originValue": -3,
+        "path": "碳中和/汇添富中证上海环交所碳中和ETF发起式联接A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.003)"
+        }
       }
     ],
     "path": "碳中和",
@@ -392,7 +437,7 @@ var funds = [
   },
   {
     "name": "信息技术",
-    "value": 137,
+    "value": 274,
     "originValue": "137",
     "children": [
       {
@@ -400,6 +445,15 @@ var funds = [
         "value": 137,
         "originValue": 137,
         "path": "信息技术/广发信息技术联接A",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.137)"
+        }
+      },
+      {
+        "name": "广发信息技术联接C",
+        "value": 137,
+        "originValue": 137,
+        "path": "信息技术/广发信息技术联接C",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.137)"
         }
