@@ -39,8 +39,8 @@ var funds = [
   },
   {
     "name": "白酒",
-    "value": 148,
-    "originValue": "37",
+    "value": 114,
+    "originValue": "38",
     "children": [
       {
         "name": "招商中证白酒指数(LOF)A",
@@ -68,36 +68,18 @@ var funds = [
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.034)"
         }
-      },
-      {
-        "name": "鹏华酒A",
-        "value": 34,
-        "originValue": 34,
-        "path": "白酒/鹏华酒A",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.034)"
-        }
       }
     ],
     "path": "白酒",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.037)"
+      "color": "rgba(255, 0, 0, 0.038)"
     }
   },
   {
     "name": "医药",
-    "value": 269,
-    "originValue": "-45",
+    "value": 199,
+    "originValue": "-40",
     "children": [
-      {
-        "name": "中欧医疗健康混合C",
-        "value": 70,
-        "originValue": -70,
-        "path": "医药/中欧医疗健康混合C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.07)"
-        }
-      },
       {
         "name": "招商国证生物医药指数(LOF)A",
         "value": 74,
@@ -146,7 +128,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.045)"
+      "color": "rgba(0, 255, 0, 0.04)"
     }
   },
   {
@@ -276,8 +258,8 @@ var funds = [
   },
   {
     "name": "ChatGPT",
-    "value": 142,
-    "originValue": "-47",
+    "value": 96,
+    "originValue": "-48",
     "children": [
       {
         "name": "西部利得人工智能主题指数增强A",
@@ -296,20 +278,11 @@ var funds = [
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.048)"
         }
-      },
-      {
-        "name": "华富中证人工智能产业ETF联接C",
-        "value": 46,
-        "originValue": -46,
-        "path": "ChatGPT/华富中证人工智能产业ETF联接C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.046)"
-        }
       }
     ],
     "path": "ChatGPT",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.047)"
+      "color": "rgba(0, 255, 0, 0.048)"
     }
   },
   {
@@ -390,7 +363,7 @@ var funds = [
   },
   {
     "name": "碳中和",
-    "value": 136,
+    "value": 102,
     "originValue": "34",
     "children": [
       {
@@ -407,15 +380,6 @@ var funds = [
         "value": 34,
         "originValue": 34,
         "path": "碳中和/易方达中证上海环交所碳中和ETF联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.034)"
-        }
-      },
-      {
-        "name": "南方中证上海环交所碳中和ETF联接A",
-        "value": 34,
-        "originValue": 34,
-        "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.034)"
         }
