@@ -265,4 +265,4 @@ const createOilHtml = async () => {
   }
 };
 
-// ![0, 6].includes(Day) && createOilHtml();
+![0, 6].includes(Day) && createOilHtml();
