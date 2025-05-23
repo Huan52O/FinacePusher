@@ -257,7 +257,7 @@ const createOilHtml = async () => {
 
     sendEmail(
       "hellohehuan@126.com",
-      html,
+      ohtml,
       "【Oil Notice】By Github Actions"
     );
   } catch (error) {
