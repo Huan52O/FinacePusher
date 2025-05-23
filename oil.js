@@ -170,32 +170,12 @@ const createOilHtml = async () => {
           flag: OilMapping[key].flag,
           desc: OilMapping[key].desc,
           color: OilMapping[key].color,
-          change: readOil.current[key] - readOil.last[key]
+          change: (readOil.current[key] - readOil.last[key]).toFixed(2) * 1
         })
       }
-    }
+    };
 
     const html = `
-      <div style="background: #0a0e1a; color: #ffffff; line-height: 1.2; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 30px 20px;">
-        <header style="text-align: center; padding: 40px 0;">
-          <h1 style="font-size: 2.0em; font-weight: 700; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; letter-spacing: 2px; text-shadow: 0 2px 8px rgba(79,172,254,0.3);">⛽智慧能源价格速报</h1>
-        </header>
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-          ${list.map(item => {
-            return `<div style="padding: 35px; border-radius: 15px; text-align: center; position: relative; overflow: hidden; transition: transform 0.3s ease; background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 2px solid ${item.color};">
-                      <div style="position: relative; font-size: 1.6em; font-weight: 600; margin-bottom: 15px;">${item.name}</div>
-                      <div style="font-size: 2.2em; font-weight: 700; color: #ffffff; text-shadow: 0 2px 6px rgba(255,255,255,0.2);">${item.price}<span style="font-size: 0.6em; color: #aab2c0;">元/L</span></div>
-                      <div style="content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg, transparent 20%, rgba(79,172,254,0.3) 50%, transparent 80%); animation: rotate 6s linear infinite;"></div>
-                    </div>`
-          }).join('')}
-        </div>
-        <footer style="text-align: center; padding: 40px 0 20px; color: #6d7a8f; font-size: 0.9em;">
-          <p>© 2025 能源数据观察中心 | 数据更新于 ${Time}</p>
-          <p style="margin-top:8px">数据来源：国家发改委价格监测中心</p>
-        </footer>
-      </div>`;
-
-    const ohtml = `
     <div style="margin: 0 auto; background-color: white; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); overflow: hidden;">
       <div style="position: relative; background-color: #165DFF; height: 100px; overflow: hidden;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, #165DFF, #3b82f6); opacity: 0.9;"></div>
@@ -227,7 +207,7 @@ const createOilHtml = async () => {
           return `
           <div style="margin-bottom: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <div style="background-color: rgba(22, 93, 255, 0.05); border-radius: 16px; padding: 16px; display: flex; align-items: center;">
-              <div style="background-color: #165DFF; color: white; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; margin-right: 16px; font-weight: bold;">
+              <div style="background-color: ${item.color}; color: white; border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; margin-right: 16px; font-weight: bold;">
                   ${item.flag}
               </div>
               <div style="flex: 1;">
@@ -258,7 +238,7 @@ const createOilHtml = async () => {
 
     sendEmail(
       "hellohehuan@126.com",
-      ohtml,
+      html,
       "【Oil Notice】By Github Actions"
     );
   } catch (error) {
