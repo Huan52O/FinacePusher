@@ -106,9 +106,9 @@ const readOilData = () => {
 
 const transformPriceChange = (change) => {
   if (change > 0) {
-    return `↑${change}`
+    return `+${change}`
   } else if (change < 0) {
-    return `↓${change}`
+    return `-${change}`
   } else if (change == 0) {
     return ''
   }
