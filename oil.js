@@ -149,7 +149,8 @@ const createOilHtml = async () => {
            "95h": resultGd['95h'],
            "98h": resultGd['98h'],
            "0h": resultGd['0h']
-         }
+         },
+         "update": `${dateFormater('YYYY-MM-DD HH:mm:ss', getNowSeconds())}`
       };
       const jsonData = JSON.stringify(readOil, null, 2)
       fs.writeFile(OilDataPath, jsonData, 'utf-8', (err) => {
