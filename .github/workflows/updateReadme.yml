@@ -8,9 +8,9 @@ on:
         required: false 
         type: boolean 
   schedule:
-    - cron: '30 1 */9 * *'  # 每隔一天运行
+    - cron: '30 1 */9 * *'
 permissions:
-  contents: write  # 允许对仓库内容进行写操作
+  contents: write
 
 jobs:
   update-readme:
@@ -29,7 +29,6 @@ jobs:
       
       - name: Start task
         run: node updateReadme.js
-        # 提交并推送修改
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"

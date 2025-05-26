@@ -246,118 +246,118 @@ const main = async () => {
   const diffForward = resForward.data.diff;
   console.log("diffForward:", diffForward.length);
   sendMsg(diffForward);
-  const resMarket = await getMarketTrend()
-  const marketInfo = resMarket.data;
-  const { au, ag, pt, pd } = marketInfo;
-  console.log("marketInfo:", marketInfo);
-  const marketList = [
-    {
-      name: '黄金',
-      children: [
-        {
-          name: '回购',
-          price: au.B
-        },
-        {
-          name: '销售',
-          price: au.A
-        },
-      ]
-    },
-    {
-      name: '钯金',
-      children: [
-        {
-          name: '回购',
-          price: pd.B
-        },
-        {
-          name: '销售',
-          price: pd.A
-        },
-      ]
-    },
-    {
-      name: '铂金',
-      children: [
-        {
-          name: '回购',
-          price: pt.B
-        },
-        {
-          name: '销售',
-          price: pt.A
-        },
-      ]
-    },
-    {
-      name: '白银',
-      children: [
-        {
-          name: '回购',
-          price: ag.B
-        },
-        {
-          name: '销售',
-          price: ag.A
-        },
-      ]
-    },
-    {
-      name: '旧料回购',
-      children: [
-        {
-          name: '银行金条',
-          price: au.jt
-        },
-        {
-          name: '足金',
-          price: au.zj
-        },
-        {
-          name: '硬金',
-          price: au.yj
-        },
-        {
-          name: '22k',
-          price: au.k22
-        },
-        {
-          name: '18k',
-          price: au.k18
-        },
-        {
-          name: '14k',
-          price: au.k14
-        },
-        {
-          name: 'PD999',
-          price: pd.pd999
-        },
-        {
-          name: 'PD990',
-          price: pd.pd990
-        },
-        {
-          name: 'PT999',
-          price: pt.pt999
-        },
-        {
-          name: 'PT990',
-          price: pt.pt990
-        },
-        {
-          name: 'PT950',
-          price: pt.pt950
-        },
-        {
-          name: 'PT900',
-          price: pt.pt900
-        },
-      ]
-    },
-  ];
-  sendMarketMsg(marketList);
+  // const resMarket = await getMarketTrend()
+  // const marketInfo = resMarket.data;
+  // const { au, ag, pt, pd } = marketInfo;
+  // console.log("marketInfo:", marketInfo);
+  // const marketList = [
+  //   {
+  //     name: '黄金',
+  //     children: [
+  //       {
+  //         name: '回购',
+  //         price: au.B
+  //       },
+  //       {
+  //         name: '销售',
+  //         price: au.A
+  //       },
+  //     ]
+  //   },
+  //   {
+  //     name: '钯金',
+  //     children: [
+  //       {
+  //         name: '回购',
+  //         price: pd.B
+  //       },
+  //       {
+  //         name: '销售',
+  //         price: pd.A
+  //       },
+  //     ]
+  //   },
+  //   {
+  //     name: '铂金',
+  //     children: [
+  //       {
+  //         name: '回购',
+  //         price: pt.B
+  //       },
+  //       {
+  //         name: '销售',
+  //         price: pt.A
+  //       },
+  //     ]
+  //   },
+  //   {
+  //     name: '白银',
+  //     children: [
+  //       {
+  //         name: '回购',
+  //         price: ag.B
+  //       },
+  //       {
+  //         name: '销售',
+  //         price: ag.A
+  //       },
+  //     ]
+  //   },
+  //   {
+  //     name: '旧料回购',
+  //     children: [
+  //       {
+  //         name: '银行金条',
+  //         price: au.jt
+  //       },
+  //       {
+  //         name: '足金',
+  //         price: au.zj
+  //       },
+  //       {
+  //         name: '硬金',
+  //         price: au.yj
+  //       },
+  //       {
+  //         name: '22k',
+  //         price: au.k22
+  //       },
+  //       {
+  //         name: '18k',
+  //         price: au.k18
+  //       },
+  //       {
+  //         name: '14k',
+  //         price: au.k14
+  //       },
+  //       {
+  //         name: 'PD999',
+  //         price: pd.pd999
+  //       },
+  //       {
+  //         name: 'PD990',
+  //         price: pd.pd990
+  //       },
+  //       {
+  //         name: 'PT999',
+  //         price: pt.pt999
+  //       },
+  //       {
+  //         name: 'PT990',
+  //         price: pt.pt990
+  //       },
+  //       {
+  //         name: 'PT950',
+  //         price: pt.pt950
+  //       },
+  //       {
+  //         name: 'PT900',
+  //         price: pt.pt900
+  //       },
+  //     ]
+  //   },
+  // ];
+  // sendMarketMsg(marketList);
 };
 
 main();
