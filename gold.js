@@ -201,7 +201,7 @@ const sendMsg = (list) => {
         </div>    
         <!-- 产品列表 -->
         <div style="padding: 15px; position: relative; z-index: 10;">
-          ${list.map(item => {
+          ${list.map((item, i) => {
             const url = icons[i];
             const time = dateFormater(
               "YYYY-MM-DD hh:mm:ss",
