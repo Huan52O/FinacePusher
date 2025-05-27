@@ -223,8 +223,8 @@ const sendMsg = (list) => {
                     <span style="color: #ffffff; font-size: 32px; font-weight: 600; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">¥${item.f2 / 100}</span>
                   </div>
                   <div style="text-align: right; background: rgba(231, 76, 60, 0.15); padding: 5px 10px; border-radius: 5px;">
-                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 16px; font-weight: 500; display: block;">${item.f4 > 0 ? '+' : '-'}${item.f4 / 100}</span>
-                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 14px;">${(item.f3 / 100 / 100).toFixed(2)}%</span>
+                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 16px; font-weight: 500; display: block;">${item.f4 > 0 ? '+' : ''}${item.f4 / 100}</span>
+                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 14px;">${item.f4 > 0 ? '+' : ''}${(item.f3 / 100 / 100).toFixed(2)}%</span>
                   </div>
                 </div>
                 <!-- 分隔线 -->
