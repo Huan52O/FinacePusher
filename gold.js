@@ -185,7 +185,84 @@ const sendMsg = (list) => {
           </p>
       </div>
   </div>`;
-  sendEmail("clearhuan@qq.com", html, `【Gold Helper】By Github Actions`);
+
+  const ohtml = `
+    <div style="max-width: 600px; margin: 0 auto; padding: 0; background-color: #f5f5f5; font-family: 'Segoe UI', Roboto, sans-serif; display: flex; justify-content: center;">
+      <div style="width: 100%;background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0;">
+          <div style="position: absolute; top: -100px; right: -100px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(241, 196, 15, 0.2) 0%, rgba(241, 196, 15, 0) 70%); border-radius: 50%;"></div>
+          <div style="position: absolute; bottom: -150px; left: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(52, 152, 219, 0.15) 0%, rgba(52, 152, 219, 0) 70%); border-radius: 50%;"></div>
+        </div>
+        <div style="height: 120px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 10;">
+          <div style="text-align: center;">
+            <h1 style="color: #f1c40f; font-size: 28px; margin: 0; text-shadow: 0 0 10px rgba(241, 196, 15, 0.4); font-weight: 600;">GOLD <span style="color: #ffffff; opacity: 0.9;">MARKET</span></h1>
+            <p style="color: #ffffff; font-size: 14px; margin: 5px 0; opacity: 0.7;">实时贵金属行情</p>
+          </div>
+        </div>    
+        <!-- 产品列表 -->
+        <div style="padding: 15px; position: relative; z-index: 10;">
+          ${list.map(item => {
+            const url = icons[i];
+            const time = dateFormater(
+              "YYYY-MM-DD hh:mm:ss",
+              `${item.f124}000` * 1
+            );
+            return `
+            <div style="margin-bottom: 15px; border-radius: 15px; overflow: hidden; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; transform: translateY(0); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);">
+              <!-- 产品头部 -->
+              <div style="padding: 15px; background: linear-gradient(90deg, rgba(241, 196, 15, 0.2) 0%, rgba(241, 196, 15, 0) 100%); display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="color: #f1c40f; font-size: 20px; margin: 0; font-weight: 500;">${item.f14}</h2>
+                <img src="${url}" style="width:32px; height:32px;">
+              </div>
+              <!-- 产品价格信息 -->
+              <div style="padding: 15px; position: relative;">
+                <!-- 价格波动背景 -->
+                <div style="position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(231, 76, 60, 0.05) 0%, rgba(231, 76, 60, 0) 50%); pointer-events: none;"></div>        
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <div>
+                    <span style="color: #ffffff; font-size: 32px; font-weight: 600; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">¥${item.f2 / 100}</span>
+                  </div>
+                  <div style="text-align: right; background: rgba(231, 76, 60, 0.15); padding: 5px 10px; border-radius: 5px;">
+                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 16px; font-weight: 500; display: block;">${item.f4 > 0 ? '+' : '-'}${item.f4 / 100}</span>
+                    <span style="color: ${item.f4 > 0 ? '#e74c3c' : '#2ecc71'}; font-size: 14px;">${(item.f3 / 100 / 100).toFixed(2)}%</span>
+                  </div>
+                </div>
+                <!-- 分隔线 -->
+                <div style="height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%); margin: 15px 0;"></div>
+                <!-- 价格详情网格 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                  <div style="text-align: center; background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; transition: all 0.3s ease;">
+                    <span style="color: rgba(255, 255, 255, 0.6); font-size: 12px; display: block; margin-bottom: 3px;">今开</span>
+                    <span style="color: #ffffff; font-size: 16px; font-weight: 500;">¥${item.f17 / 100}</span>
+                  </div>
+                  <div style="text-align: center; background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; transition: all 0.3s ease;">
+                    <span style="color: rgba(255, 255, 255, 0.6); font-size: 12px; display: block; margin-bottom: 3px;">昨结</span>
+                    <span style="color: #ffffff; font-size: 16px; font-weight: 500;">¥${item.f28 / 100}</span>
+                  </div>
+                  <div style="text-align: center; background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; transition: all 0.3s ease;">
+                    <span style="color: rgba(255, 255, 255, 0.6); font-size: 12px; display: block; margin-bottom: 3px;">最高</span>
+                    <span style="color: #ffffff; font-size: 16px; font-weight: 500;">¥${item.f15 / 100}</span>
+                  </div>
+                  <div style="text-align: center; background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; transition: all 0.3s ease;">
+                    <span style="color: rgba(255, 255, 255, 0.6); font-size: 12px; display: block; margin-bottom: 3px;">最低</span>
+                    <span style="color: #ffffff; font-size: 16px; font-weight: 500;">¥${item.f16 / 100}</span>
+                  </div>
+                </div>   
+                <!-- 更新时间 -->
+                <div style="text-align: right; margin-top: 15px;">
+                  <p style="color: rgba(255, 255, 255, 0.5); font-size: 11px; margin: 0;">更新: ${time}</p>
+                </div>
+              </div>
+            </div> 
+            `
+          }).join('')}  
+        <!-- 页脚 -->
+        <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; text-align: center; color: rgba(255, 255, 255, 0.6); margin-top: 20px;">
+          <p style="font-size: 12px; margin: 0;">© 2025 资讯 | 实时行情</p>
+        </div>
+      </div>
+    </div>`
+  sendEmail("clearhuan@qq.com", ohtml, `【Gold Helper】By Github Actions`);
 };
 
 const sendMarketMsg = (list) => {
