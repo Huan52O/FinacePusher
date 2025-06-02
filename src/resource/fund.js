@@ -352,25 +352,25 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 186,
-    "originValue": "-62",
+    "value": 173,
+    "originValue": "-58",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 82,
-        "originValue": -82,
+        "value": 76,
+        "originValue": -76,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.082)"
+          "color": "rgba(0, 255, 0, 0.076)"
         }
       },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
-        "value": 83,
-        "originValue": -83,
+        "value": 76,
+        "originValue": -76,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.083)"
+          "color": "rgba(0, 255, 0, 0.076)"
         }
       },
       {
@@ -385,7 +385,7 @@ var funds = [
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.062)"
+      "color": "rgba(0, 255, 0, 0.058)"
     }
   },
   {
