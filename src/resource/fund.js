@@ -150,10 +150,39 @@ var funds = [
     }
   },
   {
+    "name": "新能源",
+    "value": 138,
+    "originValue": "-138",
+    "children": [
+      {
+        "name": "嘉实新能源新材料股票A",
+        "value": 138,
+        "originValue": -138,
+        "path": "新能源/嘉实新能源新材料股票A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.138)"
+        }
+      }
+    ],
+    "path": "新能源",
+    "itemStyle": {
+      "color": "rgba(0, 255, 0, 0.138)"
+    }
+  },
+  {
     "name": "银行",
-    "value": 128,
+    "value": 192,
     "originValue": "64",
     "children": [
+      {
+        "name": "南方中证银行ETF发起联接E",
+        "value": 64,
+        "originValue": 64,
+        "path": "银行/南方中证银行ETF发起联接E",
+        "itemStyle": {
+          "color": "rgba(255, 0, 0, 0.064)"
+        }
+      },
       {
         "name": "天弘中证银行ETF联接C",
         "value": 64,
