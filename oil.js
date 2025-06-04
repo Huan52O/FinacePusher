@@ -131,7 +131,7 @@ const createOilHtml = async () => {
       return item.city === OilCity
     })[0];
     const { last, current } = JSON.parse(readOilData());
-    const readOil = {
+    let readOil = {
       last: last,
       current: current
     };
