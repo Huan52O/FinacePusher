@@ -20,6 +20,8 @@ const getRandomColor = () => {
   return color;
 }
 
+console.log(`email name: ${process.env.EMAIL_NAME}`)
+
 const Transporter = nodemailer.createTransport({
   host: "smtp.qq.com",
   port: 587,
