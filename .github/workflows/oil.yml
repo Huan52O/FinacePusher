@@ -1,4 +1,4 @@
-name: oil2
+name: oil
 on: 
   workflow_dispatch:
     #branches:
@@ -9,11 +9,15 @@ on:
         required: false 
         type: boolean 
   schedule:
-    - cron: "32 6 * * *"
+    - cron: "32 0,6 * * *"
 
 jobs:
   start:
     runs-on: ubuntu-latest
+
+    env:
+      EMAIL_NAME: ${{ secrets.EMAIL_NAME }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
 
     steps:
       - uses: actions/checkout@v2  
@@ -28,7 +32,7 @@ jobs:
       
       - name: Start task
         run: node oil.js
-                          # 提交并推送修改
+                    # 提交并推送修改
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"

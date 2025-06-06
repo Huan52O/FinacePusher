@@ -1,4 +1,4 @@
-name: oil1
+name: knowCar
 on: 
   workflow_dispatch:
     #branches:
@@ -9,11 +9,15 @@ on:
         required: false 
         type: boolean 
   schedule:
-    - cron: "32 0 * * *"
+    - cron: "18 1,8 * * *"
 
 jobs:
   start:
     runs-on: ubuntu-latest
+
+    env:
+      EMAIL_NAME: ${{ secrets.EMAIL_NAME }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
 
     steps:
       - uses: actions/checkout@v2  
@@ -27,16 +31,12 @@ jobs:
         run: npm install
       
       - name: Start task
-        run: node oil.js
-                    # 提交并推送修改
+        run: node knowCar.js
+        # 提交并推送修改
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else   
-            git commit -m "update oilRes.js"
-            git push
-          fi
+          git commit -m "update resource json"
+          git push

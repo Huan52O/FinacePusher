@@ -16,9 +16,6 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
 
-    env:
-      EMAIL_NAME: ${{ secrets.EMAIL_NAME }}
-
     steps:
       - uses: actions/checkout@v2  
 
