@@ -1,16 +1,16 @@
 var funds = [
   {
     "name": "沪深300",
-    "value": 67,
-    "originValue": "22",
+    "value": 68,
+    "originValue": "23",
     "children": [
       {
         "name": "天弘沪深300ETF联接C",
-        "value": 22,
-        "originValue": 22,
+        "value": 23,
+        "originValue": 23,
         "path": "沪深300/天弘沪深300ETF联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.022)"
+          "color": "rgba(255, 0, 0, 0.023)"
         }
       },
       {
@@ -34,30 +34,30 @@ var funds = [
     ],
     "path": "沪深300",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.022)"
+      "color": "rgba(255, 0, 0, 0.023)"
     }
   },
   {
     "name": "白酒",
-    "value": 273,
-    "originValue": "-68",
+    "value": 284,
+    "originValue": "-71",
     "children": [
       {
         "name": "招商中证白酒指数(LOF)A",
-        "value": 74,
-        "originValue": -74,
+        "value": 80,
+        "originValue": -80,
         "path": "白酒/招商中证白酒指数(LOF)A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.074)"
+          "color": "rgba(0, 255, 0, 0.08)"
         }
       },
       {
         "name": "招商中证白酒指数(LOF)C",
-        "value": 82,
-        "originValue": -82,
+        "value": 81,
+        "originValue": -81,
         "path": "白酒/招商中证白酒指数(LOF)C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.082)"
+          "color": "rgba(0, 255, 0, 0.081)"
         }
       },
       {
@@ -71,82 +71,82 @@ var funds = [
       },
       {
         "name": "鹏华酒A",
-        "value": 56,
-        "originValue": -56,
+        "value": 62,
+        "originValue": -62,
         "path": "白酒/鹏华酒A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.056)"
+          "color": "rgba(0, 255, 0, 0.062)"
         }
       }
     ],
     "path": "白酒",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.068)"
+      "color": "rgba(0, 255, 0, 0.071)"
     }
   },
   {
     "name": "医药",
-    "value": 1116,
-    "originValue": "186",
+    "value": 833,
+    "originValue": "139",
     "children": [
       {
         "name": "中欧医疗健康混合C",
-        "value": 211,
-        "originValue": 211,
+        "value": 157,
+        "originValue": 157,
         "path": "医药/中欧医疗健康混合C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.211)"
+          "color": "rgba(255, 0, 0, 0.157)"
         }
       },
       {
         "name": "招商国证生物医药指数(LOF)A",
-        "value": 212,
-        "originValue": 212,
+        "value": 171,
+        "originValue": 171,
         "path": "医药/招商国证生物医药指数(LOF)A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.212)"
+          "color": "rgba(255, 0, 0, 0.171)"
         }
       },
       {
         "name": "易方达医药ETF联接A",
-        "value": 163,
-        "originValue": 163,
+        "value": 107,
+        "originValue": 107,
         "path": "医药/易方达医药ETF联接A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.163)"
+          "color": "rgba(255, 0, 0, 0.107)"
         }
       },
       {
         "name": "鹏华中证医药卫生(LOF)C",
-        "value": 169,
-        "originValue": 169,
+        "value": 124,
+        "originValue": 124,
         "path": "医药/鹏华中证医药卫生(LOF)C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.169)"
+          "color": "rgba(255, 0, 0, 0.124)"
         }
       },
       {
         "name": "银华中证全指医药卫生",
-        "value": 180,
-        "originValue": 180,
+        "value": 137,
+        "originValue": 137,
         "path": "医药/银华中证全指医药卫生",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.18)"
+          "color": "rgba(255, 0, 0, 0.137)"
         }
       },
       {
         "name": "广发医药卫生联接C",
-        "value": 181,
-        "originValue": 181,
+        "value": 137,
+        "originValue": 137,
         "path": "医药/广发医药卫生联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.181)"
+          "color": "rgba(255, 0, 0, 0.137)"
         }
       }
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.186)"
+      "color": "rgba(255, 0, 0, 0.139)"
     }
   },
   {
@@ -171,297 +171,297 @@ var funds = [
   },
   {
     "name": "银行",
-    "value": 60,
-    "originValue": "20",
+    "value": 72,
+    "originValue": "24",
     "children": [
       {
         "name": "南方中证银行ETF发起联接E",
-        "value": 20,
-        "originValue": 20,
+        "value": 24,
+        "originValue": 24,
         "path": "银行/南方中证银行ETF发起联接E",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.02)"
+          "color": "rgba(255, 0, 0, 0.024)"
         }
       },
       {
         "name": "天弘中证银行ETF联接C",
-        "value": 20,
-        "originValue": 20,
+        "value": 24,
+        "originValue": 24,
         "path": "银行/天弘中证银行ETF联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.02)"
+          "color": "rgba(255, 0, 0, 0.024)"
         }
       },
       {
         "name": "南方中证银行ETF发起联接A",
-        "value": 20,
-        "originValue": 20,
+        "value": 24,
+        "originValue": 24,
         "path": "银行/南方中证银行ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.02)"
+          "color": "rgba(255, 0, 0, 0.024)"
         }
       }
     ],
     "path": "银行",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.02)"
+      "color": "rgba(255, 0, 0, 0.024)"
     }
   },
   {
     "name": "芯片半导体",
-    "value": 109,
-    "originValue": "-36",
+    "value": 78,
+    "originValue": "-26",
     "children": [
       {
         "name": "富国中证芯片产业ETF发起式联接A",
-        "value": 36,
-        "originValue": -36,
+        "value": 26,
+        "originValue": -26,
         "path": "芯片半导体/富国中证芯片产业ETF发起式联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.036)"
+          "color": "rgba(0, 255, 0, 0.026)"
         }
       },
       {
         "name": "富国中证芯片产业ETF发起式联接C",
-        "value": 37,
-        "originValue": -37,
+        "value": 26,
+        "originValue": -26,
         "path": "芯片半导体/富国中证芯片产业ETF发起式联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.037)"
+          "color": "rgba(0, 255, 0, 0.026)"
         }
       },
       {
         "name": "天弘中证芯片产业ETF发起式联接A",
-        "value": 36,
-        "originValue": -36,
+        "value": 26,
+        "originValue": -26,
         "path": "芯片半导体/天弘中证芯片产业ETF发起式联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.036)"
+          "color": "rgba(0, 255, 0, 0.026)"
         }
       }
     ],
     "path": "芯片半导体",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.036)"
+      "color": "rgba(0, 255, 0, 0.026)"
     }
   },
   {
     "name": "乘用车",
-    "value": 146,
-    "originValue": "73",
+    "value": 177,
+    "originValue": "89",
     "children": [
       {
         "name": "广发中证全指汽车指数A",
-        "value": 73,
-        "originValue": 73,
+        "value": 90,
+        "originValue": 90,
         "path": "乘用车/广发中证全指汽车指数A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.073)"
+          "color": "rgba(255, 0, 0, 0.09)"
         }
       },
       {
         "name": "广发中证全指汽车指数C",
-        "value": 73,
-        "originValue": 73,
+        "value": 87,
+        "originValue": 87,
         "path": "乘用车/广发中证全指汽车指数C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.073)"
+          "color": "rgba(255, 0, 0, 0.087)"
         }
       }
     ],
     "path": "乘用车",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.073)"
+      "color": "rgba(255, 0, 0, 0.089)"
     }
   },
   {
     "name": "ChatGPT",
-    "value": 116,
-    "originValue": "39",
+    "value": 160,
+    "originValue": "53",
     "children": [
       {
         "name": "西部利得人工智能主题指数增强A",
-        "value": 35,
-        "originValue": 35,
+        "value": 49,
+        "originValue": 49,
         "path": "ChatGPT/西部利得人工智能主题指数增强A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.035)"
+          "color": "rgba(255, 0, 0, 0.049)"
         }
       },
       {
         "name": "华夏中证人工智能主题ETF联接A",
-        "value": 34,
-        "originValue": 34,
+        "value": 49,
+        "originValue": 49,
         "path": "ChatGPT/华夏中证人工智能主题ETF联接A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.034)"
+          "color": "rgba(255, 0, 0, 0.049)"
         }
       },
       {
         "name": "华富中证人工智能产业ETF联接C",
-        "value": 47,
-        "originValue": 47,
+        "value": 62,
+        "originValue": 62,
         "path": "ChatGPT/华富中证人工智能产业ETF联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.047)"
+          "color": "rgba(255, 0, 0, 0.062)"
         }
       }
     ],
     "path": "ChatGPT",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.039)"
+      "color": "rgba(255, 0, 0, 0.053)"
     }
   },
   {
     "name": "国防军工",
-    "value": 392,
-    "originValue": "131",
+    "value": 406,
+    "originValue": "135",
     "children": [
       {
         "name": "广发中证军工ETF联接A",
-        "value": 136,
-        "originValue": 136,
+        "value": 138,
+        "originValue": 138,
         "path": "国防军工/广发中证军工ETF联接A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.136)"
+          "color": "rgba(255, 0, 0, 0.138)"
         }
       },
       {
         "name": "广发中证军工ETF联接C",
-        "value": 135,
-        "originValue": 135,
+        "value": 138,
+        "originValue": 138,
         "path": "国防军工/广发中证军工ETF联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.135)"
+          "color": "rgba(255, 0, 0, 0.138)"
         }
       },
       {
         "name": "国泰国证航天军工指数(LOF)A",
-        "value": 121,
-        "originValue": 121,
+        "value": 130,
+        "originValue": 130,
         "path": "国防军工/国泰国证航天军工指数(LOF)A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.121)"
+          "color": "rgba(255, 0, 0, 0.13)"
         }
       }
     ],
     "path": "国防军工",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.131)"
+      "color": "rgba(255, 0, 0, 0.135)"
     }
   },
   {
     "name": "黄金概念",
-    "value": 347,
-    "originValue": "-116",
+    "value": 358,
+    "originValue": "-119",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 132,
-        "originValue": -132,
+        "value": 140,
+        "originValue": -140,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.132)"
+          "color": "rgba(0, 255, 0, 0.14)"
         }
       },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
-        "value": 132,
-        "originValue": -132,
+        "value": 140,
+        "originValue": -140,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.132)"
+          "color": "rgba(0, 255, 0, 0.14)"
         }
       },
       {
         "name": "前海开源金银珠宝混合C",
-        "value": 83,
-        "originValue": -83,
+        "value": 78,
+        "originValue": -78,
         "path": "黄金概念/前海开源金银珠宝混合C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.083)"
+          "color": "rgba(0, 255, 0, 0.078)"
         }
       }
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.116)"
+      "color": "rgba(0, 255, 0, 0.119)"
     }
   },
   {
     "name": "碳中和",
-    "value": 91,
-    "originValue": "-23",
+    "value": 84,
+    "originValue": "-21",
     "children": [
       {
         "name": "易方达中证上海环交所碳中和ETF联接A",
-        "value": 22,
-        "originValue": -22,
+        "value": 21,
+        "originValue": -21,
         "path": "碳中和/易方达中证上海环交所碳中和ETF联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.022)"
+          "color": "rgba(0, 255, 0, 0.021)"
         }
       },
       {
         "name": "易方达中证上海环交所碳中和ETF联接C",
-        "value": 25,
-        "originValue": -25,
+        "value": 21,
+        "originValue": -21,
         "path": "碳中和/易方达中证上海环交所碳中和ETF联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.025)"
+          "color": "rgba(0, 255, 0, 0.021)"
         }
       },
       {
         "name": "南方中证上海环交所碳中和ETF联接A",
-        "value": 22,
-        "originValue": -22,
+        "value": 21,
+        "originValue": -21,
         "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.022)"
+          "color": "rgba(0, 255, 0, 0.021)"
         }
       },
       {
         "name": "汇添富中证上海环交所碳中和ETF发起式联接A",
-        "value": 22,
-        "originValue": -22,
+        "value": 21,
+        "originValue": -21,
         "path": "碳中和/汇添富中证上海环交所碳中和ETF发起式联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.022)"
+          "color": "rgba(0, 255, 0, 0.021)"
         }
       }
     ],
     "path": "碳中和",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.023)"
+      "color": "rgba(0, 255, 0, 0.021)"
     }
   },
   {
     "name": "信息技术",
-    "value": 67,
-    "originValue": "34",
+    "value": 86,
+    "originValue": "43",
     "children": [
       {
         "name": "广发信息技术联接A",
-        "value": 34,
-        "originValue": 34,
+        "value": 43,
+        "originValue": 43,
         "path": "信息技术/广发信息技术联接A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.034)"
+          "color": "rgba(255, 0, 0, 0.043)"
         }
       },
       {
         "name": "广发信息技术联接C",
-        "value": 33,
-        "originValue": 33,
+        "value": 43,
+        "originValue": 43,
         "path": "信息技术/广发信息技术联接C",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.033)"
+          "color": "rgba(255, 0, 0, 0.043)"
         }
       }
     ],
     "path": "信息技术",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.034)"
+      "color": "rgba(255, 0, 0, 0.043)"
     }
   }
 ];
