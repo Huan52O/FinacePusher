@@ -314,9 +314,18 @@ var funds = [
   },
   {
     "name": "国防军工",
-    "value": 257,
-    "originValue": "-129",
+    "value": 379,
+    "originValue": "-126",
     "children": [
+      {
+        "name": "广发中证军工ETF联接A",
+        "value": 122,
+        "originValue": -122,
+        "path": "国防军工/广发中证军工ETF联接A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.122)"
+        }
+      },
       {
         "name": "广发中证军工ETF联接C",
         "value": 122,
@@ -338,7 +347,7 @@ var funds = [
     ],
     "path": "国防军工",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.129)"
+      "color": "rgba(0, 255, 0, 0.126)"
     }
   },
   {
@@ -428,9 +437,18 @@ var funds = [
   },
   {
     "name": "信息技术",
-    "value": 87,
+    "value": 174,
     "originValue": "-87",
     "children": [
+      {
+        "name": "广发信息技术联接A",
+        "value": 87,
+        "originValue": -87,
+        "path": "信息技术/广发信息技术联接A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.087)"
+        }
+      },
       {
         "name": "广发信息技术联接C",
         "value": 87,
