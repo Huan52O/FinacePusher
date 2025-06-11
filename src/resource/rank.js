@@ -241,9 +241,9 @@ var rankRes = [
         "brandName": "奔驰"
       },
       {
-        "name": "揽胜运动版",
+        "name": "揽胜运动",
         "value": 420,
-        "path": "中大型SUV/揽胜运动版",
+        "path": "中大型SUV/揽胜运动",
         "brandName": "路虎"
       },
       {
