@@ -314,8 +314,8 @@ var funds = [
   },
   {
     "name": "国防军工",
-    "value": 42,
-    "originValue": "-14",
+    "value": 34,
+    "originValue": "-17",
     "children": [
       {
         "name": "广发中证军工ETF联接A",
@@ -334,20 +334,11 @@ var funds = [
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.017)"
         }
-      },
-      {
-        "name": "国泰国证航天军工指数(LOF)A",
-        "value": 8,
-        "originValue": -8,
-        "path": "国防军工/国泰国证航天军工指数(LOF)A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.008)"
-        }
       }
     ],
     "path": "国防军工",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.014)"
+      "color": "rgba(0, 255, 0, 0.017)"
     }
   },
   {
