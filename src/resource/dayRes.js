@@ -1,139 +1,139 @@
 var dayRes = [
   {
     "name": "车贷清",
-    "value": 289,
+    "value": 288,
     "path": "车贷清",
     "date": "2026.4.24"
   },
   {
     "name": "招行还款",
-    "value": 28,
+    "value": 27,
     "path": "招行还款",
     "date": "2025.8.6"
   },
   {
     "name": "光大还款",
-    "value": 1,
+    "value": 0,
     "path": "光大还款",
     "date": "2025.7.10"
   },
   {
     "name": "广发还款",
-    "value": 15,
+    "value": 14,
     "path": "广发还款",
     "date": "2025.7.24"
   },
   {
     "name": "车贷还款",
-    "value": 15,
+    "value": 14,
     "path": "车贷还款",
     "date": "2025.7.24"
   },
   {
     "name": "花呗还款",
-    "value": 16,
+    "value": 15,
     "path": "花呗还款",
     "date": "2025.7.25"
   },
   {
     "name": "情人节",
-    "value": 220,
+    "value": 219,
     "path": "情人节",
     "date": "2026.2.14"
   },
   {
     "name": "妇女节",
-    "value": 242,
+    "value": 241,
     "path": "妇女节",
     "date": "2026.3.8"
   },
   {
     "name": "清明节",
-    "value": 269,
+    "value": 268,
     "path": "清明节",
     "date": "2026.4.4"
   },
   {
     "name": "劳动节",
-    "value": 296,
+    "value": 295,
     "path": "劳动节",
     "date": "2026.5.1"
   },
   {
     "name": "青年节",
-    "value": 299,
+    "value": 298,
     "path": "青年节",
     "date": "2026.5.4"
   },
   {
     "name": "儿童节",
-    "value": 327,
+    "value": 326,
     "path": "儿童节",
     "date": "2026.6.1"
   },
   {
     "name": "建党节",
-    "value": 357,
+    "value": 356,
     "path": "建党节",
     "date": "2026.7.1"
   },
   {
     "name": "建军节",
-    "value": 23,
+    "value": 22,
     "path": "建军节",
     "date": "2025.8.1"
   },
   {
     "name": "端午节",
-    "value": -39,
+    "value": -40,
     "path": "端午节",
     "date": "2025.5.31"
   },
   {
     "name": "中秋节",
-    "value": 89,
+    "value": 88,
     "path": "中秋节",
     "date": "2025.10.6"
   },
   {
     "name": "国庆节",
-    "value": 84,
+    "value": 83,
     "path": "国庆节",
     "date": "2025.10.1"
   },
   {
     "name": "重阳节",
-    "value": 112,
+    "value": 111,
     "path": "重阳节",
     "date": "2025.10.29"
   },
   {
     "name": "平安夜",
-    "value": 168,
+    "value": 167,
     "path": "平安夜",
     "date": "2025.12.24"
   },
   {
     "name": "圣诞节",
-    "value": 169,
+    "value": 168,
     "path": "圣诞节",
     "date": "2025.12.25"
   },
   {
     "name": "元旦节",
-    "value": 176,
+    "value": 175,
     "path": "元旦节",
     "date": "2026.1.1"
   },
   {
     "name": "腊八",
-    "value": 201,
+    "value": 200,
     "path": "腊八",
     "date": "2026.1.26"
   },
   {
     "name": "除夕",
-    "value": 222,
+    "value": 221,
     "path": "除夕",
     "date": "2026.2.16"
   }
