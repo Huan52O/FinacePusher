@@ -86,18 +86,9 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 334,
-    "originValue": "56",
+    "value": 264,
+    "originValue": "53",
     "children": [
-      {
-        "name": "中欧医疗健康混合C",
-        "value": 70,
-        "originValue": 70,
-        "path": "医药/中欧医疗健康混合C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.07)"
-        }
-      },
       {
         "name": "招商国证生物医药指数(LOF)A",
         "value": 68,
@@ -146,7 +137,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.056)"
+      "color": "rgba(255, 0, 0, 0.053)"
     }
   },
   {
@@ -171,7 +162,7 @@ var funds = [
   },
   {
     "name": "银行",
-    "value": 330,
+    "value": 220,
     "originValue": "110",
     "children": [
       {
@@ -179,15 +170,6 @@ var funds = [
         "value": 110,
         "originValue": 110,
         "path": "银行/南方中证银行ETF发起联接E",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.11)"
-        }
-      },
-      {
-        "name": "天弘中证银行ETF联接C",
-        "value": 110,
-        "originValue": 110,
-        "path": "银行/天弘中证银行ETF联接C",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.11)"
         }
@@ -352,8 +334,8 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 73,
-    "originValue": "-24",
+    "value": 72,
+    "originValue": "-36",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
@@ -372,20 +354,11 @@ var funds = [
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.036)"
         }
-      },
-      {
-        "name": "前海开源金银珠宝混合C",
-        "value": 1,
-        "originValue": 1,
-        "path": "黄金概念/前海开源金银珠宝混合C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.001)"
-        }
       }
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.024)"
+      "color": "rgba(0, 255, 0, 0.036)"
     }
   },
   {
