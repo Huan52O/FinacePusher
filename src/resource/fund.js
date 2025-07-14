@@ -39,7 +39,7 @@ var funds = [
   },
   {
     "name": "白酒",
-    "value": 133,
+    "value": 174,
     "originValue": "-44",
     "children": [
       {
@@ -58,6 +58,15 @@ var funds = [
         "path": "白酒/招商中证白酒指数(LOF)C",
         "itemStyle": {
           "color": "rgba(0, 255, 0, 0.046)"
+        }
+      },
+      {
+        "name": "鹏华酒C",
+        "value": 41,
+        "originValue": -41,
+        "path": "白酒/鹏华酒C",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.041)"
         }
       },
       {
