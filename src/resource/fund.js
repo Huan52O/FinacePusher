@@ -314,8 +314,8 @@ var funds = [
   },
   {
     "name": "国防军工",
-    "value": 50,
-    "originValue": "17",
+    "value": 48,
+    "originValue": "16",
     "children": [
       {
         "name": "广发中证军工ETF联接A",
@@ -337,53 +337,71 @@ var funds = [
       },
       {
         "name": "国泰国证航天军工指数(LOF)A",
-        "value": 22,
-        "originValue": 22,
+        "value": 20,
+        "originValue": 20,
         "path": "国防军工/国泰国证航天军工指数(LOF)A",
         "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.022)"
+          "color": "rgba(255, 0, 0, 0.02)"
         }
       }
     ],
     "path": "国防军工",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.017)"
+      "color": "rgba(255, 0, 0, 0.016)"
     }
   },
   {
     "name": "黄金概念",
-    "value": 190,
-    "originValue": "-95",
+    "value": 293,
+    "originValue": "-98",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
-        "value": 95,
-        "originValue": -95,
+        "value": 93,
+        "originValue": -93,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.095)"
+          "color": "rgba(0, 255, 0, 0.093)"
         }
       },
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
-        "value": 95,
-        "originValue": -95,
+        "value": 93,
+        "originValue": -93,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.095)"
+          "color": "rgba(0, 255, 0, 0.093)"
+        }
+      },
+      {
+        "name": "前海开源金银珠宝混合C",
+        "value": 107,
+        "originValue": -107,
+        "path": "黄金概念/前海开源金银珠宝混合C",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.107)"
         }
       }
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.095)"
+      "color": "rgba(0, 255, 0, 0.098)"
     }
   },
   {
     "name": "碳中和",
-    "value": 41,
-    "originValue": "-14",
+    "value": 53,
+    "originValue": "-13",
     "children": [
+      {
+        "name": "易方达中证上海环交所碳中和ETF联接A",
+        "value": 14,
+        "originValue": -14,
+        "path": "碳中和/易方达中证上海环交所碳中和ETF联接A",
+        "itemStyle": {
+          "color": "rgba(0, 255, 0, 0.014)"
+        }
+      },
       {
         "name": "易方达中证上海环交所碳中和ETF联接C",
         "value": 14,
@@ -395,11 +413,11 @@ var funds = [
       },
       {
         "name": "南方中证上海环交所碳中和ETF联接A",
-        "value": 14,
-        "originValue": -14,
+        "value": 12,
+        "originValue": -12,
         "path": "碳中和/南方中证上海环交所碳中和ETF联接A",
         "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.014)"
+          "color": "rgba(0, 255, 0, 0.012)"
         }
       },
       {
@@ -414,7 +432,7 @@ var funds = [
     ],
     "path": "碳中和",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.014)"
+      "color": "rgba(0, 255, 0, 0.013)"
     }
   },
   {
