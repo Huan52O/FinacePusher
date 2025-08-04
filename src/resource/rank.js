@@ -259,10 +259,10 @@ var rankRes = [
         "brandName": "大众"
       },
       {
-        "name": "奔驰GLE",
+        "name": "Cayenne Coupé",
         "value": 417,
-        "path": "中大型SUV/奔驰GLE",
-        "brandName": "奔驰"
+        "path": "中大型SUV/Cayenne Coupé",
+        "brandName": "保时捷"
       }
     ],
     "path": "中大型SUV"
