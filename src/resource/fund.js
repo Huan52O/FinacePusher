@@ -86,27 +86,9 @@ var funds = [
   },
   {
     "name": "医药",
-    "value": 152,
-    "originValue": "-25",
+    "value": 54,
+    "originValue": "-18",
     "children": [
-      {
-        "name": "中欧医疗健康混合C",
-        "value": 54,
-        "originValue": -54,
-        "path": "医药/中欧医疗健康混合C",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.054)"
-        }
-      },
-      {
-        "name": "招商国证生物医药指数(LOF)A",
-        "value": 33,
-        "originValue": -33,
-        "path": "医药/招商国证生物医药指数(LOF)A",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.033)"
-        }
-      },
       {
         "name": "易方达医药ETF联接A",
         "value": 25,
@@ -126,15 +108,6 @@ var funds = [
         }
       },
       {
-        "name": "银华中证全指医药卫生",
-        "value": 11,
-        "originValue": -11,
-        "path": "医药/银华中证全指医药卫生",
-        "itemStyle": {
-          "color": "rgba(0, 255, 0, 0.011)"
-        }
-      },
-      {
         "name": "广发医药卫生联接C",
         "value": 11,
         "originValue": -11,
@@ -146,7 +119,7 @@ var funds = [
     ],
     "path": "医药",
     "itemStyle": {
-      "color": "rgba(0, 255, 0, 0.025)"
+      "color": "rgba(0, 255, 0, 0.018)"
     }
   },
   {
@@ -352,23 +325,14 @@ var funds = [
   },
   {
     "name": "黄金概念",
-    "value": 361,
-    "originValue": "120",
+    "value": 227,
+    "originValue": "114",
     "children": [
       {
         "name": "永赢中证沪深港黄金产业股票ETF发起联接C",
         "value": 134,
         "originValue": 134,
         "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接C",
-        "itemStyle": {
-          "color": "rgba(255, 0, 0, 0.134)"
-        }
-      },
-      {
-        "name": "永赢中证沪深港黄金产业股票ETF发起联接A",
-        "value": 134,
-        "originValue": 134,
-        "path": "黄金概念/永赢中证沪深港黄金产业股票ETF发起联接A",
         "itemStyle": {
           "color": "rgba(255, 0, 0, 0.134)"
         }
@@ -385,7 +349,7 @@ var funds = [
     ],
     "path": "黄金概念",
     "itemStyle": {
-      "color": "rgba(255, 0, 0, 0.12)"
+      "color": "rgba(255, 0, 0, 0.114)"
     }
   },
   {
