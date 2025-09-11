@@ -134,7 +134,7 @@ const scheduleTask2 = async () => {
           </footer>
         </div>`;
       sendEmail(
-        'clearhuan@qq.com',
+        'hellohehuan@126.com',
         html,
         `【Fund Tips】By Github Actions`
       );
