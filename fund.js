@@ -13,7 +13,7 @@ const {
 } = CONSTANT;
 
 const {
-  sendMail,
+  sendEmail,
 } = util;
 
 let upFundNum = 0;
@@ -133,7 +133,7 @@ const scheduleTask2 = async () => {
             <p>Powered by Dearhuan</p>
           </footer>
         </div>`;
-      sendMail(
+      sendEmail(
         'clearhuan@qq.com',
         html,
         `【Fund Tips】By Github Actions`
