@@ -133,10 +133,121 @@ const KnowCarInfo = {
 };
 
 const FundURL = "http://fundgz.1234567.com.cn/js/";
+const LargeMarketURL = "https://push2.eastmoney.com/api/qt/ulist.np/get";
+const FundObj = {
+  "005918": 11268.82,
+  161726: 4922.62,
+  161725: 7172.82,
+  "005693": 1000,
+  "014777": 1000,
+  "008586": 1000,
+  "003096": 575.96,
+  "015751": 1000,
+  "018957": 1000,
+  "003985": 1000,
+  "011036": 1000,
+};
+
+// 25年节假日
+const WeekDays = [
+  {
+    "date": "2025-01-01",
+    "name": "元旦"
+  },
+  {
+    "date": "2025-01-29",
+    "name": "春节"
+  },
+  {
+    "date": "2025-01-30",
+    "name": "春节"
+  },
+  {
+    "date": "2025-01-31",
+    "name": "春节"
+  },
+  {
+    "date": "2025-02-01",
+    "name": "春节"
+  },
+  {
+    "date": "2025-02-02",
+    "name": "春节"
+  },
+  {
+    "date": "2025-02-03",
+    "name": "春节"
+  },
+  {
+    "date": "2025-02-04",
+    "name": "春节"
+  },
+  {
+    "date": "2025-04-04",
+    "name": "清明节"
+  },
+  {
+    "date": "2025-05-01",
+    "name": "劳动节"
+  },
+  {
+    "date": "2025-05-02",
+    "name": "劳动节"
+  },
+  {
+    "date": "2025-05-03",
+    "name": "劳动节"
+  },
+  {
+    "date": "2025-05-04",
+    "name": "劳动节"
+  },
+  {
+    "date": "2025-05-05",
+    "name": "劳动节"
+  },
+  {
+    "date": "2025-06-02",
+    "name": "端午节"
+  },
+  {
+    "date": "2025-10-01",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-02",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-03",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-04",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-05",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-06",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-07",
+    "name": "国庆"
+  },
+  {
+    "date": "2025-10-08",
+    "name": "国庆"
+  }
+]
 
 module.exports = {
   Day,
   Time,
+  CurrentDate: dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD'),
   CM,
   IT,
   SCN,
@@ -145,5 +256,8 @@ module.exports = {
   NbaInfo,
   OilInfo,
   KnowCarInfo,
-  FundURL
+  FundURL,
+  LargeMarketURL,
+  FundObj,
+  WeekDays
 }
