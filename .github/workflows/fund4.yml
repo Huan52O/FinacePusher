@@ -1,4 +1,4 @@
-name: fund1
+name: fund4
 on:
   workflow_dispatch:
     #branches:
