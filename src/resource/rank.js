@@ -20,7 +20,7 @@ var rankRes = [
   },
   {
     "name": "中大型轿车",
-    "value": 426.8,
+    "value": 430.33,
     "children": [
       {
         "name": "Taycan",
@@ -39,18 +39,6 @@ var rankRes = [
         "value": 428,
         "path": "中大型轿车/奥迪RS 6",
         "brandName": "奥迪"
-      },
-      {
-        "name": "奔驰E级AMG",
-        "value": 422,
-        "path": "中大型轿车/奔驰E级AMG",
-        "brandName": "奔驰"
-      },
-      {
-        "name": "奔驰CLS",
-        "value": 421,
-        "path": "中大型轿车/奔驰CLS",
-        "brandName": "奔驰"
       }
     ],
     "path": "中大型轿车"
@@ -148,7 +136,7 @@ var rankRes = [
   },
   {
     "name": "中大型SUV",
-    "value": 427,
+    "value": 426.52,
     "children": [
       {
         "name": "添越",
@@ -241,9 +229,9 @@ var rankRes = [
         "brandName": "奔驰"
       },
       {
-        "name": "揽胜运动版",
+        "name": "揽胜运动",
         "value": 420,
-        "path": "中大型SUV/揽胜运动版",
+        "path": "中大型SUV/揽胜运动",
         "brandName": "路虎"
       },
       {
@@ -269,6 +257,12 @@ var rankRes = [
         "value": 418,
         "path": "中大型SUV/途锐",
         "brandName": "大众"
+      },
+      {
+        "name": "Cayenne Coupé",
+        "value": 417,
+        "path": "中大型SUV/Cayenne Coupé",
+        "brandName": "保时捷"
       }
     ],
     "path": "中大型SUV"
@@ -328,7 +322,7 @@ var rankRes = [
     ]
   },
   {
-    "value": 425.5,
+    "value": 422.67,
     "children": [
       {
         "name": "保时捷911",
@@ -341,6 +335,12 @@ var rankRes = [
         "value": 422,
         "path": "undefined/Huracán",
         "brandName": "兰博基尼"
+      },
+      {
+        "name": "AMG GT",
+        "value": 417,
+        "path": "undefined/AMG GT",
+        "brandName": "奔驰"
       }
     ]
   }
