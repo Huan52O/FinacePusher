@@ -262,7 +262,7 @@ const sendMsg = (list) => {
         </div>
       </div>
     </div>`
-  sendEmail("clearhuan@qq.com", ohtml, `【Gold Helper】By Github Actions`);
+  sendEmail("clearhuan@qq.com", ohtml, `【Gold Helper】By Huan52O`);
 };
 
 const sendMarketMsg = (list) => {
@@ -305,7 +305,7 @@ const sendMarketMsg = (list) => {
         </p>
     </div>
   </div>`;
-  sendEmail("clearhuan@qq.com", html, `【Gold Market】By Github Actions`);
+  sendEmail("clearhuan@qq.com", html, `【Gold Market】By Huan52O`);
 }
 
 const main = async () => {

@@ -239,7 +239,7 @@ const createOilHtml = async () => {
     sendEmail(
       "hellohehuan@126.com",
       html,
-      "【Oil Notice】By Github Actions"
+      "【Oil Notice】By Huan52O"
     );
   } catch (error) {
     console.error(error);

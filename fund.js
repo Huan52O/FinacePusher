@@ -136,7 +136,7 @@ const scheduleTask2 = async () => {
       sendEmail(
         'hellohehuan@126.com',
         html,
-        `【Fund Tips】By Github Actions`
+        `【Fund Tips】By Huan52O`
       );
     }
   } catch (error) {

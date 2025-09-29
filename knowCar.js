@@ -170,7 +170,7 @@ const sendRankInfoTask = async () => {
     sendEmail(
       "hellohehuan@126.com",
       template,
-      "【懂车分榜】By Github Actions"
+      "【懂车分榜】By Huan52O"
     );
   } catch (error) {
     console.log(error)
@@ -279,7 +279,7 @@ const sendAttentionInfoTask = async (type) => {
     sendEmail(
       "hellohehuan@126.com",
       template,
-      `【${attention['title']}关注度榜】By Github Actions`
+      `【${attention['title']}关注度榜】By Huan52O`
     );
   } catch (error) {
     console.log(error)

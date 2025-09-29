@@ -202,7 +202,7 @@ const createNBAHtml = async () => {
     sendEmail(
       "hellohehuan@126.com",
       html,
-      "【NBA Standings】By Github Actions"
+      "【NBA Standings】By Huan52O"
     );
   } catch (error) {
     console.error(error);
@@ -376,7 +376,7 @@ const createScheduleTask = async() => {
       sendEmail(
         "hellohehuan@126.com",
         template,
-        "【NBA Schedules】By Github Actions"
+        "【NBA Schedules】By Huan52O"
       );
     };
   } catch (error) {
