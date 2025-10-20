@@ -835,5 +835,32 @@ var oils = [
       }
     ],
     "path": "青海"
+  },
+  {
+    "name": "",
+    "value": 0,
+    "children": [
+      {
+        "name": "92h",
+        "value": 0,
+        "path": "/92h"
+      },
+      {
+        "name": "95h",
+        "value": 0,
+        "path": "/95h"
+      },
+      {
+        "name": "98h",
+        "value": 0,
+        "path": "/98h"
+      },
+      {
+        "name": "0h",
+        "value": 0,
+        "path": "/0h"
+      }
+    ],
+    "path": ""
   }
 ]
