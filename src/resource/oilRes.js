@@ -1,26 +1,26 @@
 var oils = [
   {
     "name": "北京",
-    "value": 7.29,
+    "value": 7.46,
     "children": [
       {
         "name": "92h",
-        "value": 6.77,
+        "value": 6.94,
         "path": "北京/92h"
       },
       {
         "name": "95h",
-        "value": 7.21,
+        "value": 7.39,
         "path": "北京/95h"
       },
       {
         "name": "98h",
-        "value": 8.71,
+        "value": 8.89,
         "path": "北京/98h"
       },
       {
         "name": "0h",
-        "value": 6.45,
+        "value": 6.62,
         "path": "北京/0h"
       }
     ],
@@ -28,26 +28,26 @@ var oils = [
   },
   {
     "name": "天津",
-    "value": 7.24,
+    "value": 7.41,
     "children": [
       {
         "name": "92h",
-        "value": 6.76,
+        "value": 6.93,
         "path": "天津/92h"
       },
       {
         "name": "95h",
-        "value": 7.15,
+        "value": 7.32,
         "path": "天津/95h"
       },
       {
         "name": "98h",
-        "value": 8.65,
+        "value": 8.82,
         "path": "天津/98h"
       },
       {
         "name": "0h",
-        "value": 6.41,
+        "value": 6.57,
         "path": "天津/0h"
       }
     ],
@@ -55,26 +55,26 @@ var oils = [
   },
   {
     "name": "上海",
-    "value": 7.37,
+    "value": 7.53,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.9,
         "path": "上海/92h"
       },
       {
         "name": "95h",
-        "value": 7.17,
+        "value": 7.34,
         "path": "上海/95h"
       },
       {
         "name": "98h",
-        "value": 9.17,
+        "value": 9.34,
         "path": "上海/98h"
       },
       {
         "name": "0h",
-        "value": 6.39,
+        "value": 6.55,
         "path": "上海/0h"
       }
     ],
@@ -82,26 +82,26 @@ var oils = [
   },
   {
     "name": "重庆",
-    "value": 7.32,
+    "value": 7.5,
     "children": [
       {
         "name": "92h",
-        "value": 6.85,
+        "value": 7.01,
         "path": "重庆/92h"
       },
       {
         "name": "95h",
-        "value": 7.23,
+        "value": 7.41,
         "path": "重庆/95h"
       },
       {
         "name": "98h",
-        "value": 8.73,
+        "value": 8.95,
         "path": "重庆/98h"
       },
       {
         "name": "0h",
-        "value": 6.48,
+        "value": 6.65,
         "path": "重庆/0h"
       }
     ],
@@ -109,26 +109,26 @@ var oils = [
   },
   {
     "name": "河北",
-    "value": 7.07,
+    "value": 7.24,
     "children": [
       {
         "name": "92h",
-        "value": 6.76,
+        "value": 6.93,
         "path": "河北/92h"
       },
       {
         "name": "95h",
-        "value": 7.15,
+        "value": 7.32,
         "path": "河北/95h"
       },
       {
         "name": "98h",
-        "value": 7.97,
+        "value": 8.14,
         "path": "河北/98h"
       },
       {
         "name": "0h",
-        "value": 6.41,
+        "value": 6.57,
         "path": "河北/0h"
       }
     ],
@@ -136,26 +136,26 @@ var oils = [
   },
   {
     "name": "山西",
-    "value": 7.35,
+    "value": 7.52,
     "children": [
       {
         "name": "92h",
-        "value": 6.73,
+        "value": 6.89,
         "path": "山西/92h"
       },
       {
         "name": "95h",
-        "value": 7.27,
+        "value": 7.44,
         "path": "山西/95h"
       },
       {
         "name": "98h",
-        "value": 8.95,
+        "value": 9.12,
         "path": "山西/98h"
       },
       {
         "name": "0h",
-        "value": 6.47,
+        "value": 6.64,
         "path": "山西/0h"
       }
     ],
@@ -163,26 +163,26 @@ var oils = [
   },
   {
     "name": "辽宁",
-    "value": 7.13,
+    "value": 7.3,
     "children": [
       {
         "name": "92h",
-        "value": 6.86,
+        "value": 7.03,
         "path": "辽宁/92h"
       },
       {
         "name": "95h",
-        "value": 7.33,
+        "value": 7.51,
         "path": "辽宁/95h"
       },
       {
         "name": "98h",
-        "value": 7.99,
+        "value": 8.19,
         "path": "辽宁/98h"
       },
       {
         "name": "0h",
-        "value": 6.32,
+        "value": 6.48,
         "path": "辽宁/0h"
       }
     ],
@@ -190,26 +190,26 @@ var oils = [
   },
   {
     "name": "吉林",
-    "value": 7.06,
+    "value": 7.24,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.9,
         "path": "吉林/92h"
       },
       {
         "name": "95h",
-        "value": 7.27,
+        "value": 7.44,
         "path": "吉林/95h"
       },
       {
         "name": "98h",
-        "value": 7.92,
+        "value": 8.11,
         "path": "吉林/98h"
       },
       {
         "name": "0h",
-        "value": 6.33,
+        "value": 6.5,
         "path": "吉林/0h"
       }
     ],
@@ -217,26 +217,26 @@ var oils = [
   },
   {
     "name": "黑龙江",
-    "value": 7.13,
+    "value": 7.31,
     "children": [
       {
         "name": "92h",
-        "value": 6.79,
+        "value": 6.96,
         "path": "黑龙江/92h"
       },
       {
         "name": "95h",
-        "value": 7.25,
+        "value": 7.43,
         "path": "黑龙江/95h"
       },
       {
         "name": "98h",
-        "value": 8.22,
+        "value": 8.43,
         "path": "黑龙江/98h"
       },
       {
         "name": "0h",
-        "value": 6.27,
+        "value": 6.43,
         "path": "黑龙江/0h"
       }
     ],
@@ -244,26 +244,26 @@ var oils = [
   },
   {
     "name": "江苏",
-    "value": 7.39,
+    "value": 7.55,
     "children": [
       {
         "name": "92h",
-        "value": 6.75,
+        "value": 6.91,
         "path": "江苏/92h"
       },
       {
         "name": "95h",
-        "value": 7.18,
+        "value": 7.35,
         "path": "江苏/95h"
       },
       {
         "name": "98h",
-        "value": 9.24,
+        "value": 9.41,
         "path": "江苏/98h"
       },
       {
         "name": "0h",
-        "value": 6.37,
+        "value": 6.54,
         "path": "江苏/0h"
       }
     ],
@@ -271,26 +271,26 @@ var oils = [
   },
   {
     "name": "浙江",
-    "value": 7.25,
+    "value": 7.42,
     "children": [
       {
         "name": "92h",
-        "value": 6.75,
+        "value": 6.91,
         "path": "浙江/92h"
       },
       {
         "name": "95h",
-        "value": 7.18,
+        "value": 7.35,
         "path": "浙江/95h"
       },
       {
         "name": "98h",
-        "value": 8.68,
+        "value": 8.85,
         "path": "浙江/98h"
       },
       {
         "name": "0h",
-        "value": 6.39,
+        "value": 6.56,
         "path": "浙江/0h"
       }
     ],
@@ -298,26 +298,26 @@ var oils = [
   },
   {
     "name": "安徽",
-    "value": 7.29,
+    "value": 7.45,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.9,
         "path": "安徽/92h"
       },
       {
         "name": "95h",
-        "value": 7.23,
+        "value": 7.4,
         "path": "安徽/95h"
       },
       {
         "name": "98h",
-        "value": 8.73,
+        "value": 8.9,
         "path": "安徽/98h"
       },
       {
         "name": "0h",
-        "value": 6.44,
+        "value": 6.61,
         "path": "安徽/0h"
       }
     ],
@@ -325,26 +325,26 @@ var oils = [
   },
   {
     "name": "福建",
-    "value": 7.26,
+    "value": 7.44,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.91,
         "path": "福建/92h"
       },
       {
         "name": "95h",
-        "value": 7.2,
+        "value": 7.38,
         "path": "福建/95h"
       },
       {
         "name": "98h",
-        "value": 8.7,
+        "value": 8.88,
         "path": "福建/98h"
       },
       {
         "name": "0h",
-        "value": 6.4,
+        "value": 6.57,
         "path": "福建/0h"
       }
     ],
@@ -352,26 +352,26 @@ var oils = [
   },
   {
     "name": "江西",
-    "value": 7.29,
+    "value": 7.46,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.9,
         "path": "江西/92h"
       },
       {
         "name": "95h",
-        "value": 7.23,
+        "value": 7.41,
         "path": "江西/95h"
       },
       {
         "name": "98h",
-        "value": 8.73,
+        "value": 8.91,
         "path": "江西/98h"
       },
       {
         "name": "0h",
-        "value": 6.45,
+        "value": 6.62,
         "path": "江西/0h"
       }
     ],
@@ -379,26 +379,26 @@ var oils = [
   },
   {
     "name": "山东",
-    "value": 7.13,
+    "value": 7.3,
     "children": [
       {
         "name": "92h",
-        "value": 6.74,
+        "value": 6.9,
         "path": "山东/92h"
       },
       {
         "name": "95h",
-        "value": 7.23,
+        "value": 7.41,
         "path": "山东/95h"
       },
       {
         "name": "98h",
-        "value": 8.23,
+        "value": 8.41,
         "path": "山东/98h"
       },
       {
         "name": "0h",
-        "value": 6.33,
+        "value": 6.5,
         "path": "山东/0h"
       }
     ],
@@ -406,26 +406,26 @@ var oils = [
   },
   {
     "name": "河南",
-    "value": 7.08,
+    "value": 7.25,
     "children": [
       {
         "name": "92h",
-        "value": 6.78,
+        "value": 6.94,
         "path": "河南/92h"
       },
       {
         "name": "95h",
-        "value": 7.24,
+        "value": 7.41,
         "path": "河南/95h"
       },
       {
         "name": "98h",
-        "value": 7.89,
+        "value": 8.07,
         "path": "河南/98h"
       },
       {
         "name": "0h",
-        "value": 6.39,
+        "value": 6.56,
         "path": "河南/0h"
       }
     ],
@@ -433,26 +433,26 @@ var oils = [
   },
   {
     "name": "湖北",
-    "value": 7.42,
+    "value": 7.6,
     "children": [
       {
         "name": "92h",
-        "value": 6.78,
+        "value": 6.95,
         "path": "湖北/92h"
       },
       {
         "name": "95h",
-        "value": 7.26,
+        "value": 7.44,
         "path": "湖北/95h"
       },
       {
         "name": "98h",
-        "value": 9.26,
+        "value": 9.44,
         "path": "湖北/98h"
       },
       {
         "name": "0h",
-        "value": 6.4,
+        "value": 6.56,
         "path": "湖北/0h"
       }
     ],
@@ -460,26 +460,26 @@ var oils = [
   },
   {
     "name": "湖南",
-    "value": 7.18,
+    "value": 7.35,
     "children": [
       {
         "name": "92h",
-        "value": 6.73,
+        "value": 6.89,
         "path": "湖南/92h"
       },
       {
         "name": "95h",
-        "value": 7.16,
+        "value": 7.33,
         "path": "湖南/95h"
       },
       {
         "name": "98h",
-        "value": 8.36,
+        "value": 8.53,
         "path": "湖南/98h"
       },
       {
         "name": "0h",
-        "value": 6.47,
+        "value": 6.64,
         "path": "湖南/0h"
       }
     ],
@@ -487,26 +487,26 @@ var oils = [
   },
   {
     "name": "广东",
-    "value": 7.48,
+    "value": 7.65,
     "children": [
       {
         "name": "92h",
-        "value": 6.79,
+        "value": 6.96,
         "path": "广东/92h"
       },
       {
         "name": "95h",
-        "value": 7.36,
+        "value": 7.54,
         "path": "广东/95h"
       },
       {
         "name": "98h",
-        "value": 9.36,
+        "value": 9.54,
         "path": "广东/98h"
       },
       {
         "name": "0h",
-        "value": 6.42,
+        "value": 6.58,
         "path": "广东/0h"
       }
     ],
@@ -514,26 +514,26 @@ var oils = [
   },
   {
     "name": "海南",
-    "value": 8.03,
+    "value": 8.2,
     "children": [
       {
         "name": "92h",
-        "value": 7.89,
+        "value": 8.05,
         "path": "海南/92h"
       },
       {
         "name": "95h",
-        "value": 8.37,
+        "value": 8.55,
         "path": "海南/95h"
       },
       {
         "name": "98h",
-        "value": 9.37,
+        "value": 9.55,
         "path": "海南/98h"
       },
       {
         "name": "0h",
-        "value": 6.49,
+        "value": 6.66,
         "path": "海南/0h"
       }
     ],
@@ -541,26 +541,26 @@ var oils = [
   },
   {
     "name": "四川",
-    "value": 7.27,
+    "value": 7.45,
     "children": [
       {
         "name": "92h",
-        "value": 6.88,
+        "value": 7.04,
         "path": "四川/92h"
       },
       {
         "name": "95h",
-        "value": 7.35,
+        "value": 7.52,
         "path": "四川/95h"
       },
       {
         "name": "98h",
-        "value": 8.39,
+        "value": 8.58,
         "path": "四川/98h"
       },
       {
         "name": "0h",
-        "value": 6.47,
+        "value": 6.64,
         "path": "四川/0h"
       }
     ],
@@ -568,26 +568,26 @@ var oils = [
   },
   {
     "name": "贵州",
-    "value": 7.25,
+    "value": 7.42,
     "children": [
       {
         "name": "92h",
-        "value": 6.9,
+        "value": 7.07,
         "path": "贵州/92h"
       },
       {
         "name": "95h",
-        "value": 7.29,
+        "value": 7.47,
         "path": "贵州/95h"
       },
       {
         "name": "98h",
-        "value": 8.29,
+        "value": 8.47,
         "path": "贵州/98h"
       },
       {
         "name": "0h",
-        "value": 6.52,
+        "value": 6.68,
         "path": "贵州/0h"
       }
     ],
@@ -595,26 +595,26 @@ var oils = [
   },
   {
     "name": "云南",
-    "value": 7.24,
+    "value": 7.4,
     "children": [
       {
         "name": "92h",
-        "value": 6.92,
+        "value": 7.08,
         "path": "云南/92h"
       },
       {
         "name": "95h",
-        "value": 7.43,
+        "value": 7.6,
         "path": "云南/95h"
       },
       {
         "name": "98h",
-        "value": 8.11,
+        "value": 8.28,
         "path": "云南/98h"
       },
       {
         "name": "0h",
-        "value": 6.49,
+        "value": 6.65,
         "path": "云南/0h"
       }
     ],
@@ -622,26 +622,26 @@ var oils = [
   },
   {
     "name": "陕西",
-    "value": 7.32,
+    "value": 7.5,
     "children": [
       {
         "name": "92h",
-        "value": 6.67,
+        "value": 6.83,
         "path": "陕西/92h"
       },
       {
         "name": "95h",
-        "value": 7.04,
+        "value": 7.22,
         "path": "陕西/95h"
       },
       {
         "name": "98h",
-        "value": 9.25,
+        "value": 9.47,
         "path": "陕西/98h"
       },
       {
         "name": "0h",
-        "value": 6.31,
+        "value": 6.48,
         "path": "陕西/0h"
       }
     ],
@@ -649,26 +649,26 @@ var oils = [
   },
   {
     "name": "甘肃",
-    "value": 7.02,
+    "value": 7.2,
     "children": [
       {
         "name": "92h",
-        "value": 6.77,
+        "value": 6.93,
         "path": "甘肃/92h"
       },
       {
         "name": "95h",
-        "value": 7.22,
+        "value": 7.4,
         "path": "甘肃/95h"
       },
       {
         "name": "98h",
-        "value": 7.79,
+        "value": 7.97,
         "path": "甘肃/98h"
       },
       {
         "name": "0h",
-        "value": 6.32,
+        "value": 6.49,
         "path": "甘肃/0h"
       }
     ],
@@ -676,26 +676,26 @@ var oils = [
   },
   {
     "name": "内蒙古",
-    "value": 7.03,
+    "value": 7.2,
     "children": [
       {
         "name": "92h",
-        "value": 6.77,
+        "value": 6.94,
         "path": "内蒙古/92h"
       },
       {
         "name": "95h",
-        "value": 7.19,
+        "value": 7.37,
         "path": "内蒙古/95h"
       },
       {
         "name": "98h",
-        "value": 7.86,
+        "value": 8.05,
         "path": "内蒙古/98h"
       },
       {
         "name": "0h",
-        "value": 6.28,
+        "value": 6.44,
         "path": "内蒙古/0h"
       }
     ],
@@ -703,26 +703,26 @@ var oils = [
   },
   {
     "name": "宁夏",
-    "value": 7.03,
+    "value": 7.21,
     "children": [
       {
         "name": "92h",
-        "value": 6.68,
+        "value": 6.84,
         "path": "宁夏/92h"
       },
       {
         "name": "95h",
-        "value": 7.06,
+        "value": 7.23,
         "path": "宁夏/95h"
       },
       {
         "name": "98h",
-        "value": 8.08,
+        "value": 8.28,
         "path": "宁夏/98h"
       },
       {
         "name": "0h",
-        "value": 6.3,
+        "value": 6.47,
         "path": "宁夏/0h"
       }
     ],
@@ -730,26 +730,26 @@ var oils = [
   },
   {
     "name": "新疆",
-    "value": 6.92,
+    "value": 7.1,
     "children": [
       {
         "name": "92h",
-        "value": 6.6,
+        "value": 6.76,
         "path": "新疆/92h"
       },
       {
         "name": "95h",
-        "value": 7.05,
+        "value": 7.23,
         "path": "新疆/95h"
       },
       {
         "name": "98h",
-        "value": 7.85,
+        "value": 8.05,
         "path": "新疆/98h"
       },
       {
         "name": "0h",
-        "value": 6.2,
+        "value": 6.37,
         "path": "新疆/0h"
       }
     ],
@@ -757,26 +757,26 @@ var oils = [
   },
   {
     "name": "广西",
-    "value": 7.33,
+    "value": 7.5,
     "children": [
       {
         "name": "92h",
-        "value": 6.84,
+        "value": 7,
         "path": "广西/92h"
       },
       {
         "name": "95h",
-        "value": 7.38,
+        "value": 7.56,
         "path": "广西/95h"
       },
       {
         "name": "98h",
-        "value": 8.63,
+        "value": 8.81,
         "path": "广西/98h"
       },
       {
         "name": "0h",
-        "value": 6.47,
+        "value": 6.64,
         "path": "广西/0h"
       }
     ],
@@ -784,26 +784,26 @@ var oils = [
   },
   {
     "name": "西藏",
-    "value": 7.94,
+    "value": 8.11,
     "children": [
       {
         "name": "92h",
-        "value": 7.66,
+        "value": 7.82,
         "path": "西藏/92h"
       },
       {
         "name": "95h",
-        "value": 8.1,
+        "value": 8.27,
         "path": "西藏/95h"
       },
       {
         "name": "98h",
-        "value": 9.03,
+        "value": 9.22,
         "path": "西藏/98h"
       },
       {
         "name": "0h",
-        "value": 6.96,
+        "value": 7.13,
         "path": "西藏/0h"
       }
     ],
@@ -811,26 +811,26 @@ var oils = [
   },
   {
     "name": "青海",
-    "value": 7.04,
+    "value": 7.21,
     "children": [
       {
         "name": "92h",
-        "value": 6.73,
+        "value": 6.89,
         "path": "青海/92h"
       },
       {
         "name": "95h",
-        "value": 7.21,
+        "value": 7.39,
         "path": "青海/95h"
       },
       {
         "name": "98h",
-        "value": 7.86,
+        "value": 8.05,
         "path": "青海/98h"
       },
       {
         "name": "0h",
-        "value": 6.34,
+        "value": 6.51,
         "path": "青海/0h"
       }
     ],
