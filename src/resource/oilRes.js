@@ -433,7 +433,7 @@ var oils = [
   },
   {
     "name": "湖北",
-    "value": 9.61,
+    "value": 9.51,
     "children": [
       {
         "name": "92h",
@@ -447,7 +447,7 @@ var oils = [
       },
       {
         "name": "98h",
-        "value": 11.37,
+        "value": 10.98,
         "path": "湖北/98h"
       },
       {
@@ -717,7 +717,7 @@ var oils = [
       },
       {
         "name": "98h",
-        "value": 10.57,
+        "value": 10.58,
         "path": "宁夏/98h"
       },
       {
