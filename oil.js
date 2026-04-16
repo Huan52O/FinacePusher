@@ -237,7 +237,7 @@ const createOilHtml = async () => {
     </div>`;
 
     sendEmail(
-      "hellohehuan@126.com",
+      "clearhuan@qq.com",
       html,
       "【Oil Notice】By Huan52O"
     );
