@@ -168,7 +168,7 @@ const sendRankInfoTask = async () => {
       </div>
     </div>`;
     sendEmail(
-      "hellohehuan@126.com",
+      "clearhuan@qq.com",
       template,
       "【懂车分榜】By Huan52O"
     );
@@ -277,7 +277,7 @@ const sendAttentionInfoTask = async (type) => {
       </div>
     </div>`;
     sendEmail(
-      "hellohehuan@126.com",
+      "clearhuan@qq.com",
       template,
       `【${attention['title']}关注度榜】By Huan52O`
     );
