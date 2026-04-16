@@ -134,7 +134,7 @@ const scheduleTask2 = async () => {
           </footer>
         </div>`;
       sendEmail(
-        'hellohehuan@126.com',
+        'clearhuan@qq.com',
         html,
         `【Fund Tips】By Huan52O`
       );
